@@ -1,42 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFBF5;
-  --foreground: #1A1A2E;
-  --coral: #FF6B6B;
-  --coral-light: #FF8E8E;
-  --lavender: #E8D5F5;
-  --lavender-deep: #C9A0DC;
-  --sage: #A8D5BA;
-  --sage-deep: #7BC4A0;
-  --peach: #FFD4B8;
-  --sunny: #FFE066;
-  --navy: #1A1A2E;
-  --soft-gray: #F0ECE6;
-  --text: #1A1A2E;
-  --text-light: #6E6E82;
+  --background: #FDFBF7;
+  --foreground: #1B1B1B;
+  --forest: #2D5A3D;
+  --forest-light: #3A7A50;
+  --blush: #E8B4B8;
+  --blush-light: #F5D5D8;
+  --sand: #F0E6D3;
+  --sand-light: #F7F0E4;
+  --clay: #C4956A;
+  --navy: #1B1B1B;
+  --soft-white: #FDFBF7;
+  --text: #1B1B1B;
+  --text-light: #7A7A7A;
+  --card-bg: #FFFFFF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-coral: var(--coral);
-  --color-coral-light: var(--coral-light);
-  --color-lavender: var(--lavender);
-  --color-lavender-deep: var(--lavender-deep);
-  --color-sage: var(--sage);
-  --color-sage-deep: var(--sage-deep);
-  --color-peach: var(--peach);
-  --color-sunny: var(--sunny);
+  --color-forest: var(--forest);
+  --color-forest-light: var(--forest-light);
+  --color-blush: var(--blush);
+  --color-blush-light: var(--blush-light);
+  --color-sand: var(--sand);
+  --color-sand-light: var(--sand-light);
+  --color-clay: var(--clay);
   --color-navy: var(--navy);
-  --color-soft-gray: var(--soft-gray);
+  --color-soft-white: var(--soft-white);
   --color-charcoal: var(--foreground);
   --color-text: var(--text);
   --color-text-light: var(--text-light);
-  --color-beige: var(--soft-gray);
-  --color-cream: #FFF7EE;
-  --color-accent: var(--coral);
-  --color-accent-dark: #E55A5A;
+  --color-card-bg: var(--card-bg);
+  --color-beige: var(--sand);
+  --color-cream: var(--sand-light);
+  --color-accent: var(--forest);
+  --color-accent-dark: #1E4A2E;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -51,7 +51,6 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Scroll animations */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
@@ -82,21 +81,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .hero-animate {
   opacity: 0;
   animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -114,11 +98,6 @@ body {
 .scroll-visible-slideRight { animation: slideRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .scroll-visible-scaleIn { animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
-.float { animation: float 4s ease-in-out infinite; }
-.float-delay { animation: float 4s ease-in-out 1s infinite; }
-.marquee { animation: marquee 25s linear infinite; }
-.spin-slow { animation: spin-slow 20s linear infinite; }
-
 @media (prefers-reduced-motion: reduce) {
   .scroll-hidden { opacity: 1; }
   .hero-animate { opacity: 1; animation: none; }
@@ -127,5 +106,4 @@ body {
   .scroll-visible-slideLeft,
   .scroll-visible-slideRight,
   .scroll-visible-scaleIn { animation: none; opacity: 1; }
-  .marquee, .float, .float-delay, .spin-slow { animation: none; }
 }
