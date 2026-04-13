@@ -1,27 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #2D2D2D;
-  --beige: #F5F0EB;
-  --cream: #FAF8F5;
-  --charcoal: #2D2D2D;
-  --accent: #C4A68A;
-  --accent-dark: #A8896E;
-  --text: #2D2D2D;
-  --text-light: #6B6B6B;
+  --background: #FFFBF5;
+  --foreground: #1A1A2E;
+  --coral: #FF6B6B;
+  --coral-light: #FF8E8E;
+  --lavender: #E8D5F5;
+  --lavender-deep: #C9A0DC;
+  --sage: #A8D5BA;
+  --sage-deep: #7BC4A0;
+  --peach: #FFD4B8;
+  --sunny: #FFE066;
+  --navy: #1A1A2E;
+  --soft-gray: #F0ECE6;
+  --text: #1A1A2E;
+  --text-light: #6E6E82;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-beige: var(--beige);
-  --color-cream: var(--cream);
-  --color-charcoal: var(--charcoal);
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
+  --color-coral: var(--coral);
+  --color-coral-light: var(--coral-light);
+  --color-lavender: var(--lavender);
+  --color-lavender-deep: var(--lavender-deep);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-peach: var(--peach);
+  --color-sunny: var(--sunny);
+  --color-navy: var(--navy);
+  --color-soft-gray: var(--soft-gray);
+  --color-charcoal: var(--foreground);
   --color-text: var(--text);
   --color-text-light: var(--text-light);
+  --color-beige: var(--soft-gray);
+  --color-cream: #FFF7EE;
+  --color-accent: var(--coral);
+  --color-accent-dark: #E55A5A;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -38,14 +53,8 @@ body {
 
 /* Scroll animations */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
@@ -54,114 +63,69 @@ body {
 }
 
 @keyframes slideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(10px); }
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(50px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero load animations */
-@keyframes heroFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .hero-animate {
   opacity: 0;
-  animation: heroFadeUp 1s ease forwards;
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.hero-animate-delay-1 {
-  animation-delay: 0.2s;
-}
+.hero-animate-delay-1 { animation-delay: 0.15s; }
+.hero-animate-delay-2 { animation-delay: 0.3s; }
+.hero-animate-delay-3 { animation-delay: 0.5s; }
+.hero-animate-delay-4 { animation-delay: 0.7s; }
 
-.hero-animate-delay-2 {
-  animation-delay: 0.4s;
-}
+.scroll-hidden { opacity: 0; }
+.scroll-visible-fadeUp { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.scroll-visible-fadeIn { animation: fadeIn 0.8s ease forwards; }
+.scroll-visible-slideLeft { animation: slideLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.scroll-visible-slideRight { animation: slideRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.scroll-visible-scaleIn { animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
-.hero-animate-delay-3 {
-  animation-delay: 0.6s;
-}
+.float { animation: float 4s ease-in-out infinite; }
+.float-delay { animation: float 4s ease-in-out 1s infinite; }
+.marquee { animation: marquee 25s linear infinite; }
+.spin-slow { animation: spin-slow 20s linear infinite; }
 
-/* Scroll reveal classes */
-.scroll-hidden {
-  opacity: 0;
-}
-
-.scroll-visible-fadeUp {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.scroll-visible-fadeIn {
-  animation: fadeIn 0.8s ease forwards;
-}
-
-.scroll-visible-slideLeft {
-  animation: slideLeft 0.8s ease forwards;
-}
-
-.scroll-visible-slideRight {
-  animation: slideRight 0.8s ease forwards;
-}
-
-.scroll-visible-scaleIn {
-  animation: scaleIn 0.8s ease forwards;
-}
-
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .scroll-hidden {
-    opacity: 1;
-  }
-
-  .hero-animate {
-    opacity: 1;
-    animation: none;
-  }
-
+  .scroll-hidden { opacity: 1; }
+  .hero-animate { opacity: 1; animation: none; }
   .scroll-visible-fadeUp,
   .scroll-visible-fadeIn,
   .scroll-visible-slideLeft,
   .scroll-visible-slideRight,
-  .scroll-visible-scaleIn {
-    animation: none;
-    opacity: 1;
-  }
+  .scroll-visible-scaleIn { animation: none; opacity: 1; }
+  .marquee, .float, .float-delay, .spin-slow { animation: none; }
 }

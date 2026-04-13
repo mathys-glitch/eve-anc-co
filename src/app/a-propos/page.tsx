@@ -1,143 +1,80 @@
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
-import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "A propos | EVE & CO",
-  description:
-    "Decouvrez l'histoire d'EVE & CO, notre mission et les valeurs qui guident notre engagement pour le confort menstruel durable en entreprise.",
+  title: "Notre Histoire | eve&co",
+  description: "Comment une frustration est devenue une mission. L'histoire d'eve&co, la culotte menstruelle qui change la donne en entreprise.",
 };
 
 export default function APropos() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 lg:py-28 bg-cream">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h1 className="hero-animate text-4xl md:text-5xl lg:text-6xl font-extralight text-charcoal leading-[1.1] tracking-tight">
-              A propos d&apos;
-              <span className="text-accent">EVE & CO</span>
+      <section className="py-20 lg:py-28 relative overflow-hidden">
+        <div className="absolute top-10 right-20 w-32 h-32 bg-peach/30 rounded-full float" />
+        <div className="absolute bottom-20 left-10 w-20 h-20 bg-lavender/40 rounded-full float-delay" />
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl">
+            <span className="hero-animate inline-block bg-lavender/30 text-lavender-deep text-sm font-bold px-4 py-2 rounded-full mb-6">
+              Notre histoire
+            </span>
+            <h1 className="hero-animate hero-animate-delay-1 text-4xl md:text-5xl lg:text-7xl font-bold text-navy leading-[1.05] tracking-tight">
+              On en avait marre.
+              <br />
+              Alors on a <span className="text-coral">agi</span>.
             </h1>
-            <p className="hero-animate hero-animate-delay-1 mt-6 text-lg text-text-light font-light leading-relaxed">
-              Nee d&apos;une conviction : le confort menstruel ne devrait jamais etre un compromis, ni pour les femmes, ni pour la planete.
+            <p className="hero-animate hero-animate-delay-2 mt-8 text-xl text-text-light leading-relaxed max-w-2xl">
+              Marre des protections jetables pleines de chimie. Marre du tabou autour des regles au bureau. Marre d&apos;attendre que ca change tout seul.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Notre Histoire */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal animation="slideLeft">
-              <div className="aspect-[4/5] bg-beige flex items-center justify-center">
-                <span className="text-accent/40 text-sm tracking-widest uppercase">
-                  Photo fondatrice
-                </span>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal animation="slideRight">
-              <div>
-                <SectionHeading title="Notre Histoire" centered={false} />
-                <div className="mt-8 space-y-6 text-text-light font-light leading-relaxed">
-                  <p>
-                    Tout a commence par un constat simple : chaque mois, des millions de femmes utilisent des protections jetables polluantes, inconfortables et souvent chargees en produits chimiques.
-                  </p>
-                  <p>
-                    EVE & CO est nee de la volonte de proposer une alternative a la hauteur des enjeux actuels. Nous avons passe deux ans a developper une culotte menstruelle qui allie performance, confort et respect de l&apos;environnement.
-                  </p>
-                  <p>
-                    En 2023, nous avons elargi notre mission au monde de l&apos;entreprise. Pourquoi ? Parce que le bien-etre menstruel au travail est encore un tabou, et les entreprises ont le pouvoir de changer les choses.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="py-20 lg:py-28 bg-cream">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <ScrollReveal animation="fadeUp">
-            <p className="text-xs tracking-[0.3em] uppercase text-accent mb-8">
-              Notre Mission
-            </p>
-            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-extralight text-charcoal leading-relaxed">
-              &laquo; Rendre le confort menstruel accessible a toutes, dans tous les environnements, tout en preservant notre planete. &raquo;
-            </blockquote>
-            <div className="mt-8 w-16 h-px bg-accent mx-auto" />
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Valeurs */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal>
-            <SectionHeading
-              title="Nos Valeurs"
-              subtitle="Les principes qui guident chacune de nos decisions"
-            />
-          </ScrollReveal>
-
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Timeline */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="space-y-12">
             {[
               {
-                title: "Transparence",
-                desc: "Composition, fabrication, prix : nous n'avons rien a cacher. Chaque information est accessible et verifiable.",
-                icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                ),
+                year: "2021",
+                title: "Le declic",
+                desc: "Claire, consultante RSE, realise qu'aucune entreprise ne propose de solution menstruelle durable a ses equipes. Le projet nait dans un cafe parisien.",
+                color: "bg-lavender/30",
               },
               {
-                title: "Durabilite",
-                desc: "Nos produits sont conçus pour durer 5 ans minimum. Chaque choix de materiau vise a minimiser notre empreinte.",
-                icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                    <path d="M12 6v6l4 2" strokeLinecap="round" />
-                  </svg>
-                ),
+                year: "2022",
+                title: "2 ans de R&D",
+                desc: "On teste 47 prototypes. On refuse tout compromis : coton bio, zero substance controverse, absorption au top, confort 12h. On y arrive.",
+                color: "bg-sage/20",
               },
               {
-                title: "Inclusivite",
-                desc: "Nos culottes sont disponibles du XS au 3XL. Le confort menstruel est un droit, pas un privilege.",
-                icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
-                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-                  </svg>
-                ),
+                year: "2023",
+                title: "Lancement B2B",
+                desc: "Premiere entreprise equipee : 50 collaboratrices. Taux d'adoption : 94%. Le bouche-a-oreille fait le reste.",
+                color: "bg-peach/30",
               },
               {
-                title: "Innovation",
-                desc: "Nous investissons continuellement dans la R&D pour offrir des produits toujours plus performants et confortables.",
-                icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                ),
+                year: "2024",
+                title: "Certification B Corp",
+                desc: "On passe l'audit avec brio. Production locale, salaires equitables, impact mesure. La totale.",
+                color: "bg-sunny/30",
               },
-            ].map((value, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
-                <div className="p-8 bg-cream transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-                  <div className="w-12 h-12 bg-white flex items-center justify-center mb-6">
-                    {value.icon}
+              {
+                year: "2025",
+                title: "Et maintenant ?",
+                desc: "200+ entreprises equipees, 15 000 collaboratrices conquises. Et on ne fait que commencer.",
+                color: "bg-coral/10",
+              },
+            ].map((item, i) => (
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
+                <div className={`${item.color} rounded-3xl p-8 lg:p-10 flex flex-col md:flex-row gap-6 items-start`}>
+                  <span className="text-4xl font-bold text-coral shrink-0">{item.year}</span>
+                  <div>
+                    <h3 className="text-xl font-bold text-navy mb-2">{item.title}</h3>
+                    <p className="text-text-light leading-relaxed">{item.desc}</p>
                   </div>
-                  <h3 className="text-lg font-light text-charcoal mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-sm text-text-light font-light leading-relaxed">
-                    {value.desc}
-                  </p>
                 </div>
               </ScrollReveal>
             ))}
@@ -145,50 +82,73 @@ export default function APropos() {
         </div>
       </section>
 
-      {/* Equipe */}
-      <section className="py-20 lg:py-28 bg-cream">
+      {/* Mission */}
+      <section className="py-20 lg:py-28 bg-navy rounded-[3rem] mx-4 lg:mx-8">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <ScrollReveal animation="fadeUp">
+            <span className="text-coral font-bold text-sm uppercase tracking-wider">Notre mission</span>
+            <blockquote className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-relaxed">
+              &laquo; Faire du confort menstruel au travail quelque chose d&apos;aussi normal que la pause cafe. &raquo;
+            </blockquote>
+            <div className="mt-8 flex justify-center gap-3">
+              <span className="bg-coral/20 text-coral text-xs font-bold px-3 py-1 rounded-full">Engagees</span>
+              <span className="bg-sage/20 text-sage text-xs font-bold px-3 py-1 rounded-full">Concretes</span>
+              <span className="bg-lavender/20 text-lavender-deep text-xs font-bold px-3 py-1 rounded-full">Sans compromis</span>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Valeurs */}
+      <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <SectionHeading
-              title="L'equipe"
-              subtitle="Des passionnees au service de votre bien-etre"
-            />
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy">Ce en quoi on croit</h2>
+            </div>
           </ScrollReveal>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              {
-                name: "Claire Moreau",
-                role: "Fondatrice & CEO",
-                bio: "Ancienne consultante RSE, Claire a fonde EVE & CO pour concilier impact social et entrepreneuriat.",
-              },
-              {
-                name: "Amina Khelifi",
-                role: "Directrice Produit",
-                bio: "Ingenieure textile, Amina supervise le developpement de nos produits et l'innovation materiau.",
-              },
-              {
-                name: "Lucas Bernard",
-                role: "Responsable Partenariats B2B",
-                bio: "Expert en relations entreprises, Lucas accompagne nos clients dans leur demarche RSE.",
-              },
+              { emoji: "🔍", title: "Transparence radicale", desc: "Composition, prix, marge — on dit tout. Si on peut pas le dire, on le fait pas." },
+              { emoji: "♾️", title: "Durabilite reelle", desc: "5 ans minimum. Parce que le vrai ecolo, c'est ce qui dure." },
+              { emoji: "🤗", title: "Inclusivite", desc: "Du XS au 3XL. Le confort menstruel n'est pas un privilege de taille." },
+              { emoji: "🚀", title: "Innovation constante", desc: "On investit en R&D chaque mois. Nos culottes de demain seront encore meilleures." },
+            ].map((value, i) => (
+              <ScrollReveal key={i} animation="scaleIn" delay={i * 100}>
+                <div className="bg-soft-gray rounded-3xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 h-full">
+                  <span className="text-4xl mb-4 block">{value.emoji}</span>
+                  <h3 className="text-lg font-bold text-navy mb-3">{value.title}</h3>
+                  <p className="text-sm text-text-light leading-relaxed">{value.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-20 lg:py-28 bg-soft-gray rounded-[3rem] mx-4 lg:mx-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy">Les humains derriere la culotte</h2>
+              <p className="mt-4 text-text-light text-lg">Une equipe passionnee (et un peu obstinee)</p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { name: "Claire Moreau", role: "Fondatrice & CEO", emoji: "👩‍💼", desc: "Ex-consultante RSE qui en avait marre des slides PowerPoint. A decide de passer a l'action." },
+              { name: "Amina Khelifi", role: "Directrice Produit", emoji: "👩‍🔬", desc: "Ingenieure textile. A teste les 47 prototypes. Obsedee par le confort et la qualite." },
+              { name: "Lucas Bernard", role: "Partenariats B2B", emoji: "🤝", desc: "Convainc les entreprises une par une. 100% de ses clients recommandent EVE&CO." },
             ].map((member, i) => (
-              <ScrollReveal key={i} animation="scaleIn" delay={i * 150}>
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-beige rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-accent/40 text-xs tracking-widest uppercase">
-                      Photo
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-light text-charcoal">
-                    {member.name}
-                  </h3>
-                  <p className="text-xs text-accent tracking-widest uppercase mt-1">
-                    {member.role}
-                  </p>
-                  <p className="mt-3 text-sm text-text-light font-light leading-relaxed">
-                    {member.bio}
-                  </p>
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 150}>
+                <div className="bg-white rounded-3xl p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <span className="text-5xl mb-4 block">{member.emoji}</span>
+                  <h3 className="text-lg font-bold text-navy">{member.name}</h3>
+                  <p className="text-coral text-xs font-bold uppercase tracking-wider mt-1">{member.role}</p>
+                  <p className="mt-4 text-sm text-text-light leading-relaxed">{member.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -197,17 +157,17 @@ export default function APropos() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <section className="py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-extralight text-charcoal">
-              Envie d&apos;en savoir plus ?
+            <h2 className="text-3xl md:text-4xl font-bold text-navy">
+              Envie de faire partie de l&apos;histoire ?
             </h2>
-            <p className="mt-4 text-text-light font-light text-lg max-w-lg mx-auto">
-              Echangeons sur votre projet et decouvrez comment EVE & CO peut accompagner votre entreprise.
+            <p className="mt-4 text-text-light text-lg max-w-lg mx-auto">
+              Chaque entreprise qui rejoint le mouvement rend le monde un peu meilleur. Sans exagerer.
             </p>
             <div className="mt-8">
-              <Button href="/contact">Nous contacter</Button>
+              <Button href="/contact">Rejoindre le mouvement →</Button>
             </div>
           </ScrollReveal>
         </div>

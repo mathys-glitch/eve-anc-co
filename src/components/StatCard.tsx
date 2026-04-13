@@ -6,11 +6,13 @@ export default function StatCard({
   value,
   suffix = "",
   label,
+  color = "bg-lavender",
   duration = 2000,
 }: {
   value: number;
   suffix?: string;
   label: string;
+  color?: string;
   duration?: number;
 }) {
   const [count, setCount] = useState(0);
@@ -57,12 +59,12 @@ export default function StatCard({
   }, [started, value, duration]);
 
   return (
-    <div ref={ref} className="text-center">
-      <div className="text-5xl md:text-6xl font-extralight text-charcoal tracking-tight">
+    <div ref={ref} className={`${color} rounded-3xl p-8 text-center`}>
+      <div className="text-4xl md:text-5xl font-bold text-navy tracking-tight">
         {started ? count.toLocaleString("fr-FR") : "0"}
-        <span className="text-accent">{suffix}</span>
+        <span className="text-coral">{suffix}</span>
       </div>
-      <p className="mt-3 text-sm text-text-light tracking-widest uppercase">
+      <p className="mt-3 text-sm text-text-light font-medium">
         {label}
       </p>
     </div>

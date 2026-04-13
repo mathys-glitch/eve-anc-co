@@ -16,15 +16,15 @@ export default function Button({
   type?: "submit" | "button";
 }) {
   const base =
-    "inline-flex items-center justify-center font-medium transition-all duration-300 cursor-pointer";
+    "inline-flex items-center justify-center font-semibold transition-all duration-300 cursor-pointer";
 
   const variants: Record<Variant, string> = {
     primary:
-      "bg-charcoal text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-accent-dark hover:shadow-lg hover:-translate-y-0.5",
+      "bg-coral text-white px-8 py-4 text-sm rounded-full hover:bg-accent-dark hover:shadow-xl hover:shadow-coral/20 hover:-translate-y-0.5",
     secondary:
-      "border border-charcoal text-charcoal px-8 py-4 text-sm tracking-widest uppercase hover:bg-charcoal hover:text-white hover:-translate-y-0.5",
+      "border-2 border-navy text-navy px-8 py-4 text-sm rounded-full hover:bg-navy hover:text-white hover:-translate-y-0.5",
     ghost:
-      "text-charcoal text-sm tracking-widest uppercase border-b border-charcoal pb-1 hover:text-accent-dark hover:border-accent-dark",
+      "text-coral text-sm font-bold hover:text-accent-dark underline underline-offset-4 decoration-2",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;
