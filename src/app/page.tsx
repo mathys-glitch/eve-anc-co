@@ -22,7 +22,7 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="hero-animate hero-animate-delay-2 text-5xl md:text-6xl lg:text-7xl font-bold text-deep leading-tight tracking-tight mb-8">
+            <h1 className="hero-animate hero-animate-delay-2 text-4xl md:text-4xl lg:text-4xl font-bold text-deep leading-tight tracking-tight mb-8">
               Le confort menstruel<br />
               n&apos;est pas un luxe.<br />
               C&apos;est un <span className="text-terra">droit.</span>
@@ -67,7 +67,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Le contexte</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
                 Le meilleur ratio coût / impact du CSE
               </h2>
             </div>
@@ -128,7 +128,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-4">LA RÉPONSE EVE AND CO</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-deep leading-tight">
+              <h2 className="text-4xl md:text-4xl font-bold text-deep leading-tight">
                 Une vraie action RSE, des vrais résultats
               </h2>
             </div>
@@ -192,7 +192,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Impact mesurable</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
                 Voir votre impact en 5 ans
               </h2>
               <p className="mt-6 text-lg text-text-light">
@@ -218,7 +218,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Le quotidien</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
                 Une journée, deux expériences
               </h2>
             </div>
@@ -236,7 +236,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-20">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Arguments décisifs</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
                 6 bonnes raisons de dire oui au CODIR
               </h2>
             </div>
@@ -295,7 +295,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Ils l'ont fait</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep">Elles racontent</h2>
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep">Elles racontent</h2>
             </div>
           </ScrollReveal>
 
@@ -343,7 +343,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="text-white">
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+                <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-8">
                   Prêt à faire une vraie différence ?
                 </h2>
                 <p className="text-xl text-white/80 leading-relaxed mb-12">

@@ -39,7 +39,7 @@ export default function ProductShowcase() {
         <ScrollReveal>
           <div className="text-center mb-20">
             <span className="text-sm font-bold text-terra uppercase tracking-widest">Notre gamme</span>
-            <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+            <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
               Trois modèles, un seul objectif : ton confort
             </h2>
             <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
