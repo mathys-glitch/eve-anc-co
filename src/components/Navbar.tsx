@@ -1,38 +1,42 @@
 import MobileMenu from "./MobileMenu";
 
 const links = [
-  { href: "#produits", label: "Produits" },
-  { href: "#impact", label: "Impact" },
-  { href: "#quotidien", label: "Au quotidien" },
-  { href: "#preuves", label: "Preuves" },
-  { href: "#devis", label: "Devis" },
+  { href: "#impact", label: "IMPACT" },
+  { href: "#quotidien", label: "AU QUOTIDIEN" },
+  { href: "#preuves", label: "ARGUMENTS CODIR" },
 ];
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F4F1EE] backdrop-blur-lg border-b border-warm-gray/30">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[72px]">
-        <a href="#" className="text-deep font-bold text-xl tracking-tight">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F4F1EE]">
+      <div className="max-w-[1400px] mx-auto px-8 lg:px-16 flex items-center justify-between h-[72px]">
+        {/* Logo */}
+        <a href="#" className="text-deep font-bold text-xl tracking-wide font-poppins">
           EVE AND CO
         </a>
 
+        {/* Center Links */}
         <nav className="hidden md:flex items-center gap-10">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-text-light hover:text-terra transition-colors duration-300 font-medium"
+              className="text-xs text-deep/70 hover:text-deep tracking-[0.15em] font-medium transition-colors duration-300"
             >
               {link.label}
             </a>
           ))}
+        </nav>
+
+        {/* Right: CTA */}
+        <div className="hidden md:block">
           <a
             href="#devis"
-            className="ml-4 bg-terra text-white text-sm font-semibold px-8 py-2.5 rounded-full hover:bg-terra-light transition-all duration-300 hover:shadow-lg"
+            className="bg-deep text-white text-xs font-semibold tracking-wider px-6 py-2.5 rounded-full hover:bg-deep/80 transition-all duration-300"
           >
-            Devis gratuit
+            DEVIS GRATUIT
           </a>
-        </nav>
+        </div>
 
         <MobileMenu />
       </div>
