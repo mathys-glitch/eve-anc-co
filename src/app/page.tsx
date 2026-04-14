@@ -22,7 +22,7 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="hero-animate hero-animate-delay-2 text-5xl md:text-6xl lg:text-7xl font-bold text-deep leading-tight tracking-tight mb-8">
+            <h1 className="hero-animate hero-animate-delay-2 text-6xl md:text-7xl lg:text-8xl font-bold text-deep leading-tight tracking-tight mb-8">
               Le confort menstruel<br />
               n&apos;est pas un luxe.<br />
               C&apos;est un <span className="text-terra">droit.</span>
