@@ -57,7 +57,7 @@ export default function Footer() {
 
             {/* B Corp Badge */}
             <div className="flex items-center justify-center">
-              <img src="/images/bcorp-badge.svg" alt="B Corp Certified" className="w-24 h-24" />
+              <img src="/images/bcrop-logo.webp" alt="B Corp Certified" className="w-28 h-28" />
             </div>
           </div>
 
