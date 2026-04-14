@@ -24,7 +24,7 @@ export default function Footer() {
                 <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">À propos d'EVE AND CO</a>
                 <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Notre engagement RSE</a>
                 <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Certifications & Audits</a>
-                <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Presse & Média</a>
+                <a href="https://eve-and-co.com/pages/presse" target="_blank" rel="noopener noreferrer" className="block text-sm text-text-light hover:text-terra transition-colors">Presse & Média</a>
                 <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Contact</a>
               </div>
             </div>
