@@ -181,7 +181,7 @@ export default function Home() {
           <ScrollReveal animation="fadeUp" className="mt-16">
             <div className="bg-white rounded-3xl p-12 border-2 border-warm-gray text-center space-y-6">
               <div className="flex justify-center">
-                <img src="/images/bcrop-logo.webp" alt="B Corp Certified" className="w-28 h-28" />
+                <img src="/images/bcorp-badge.svg" alt="B Corp Certified" className="w-32 h-32" />
               </div>
               <div className="space-y-2">
                 <p className="text-xs font-bold text-terra uppercase tracking-widest">Certification & Engagement</p>
