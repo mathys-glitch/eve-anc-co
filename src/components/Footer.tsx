@@ -34,7 +34,7 @@ export default function Footer() {
             <div>
               <h3 className="text-sm font-bold text-deep uppercase tracking-widest mb-8">Entreprise</h3>
               <div className="flex items-start gap-4 mb-8">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                <div className="flex-shrink-0 w-20 h-20 flex items-center justify-center">
                   <img src="/images/logo-bcorp.png" alt="B Corp Certified" className="w-full h-full object-contain" />
                 </div>
                 <div>
@@ -69,7 +69,7 @@ export default function Footer() {
 
             {/* Logo */}
             <div className="text-center">
-              <p className="text-2xl font-bold text-deep/40">EVE AND CO</p>
+              <p className="text-4xl font-bold" style={{ color: '#EEE8E3' }}>EVE AND CO</p>
             </div>
 
             {/* Copyright */}
