@@ -22,7 +22,7 @@ export default function Footer() {
               <p className="text-xs font-bold text-terra uppercase tracking-widest mb-8">Pour les curieux</p>
               <div className="space-y-4">
                 <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">À propos d'EVE AND CO</a>
-                <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Notre engagement RSE</a>
+                <a href="https://eve-and-co.com/pages/nos-actions" target="_blank" rel="noopener noreferrer" className="block text-sm text-text-light hover:text-terra transition-colors">Notre engagement RSE</a>
                 <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Certifications & Audits</a>
                 <a href="https://eve-and-co.com/pages/presse" target="_blank" rel="noopener noreferrer" className="block text-sm text-text-light hover:text-terra transition-colors">Presse & Média</a>
                 <a href="mailto:mathys@eve-and-co.com" className="block text-sm text-text-light hover:text-terra transition-colors">Contact</a>
