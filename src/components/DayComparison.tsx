@@ -1,102 +1,90 @@
 "use client";
 
-import { useState } from "react";
-
 const WITHOUT = [
-  { time: "7h30", icon: "😰", title: "Le stress du matin", desc: "Verifier qu'on a des protections dans son sac. En racheter en urgence si le paquet est vide." },
-  { time: "9h00", icon: "🏢", title: "Arrivee au bureau", desc: "Cacher discretement une protection dans sa poche pour aller aux toilettes. Esperer que personne ne remarque." },
-  { time: "11h00", icon: "⏰", title: "La montre tourne", desc: "S'inquieter de fuites potentielles. Aller se changer toutes les 3-4 heures. Inconfort constant." },
-  { time: "13h00", icon: "🚶‍♀️", title: "La pause dej", desc: "Passer a la pharmacie acheter des protections en plus. 5€ de plus dans le budget du mois." },
-  { time: "16h00", icon: "😣", title: "L'apres-midi difficile", desc: "Sensation d'humidite, irritations liees aux matieres synthetiques et produits chimiques." },
-  { time: "18h00", icon: "🗑️", title: "Fin de journee", desc: "Jeter 4-5 protections a la poubelle. Autant de plastique qui mettra 500 ans a se decomposer." },
+  { time: "07:30", event: "Stress : est-ce que j'ai assez de protections ?", mood: 1 },
+  { time: "09:00", event: "Angoisse discrète aux toilettes", mood: 2 },
+  { time: "11:00", event: "Inconfort et irritations, faut changer", mood: 1 },
+  { time: "13:00", event: "Pharmacie d'urgence pendant la pause déjeuner", mood: 2 },
+  { time: "15:00", event: "Impossible de se concentrer, distraction permanente", mood: 1 },
+  { time: "17:00", event: "4 protections à la poubelle — culpabilité", mood: 1 },
 ];
 
 const WITH = [
-  { time: "7h30", icon: "😊", title: "Matin tranquille", desc: "Enfiler sa culotte EVE & CO comme n'importe quel sous-vetement. C'est tout. C'est pret." },
-  { time: "9h00", icon: "💼", title: "Arrivee au bureau", desc: "Rien a transporter, rien a cacher. On s'assoit, on travaille, on oublie qu'on a ses regles." },
-  { time: "11h00", icon: "✨", title: "Confort continu", desc: "Absorption jusqu'a 12h. Zero fuite, zero odeur. Le coton bio respire, pas d'irritation." },
-  { time: "13h00", icon: "🥗", title: "Pause dej sereine", desc: "On profite de sa pause sans penser a rien. Pas d'achat de derniere minute, pas de stress." },
-  { time: "16h00", icon: "🚀", title: "L'apres-midi productive", desc: "Concentration maximale. Le confort est total, le tissu reste sec et doux toute la journee." },
-  { time: "18h00", icon: "🌱", title: "Fin de journee verte", desc: "Zero dechet produit. La culotte passe en machine ce soir et sera prete pour 300+ utilisations." },
+  { time: "07:30", event: "On enfile sa culotte. Point. Et c'est parti.", mood: 5 },
+  { time: "09:00", event: "Au bureau, on oublie totalement", mood: 5 },
+  { time: "11:00", event: "Confort max, coton bio qui respire, zéro irritation", mood: 5 },
+  { time: "13:00", event: "Pause déj tranquille, rien à prévoir, zéro stress", mood: 5 },
+  { time: "15:00", event: "Concentration totale, zéro distraction, 100% présente", mood: 5 },
+  { time: "17:00", event: "Machine ce soir, prête pour 300 utilisations de plus", mood: 5 },
 ];
 
-export default function DayComparison() {
-  const [showWith, setShowWith] = useState(false);
-  const data = showWith ? WITH : WITHOUT;
-
+function MoodBar({ mood }: { mood: number }) {
+  const width = `${(mood / 5) * 100}%`;
+  const color = mood <= 2 ? "bg-terra" : "bg-sage";
   return (
-    <div>
-      {/* Toggle */}
-      <div className="flex justify-center mb-12">
-        <div className="bg-card-bg rounded-full p-1.5 inline-flex border border-sand">
-          <button
-            onClick={() => setShowWith(false)}
-            className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
-              !showWith
-                ? "bg-navy text-white shadow-lg"
-                : "text-text-light hover:text-navy"
-            }`}
-          >
-            Sans EVE & CO
-          </button>
-          <button
-            onClick={() => setShowWith(true)}
-            className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
-              showWith
-                ? "bg-forest text-white shadow-lg"
-                : "text-text-light hover:text-navy"
-            }`}
-          >
-            Avec EVE & CO ✨
-          </button>
+    <div className="flex-1 h-2 bg-warm-gray rounded-full overflow-hidden">
+      <div className={`h-full ${color} transition-all duration-500 rounded-full`} style={{ width }} />
+    </div>
+  );
+}
+
+export default function DayComparison() {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* SANS */}
+      <div className="bg-terra/5 rounded-3xl p-10 border border-terra/20 hover:border-terra/40 transition-colors duration-300">
+        <div className="flex items-center gap-3 mb-10">
+          <span className="text-2xl">😰</span>
+          <h3 className="text-xl font-bold text-deep">Sans EVE & CO</h3>
         </div>
-      </div>
-
-      {/* Timeline */}
-      <div className="max-w-2xl mx-auto">
-        <div className="space-y-0">
-          {data.map((item, i) => (
-            <div
-              key={`${showWith}-${i}`}
-              className="flex gap-5 group"
-              style={{ animation: `fadeUp 0.5s cubic-bezier(0.16,1,0.3,1) ${i * 0.08}s both` }}
-            >
-              {/* Timeline line */}
-              <div className="flex flex-col items-center shrink-0">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl shrink-0 ${
-                  showWith ? "bg-forest/10" : "bg-blush/30"
-                }`}>
-                  {item.icon}
+        <div className="space-y-8">
+          {WITHOUT.map((item, i) => (
+            <div key={i} className="flex gap-4">
+              <span className="text-xs font-mono font-bold text-terra shrink-0 w-12">{item.time}</span>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm text-deep leading-relaxed font-medium">{item.event}</p>
+                <div className="mt-3 flex items-center gap-3">
+                  <span className="text-xs text-text-light font-semibold">Confort</span>
+                  <MoodBar mood={item.mood} />
+                  <span className="text-xs font-bold text-terra w-4">{item.mood}/5</span>
                 </div>
-                {i < data.length - 1 && (
-                  <div className={`w-px flex-1 min-h-[24px] ${showWith ? "bg-forest/20" : "bg-blush/40"}`} />
-                )}
-              </div>
-
-              {/* Content */}
-              <div className="pb-8">
-                <span className={`text-xs font-bold ${showWith ? "text-forest" : "text-blush"}`}>
-                  {item.time}
-                </span>
-                <h4 className="text-lg font-bold text-navy mt-0.5">{item.title}</h4>
-                <p className="text-sm text-text-light leading-relaxed mt-1">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
+        <div className="mt-10 pt-6 border-t border-terra/20">
+          <p className="text-sm font-semibold text-terra">
+            📊 Bilan : stress, inconfort, ~5€ dépensés, 4 déchets jetés
+          </p>
+        </div>
       </div>
 
-      {/* Bottom summary */}
-      <div className={`mt-8 rounded-2xl p-6 text-center ${showWith ? "bg-forest/5" : "bg-blush/10"}`}>
-        {showWith ? (
-          <p className="text-forest font-semibold">
-            Zero stress. Zero dechet. Zero compromis. C&apos;est ca, une journee avec EVE & CO.
+      {/* AVEC */}
+      <div className="bg-sage/5 rounded-3xl p-10 border border-sage/20 hover:border-sage/40 transition-colors duration-300">
+        <div className="flex items-center gap-3 mb-10">
+          <span className="text-2xl">😌</span>
+          <h3 className="text-xl font-bold text-deep">Avec EVE & CO</h3>
+        </div>
+        <div className="space-y-8">
+          {WITH.map((item, i) => (
+            <div key={i} className="flex gap-4">
+              <span className="text-xs font-mono font-bold text-sage shrink-0 w-12">{item.time}</span>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm text-deep leading-relaxed font-medium">{item.event}</p>
+                <div className="mt-3 flex items-center gap-3">
+                  <span className="text-xs text-text-light font-semibold">Confort</span>
+                  <MoodBar mood={item.mood} />
+                  <span className="text-xs font-bold text-sage w-4">{item.mood}/5</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 pt-6 border-t border-sage/20">
+          <p className="text-sm font-semibold text-sage">
+            ✨ Bilan : sérénité totale, 0€ dépensé, 0 déchet produit
           </p>
-        ) : (
-          <p className="text-navy font-semibold">
-            Stress, inconfort, depenses, dechets. Et ca, c&apos;est chaque mois, pour chaque collaboratrice.
-          </p>
-        )}
+        </div>
       </div>
     </div>
   );

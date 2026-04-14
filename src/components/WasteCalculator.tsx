@@ -2,94 +2,77 @@
 
 import { useState } from "react";
 
+const PRESETS = [
+  { label: "PME", employees: 30, icon: "🏠", desc: "jusqu'à 50" },
+  { label: "ETI", employees: 150, icon: "🏢", desc: "50-200" },
+  { label: "Grand groupe", employees: 500, icon: "🏙️", desc: "200+" },
+];
+
 export default function WasteCalculator() {
-  const [employees, setEmployees] = useState(50);
+  const [selected, setSelected] = useState(1);
+  const employees = PRESETS[selected].employees;
 
-  const protectionsPerYearPerPerson = 240;
-  const weightPerProtection = 0.005; // kg
-  const culottesPerPerson = 5;
-  const culotteLifespan = 5; // years
-  const costDisposablePerYear = 60; // euros
-  const costCulottesTotal = 150; // euros pour 5 culottes
+  const protectionsPerYear = 240;
+  const wastePerProtection = 0.005;
 
-  const totalDisposable5y = employees * protectionsPerYearPerPerson * 5;
-  const wasteAvoided5y = totalDisposable5y * weightPerProtection;
-  const savingsPerPerson5y = (costDisposablePerYear * 5) - costCulottesTotal;
-  const totalSavings5y = employees * savingsPerPerson5y;
-  const co2Saved = wasteAvoided5y * 3.5; // rough estimate kg CO2
+  const disposable5y = employees * protectionsPerYear * 5;
+  const waste5y = disposable5y * wastePerProtection;
+  const savings5y = employees * 150;
+  const co2 = waste5y * 3.5;
+
+  const maxDisposable = 500 * 240 * 5;
+  const maxWaste = maxDisposable * 0.005;
+  const maxSavings = 500 * 150;
+  const maxCo2 = maxWaste * 3.5;
+
+  const bars = [
+    { label: "Protections évitées", value: disposable5y, max: maxDisposable, display: disposable5y.toLocaleString("fr-FR"), color: "bg-terra" },
+    { label: "Déchets évités", value: waste5y, max: maxWaste, display: `${waste5y.toLocaleString("fr-FR", { maximumFractionDigits: 0 })} kg`, color: "bg-sage" },
+    { label: "Économies réalisées", value: savings5y, max: maxSavings, display: `${savings5y.toLocaleString("fr-FR")} €`, color: "bg-terra-light" },
+    { label: "CO₂ économisé", value: co2, max: maxCo2, display: `${co2.toLocaleString("fr-FR", { maximumFractionDigits: 0 })} kg`, color: "bg-sage" },
+  ];
 
   return (
-    <div className="bg-card-bg rounded-3xl p-8 lg:p-12 border border-sand">
-      <div className="text-center mb-10">
-        <h3 className="text-2xl md:text-3xl font-bold text-navy">
-          Calculez votre impact
-        </h3>
-        <p className="mt-2 text-text-light">
-          Deplacez le curseur pour voir ce que ca change
-        </p>
+    <div>
+      {/* Presets */}
+      <div className="grid grid-cols-3 gap-4 mb-16">
+        {PRESETS.map((p, i) => (
+          <button
+            key={i}
+            onClick={() => setSelected(i)}
+            className={`rounded-2xl px-6 py-8 border-2 transition-all duration-300 cursor-pointer ${
+              selected === i
+                ? "border-terra bg-terra/10"
+                : "border-warm-gray hover:border-terra/40 bg-white"
+            }`}
+          >
+            <span className="text-4xl block mb-3">{p.icon}</span>
+            <span className="text-sm font-bold text-deep block">{p.label}</span>
+            <span className="text-xs text-text-light block mt-1">{p.employees} collab.</span>
+          </button>
+        ))}
       </div>
 
-      {/* Slider */}
-      <div className="max-w-md mx-auto mb-12">
-        <label className="block text-sm font-semibold text-navy mb-3 text-center">
-          Nombre de collaboratrices
-        </label>
-        <input
-          type="range"
-          min={5}
-          max={500}
-          step={5}
-          value={employees}
-          onChange={(e) => setEmployees(Number(e.target.value))}
-          className="w-full h-2 bg-sand rounded-full appearance-none cursor-pointer accent-forest"
-        />
-        <div className="mt-3 text-center">
-          <span className="text-5xl font-bold text-forest">{employees}</span>
-          <span className="text-text-light ml-2">collaboratrices</span>
-        </div>
+      {/* Results */}
+      <div className="space-y-10">
+        {bars.map((bar, i) => (
+          <div key={`${selected}-${i}`}>
+            <div className="flex justify-between items-end mb-3">
+              <span className="text-sm font-medium text-text-light">{bar.label}</span>
+              <span className="text-3xl font-bold text-deep">{bar.display}</span>
+            </div>
+            <div className="w-full h-4 bg-warm-gray rounded-full overflow-hidden">
+              <div
+                className={`h-full ${bar.color} bar-animate rounded-full`}
+                style={{ "--bar-width": `${(bar.value / bar.max) * 100}%` } as React.CSSProperties}
+              />
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Results grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-forest/5 rounded-2xl p-6 text-center">
-          <div className="text-3xl md:text-4xl font-bold text-forest">
-            {totalDisposable5y.toLocaleString("fr-FR")}
-          </div>
-          <p className="mt-2 text-xs text-text-light font-medium leading-tight">
-            protections jetables evitees sur 5 ans
-          </p>
-        </div>
-
-        <div className="bg-blush/20 rounded-2xl p-6 text-center">
-          <div className="text-3xl md:text-4xl font-bold text-forest">
-            {wasteAvoided5y.toLocaleString("fr-FR", { maximumFractionDigits: 0 })} kg
-          </div>
-          <p className="mt-2 text-xs text-text-light font-medium leading-tight">
-            de dechets en moins
-          </p>
-        </div>
-
-        <div className="bg-sand rounded-2xl p-6 text-center">
-          <div className="text-3xl md:text-4xl font-bold text-forest">
-            {totalSavings5y.toLocaleString("fr-FR")} &euro;
-          </div>
-          <p className="mt-2 text-xs text-text-light font-medium leading-tight">
-            d&apos;economies totales sur 5 ans
-          </p>
-        </div>
-
-        <div className="bg-forest/5 rounded-2xl p-6 text-center">
-          <div className="text-3xl md:text-4xl font-bold text-forest">
-            {co2Saved.toLocaleString("fr-FR", { maximumFractionDigits: 0 })} kg
-          </div>
-          <p className="mt-2 text-xs text-text-light font-medium leading-tight">
-            de CO2 economise
-          </p>
-        </div>
-      </div>
-
-      <p className="mt-6 text-center text-xs text-text-light">
-        Base : {protectionsPerYearPerPerson} protections/an/personne &bull; Duree de vie culotte : {culotteLifespan} ans &bull; {culottesPerPerson} culottes par collaboratrice
+      <p className="mt-10 text-xs text-text-light text-center">
+        📊 Projection sur 5 ans (240 protections/an) — Données moyennes
       </p>
     </div>
   );

@@ -6,134 +6,106 @@ import ContactForm from "@/components/ContactForm";
 export default function Home() {
   return (
     <>
-      {/* ═══════════════ HERO ═══════════════ */}
-      <section className="relative min-h-[95vh] flex items-center overflow-hidden">
-        {/* Soft gradient bg */}
-        <div className="absolute inset-0 bg-gradient-to-br from-soft-white via-sand-light to-blush-light/30 -z-10" />
+      {/* ═══════ HERO ═══════ */}
+      <section className="min-h-[100vh] flex items-center relative overflow-hidden pt-32">
+        <div className="absolute top-20 -right-32 w-96 h-96 bg-cream rounded-full opacity-40 blur-3xl" />
+        <div className="absolute bottom-0 -left-32 w-72 h-72 bg-sage/10 rounded-full opacity-60 blur-3xl" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-          <div className="max-w-4xl">
-            <div className="hero-animate hero-animate-delay-1 flex gap-3 flex-wrap mb-8">
-              <span className="inline-flex items-center gap-1.5 bg-forest/10 text-forest text-xs font-bold px-4 py-2 rounded-full">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="2"/><path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                Certifie B Corp
-              </span>
-              <span className="inline-flex items-center bg-clay/15 text-clay text-xs font-bold px-4 py-2 rounded-full">
-                Made in France
-              </span>
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 py-20 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="hero-animate hero-animate-delay-1 flex items-center gap-3 mb-8 flex-wrap">
+                <span className="text-xs font-bold uppercase tracking-widest text-terra bg-cream px-4 py-2 rounded-full">✨ B Corp Certifiée</span>
+                <span className="text-xs font-semibold text-text-light">Fabriquée en France</span>
+              </div>
+
+              <h1 className="hero-animate hero-animate-delay-2 text-4xl md:text-5xl lg:text-6xl font-bold text-deep leading-tight tracking-tight">
+                Le confort menstruel,<br />
+                <span className="text-terra">enfin normal.</span>
+              </h1>
+
+              <p className="hero-animate hero-animate-delay-3 mt-6 text-lg text-text-light leading-relaxed max-w-lg">
+                Dotez votre équipe de culottes menstruelles durables. Une vraie action RSE, des économies concrètes, et un confort sans compromis.
+              </p>
+
+              <div className="hero-animate hero-animate-delay-4 mt-10 flex gap-4 flex-wrap">
+                <a href="#devis" className="bg-terra text-white font-semibold px-8 py-4 rounded-full hover:bg-terra-light transition-all duration-300 hover:shadow-xl">
+                  Obtenir un devis gratuit
+                </a>
+                <a href="#impact" className="text-terra font-semibold px-8 py-4 rounded-full border-2 border-terra hover:bg-terra/5 transition-all duration-300">
+                  Voir l&apos;impact →
+                </a>
+              </div>
             </div>
 
-            <h1 className="hero-animate hero-animate-delay-2 text-4xl md:text-6xl lg:text-7xl font-bold text-navy leading-[1.08] tracking-tight">
-              Vos collaboratrices meritent mieux que du{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10">jetable</span>
-                <span className="absolute bottom-1 left-0 w-full h-3 bg-blush/60 -z-0 rounded-sm" />
-              </span>
-            </h1>
-
-            <p className="hero-animate hero-animate-delay-3 mt-8 text-lg md:text-xl text-text-light leading-relaxed max-w-2xl">
-              EVE & CO equipe votre entreprise en culottes menstruelles durables. Un vrai geste RSE, des economies concretes, et des equipes qui disent merci.
-            </p>
-
-            <div className="hero-animate hero-animate-delay-4 mt-10 flex flex-col sm:flex-row gap-4 items-start">
-              <a href="#devis" className="bg-forest text-white font-semibold px-8 py-4 rounded-full hover:bg-forest-light hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-sm">
-                Demander un devis gratuit →
-              </a>
-              <a href="#calculateur" className="border-2 border-navy text-navy font-semibold px-8 py-4 rounded-full hover:bg-navy hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">
-                Calculer mon impact
-              </a>
-            </div>
-
-            {/* Trust bar */}
-            <div className="hero-animate hero-animate-delay-4 mt-14 flex items-center gap-8 text-sm text-text-light">
-              <div className="flex items-center gap-2">
-                <span className="text-forest font-bold text-lg">200+</span> entreprises equipees
-              </div>
-              <div className="w-px h-5 bg-sand" />
-              <div className="flex items-center gap-2">
-                <span className="text-forest font-bold text-lg">15K</span> collaboratrices
-              </div>
-              <div className="hidden sm:block w-px h-5 bg-sand" />
-              <div className="hidden sm:flex items-center gap-2">
-                <span className="text-forest font-bold text-lg">4.9/5</span> satisfaction
+            {/* Right side — animated stat */}
+            <div className="hero-animate hero-animate-delay-4 hidden lg:flex items-center justify-center">
+              <div className="bg-cream rounded-3xl p-12 text-center">
+                <div className="text-7xl font-bold text-terra mb-2">45</div>
+                <p className="text-2xl font-bold text-deep mb-4">milliards</p>
+                <p className="text-text-light leading-relaxed">
+                  de protections jetées chaque année. Nous, on dit stop. 🛑
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════ PRODUITS ═══════════════ */}
-      <section id="produits" className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* ═══════ STATS BAR ═══════ */}
+      <section className="py-12 bg-cream">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { number: "200+", label: "entreprises" },
+              { number: "15K+", label: "collaboratrices équipées" },
+              { number: "97%", label: "taux d'adoption" },
+              { number: "4.9/5", label: "satisfaction" },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-terra">{stat.number}</div>
+                <p className="text-xs text-text-light mt-2 font-medium">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ POURQUOI EVE & CO ═══════ */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="text-forest font-bold text-sm uppercase tracking-wider">Nos produits</span>
-              <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight">
-                3 modeles, 0 compromis
+            <div className="text-center mb-20">
+              <span className="text-sm font-bold text-terra uppercase tracking-widest">Pourquoi EVE & CO</span>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+                Trois raisons <span className="text-terra">évidentes</span>
               </h2>
-              <p className="mt-4 text-text-light text-lg">
-                Coton bio, zero substance controverse, confort 12h. Vos collaboratrices choisissent leur modele.
-              </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "La Quotidienne",
-                tagline: "Le basique parfait",
-                absorption: "3 tampons",
-                color: "bg-sand-light",
-                accent: "bg-clay/15 text-clay",
-                features: ["Coton bio GOTS", "Du XS au 3XL", "300+ lavages", "Confort toute la journee"],
-                best: false,
+                emoji: "🌱",
+                title: "Durable par nature",
+                desc: "Coton bio certifié GOTS, zéro substance controversée, fabriquées en France. 300+ lavages garantis.",
               },
               {
-                name: "L'Active",
-                tagline: "Pour celles qui bougent",
-                absorption: "4 tampons",
-                color: "bg-forest/5",
-                accent: "bg-forest/10 text-forest",
-                features: ["Tissu technique respirant", "Maintien sportif", "Sechage rapide", "Anti-odeur naturel"],
-                best: true,
+                emoji: "💚",
+                title: "ROI visible",
+                desc: "150€ par personne sur 5 ans vs 300€ en jetables. Le confort profitable, c'est possible.",
               },
               {
-                name: "La Serenite",
-                tagline: "Tranquillite absolue",
-                absorption: "5 tampons",
-                color: "bg-blush-light/40",
-                accent: "bg-blush text-navy",
-                features: ["Absorption maximale", "Technologie anti-fuites", "Coupe enveloppante", "Ultra-douce"],
-                best: false,
+                emoji: "🎯",
+                title: "RSE mesurable",
+                desc: "Rapports d'impact chiffrés. Intégrable dans votre DPEF. Vrai impact, vraies chiffres.",
               },
-            ].map((product, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
-                <div className={`relative bg-card-bg rounded-3xl overflow-hidden border border-sand transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${product.best ? "ring-2 ring-forest" : ""}`}>
-                  {product.best && (
-                    <div className="bg-forest text-white text-xs font-bold text-center py-1.5 tracking-wider uppercase">
-                      Le plus populaire
-                    </div>
-                  )}
-                  <div className={`${product.color} aspect-[4/3] flex flex-col items-center justify-center p-6`}>
-                    <span className={`text-xs font-bold px-3 py-1 rounded-full mb-3 ${product.accent}`}>
-                      Absorption : {product.absorption}
-                    </span>
-                    <span className="text-6xl mb-2">🩲</span>
-                  </div>
-                  <div className="p-6 lg:p-8">
-                    <h3 className="text-xl font-bold text-navy">{product.name}</h3>
-                    <p className="text-text-light text-sm mt-1 mb-5">{product.tagline}</p>
-                    <ul className="space-y-2.5">
-                      {product.features.map((f, j) => (
-                        <li key={j} className="flex items-center gap-2.5 text-sm text-navy">
-                          <span className="w-5 h-5 bg-forest/10 rounded-full flex items-center justify-center shrink-0">
-                            <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M4 8l3 3 5-5" stroke="#2D5A3D" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                          </span>
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+            ].map((item, i) => (
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
+                <div className="bg-card rounded-3xl p-10 border border-warm-gray hover:border-terra transition-colors duration-300">
+                  <div className="text-6xl mb-4">{item.emoji}</div>
+                  <h3 className="text-2xl font-bold text-deep mb-3">{item.title}</h3>
+                  <p className="text-text-light leading-relaxed">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -141,36 +113,86 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════ CALCULATEUR ═══════════════ */}
-      <section id="calculateur" className="py-20 lg:py-28 bg-sand-light">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      {/* ═══════ PRODUITS ═══════ */}
+      <section id="produits" className="py-24 lg:py-32 bg-cream/40">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <span className="text-forest font-bold text-sm uppercase tracking-wider">Calculateur d&apos;impact</span>
-              <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight">
-                Combien de dechets votre entreprise peut eviter ?
+            <div className="text-center mb-20">
+              <span className="text-sm font-bold text-terra uppercase tracking-widest">Notre gamme</span>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+                Un modèle pour chaque femme
               </h2>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal animation="scaleIn">
-            <WasteCalculator />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                emoji: "👔",
+                name: "La Quotidienne",
+                absorption: "3 tampons • 8h",
+                desc: "Le classique incontournable. Bureau, réunions, routine. Parfait pour les flux légers à modérés.",
+                color: "bg-cream",
+              },
+              {
+                emoji: "⚡",
+                name: "L'Active",
+                absorption: "4 tampons • 10h",
+                desc: "Réunion, escaliers, vélo-taf, sport. Maintien sportif et sechage rapide. Flux modérés.",
+                color: "bg-terra/5",
+              },
+              {
+                emoji: "🌙",
+                name: "La Sérénité",
+                absorption: "5 tampons • 12h",
+                desc: "La tranquillité absolue du matin au soir. Flux abondants, protection maximale, ultra-douce.",
+                color: "bg-sage/5",
+              },
+            ].map((product, i) => (
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
+                <div className={`${product.color} rounded-3xl p-10 border border-warm-gray hover:shadow-xl transition-all duration-300`}>
+                  <div className="text-5xl mb-4">{product.emoji}</div>
+                  <h3 className="text-2xl font-bold text-deep mb-2">{product.name}</h3>
+                  <span className="inline-block text-xs font-bold text-terra bg-white px-3 py-1 rounded-full mb-4">
+                    {product.absorption}
+                  </span>
+                  <p className="text-text-light leading-relaxed">{product.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ CALCULATEUR ═══════ */}
+      <section id="impact" className="py-24 lg:py-32">
+        <div className="max-w-[1100px] mx-auto px-6 lg:px-10">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="text-sm font-bold text-terra uppercase tracking-widest">Calculez votre impact</span>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+                Votre entreprise, quel impact en 5 ans ?
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fadeUp">
+            <div className="bg-card rounded-3xl p-12 border border-warm-gray">
+              <WasteCalculator />
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ═══════════════ COMPARATIF ═══════════════ */}
-      <section id="comparatif" className="py-20 lg:py-28">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      {/* ═══════ COMPARATIF JOURNEE ═══════ */}
+      <section id="quotidien" className="py-24 lg:py-32 bg-cream/40">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <span className="text-forest font-bold text-sm uppercase tracking-wider">Comparatif</span>
-              <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight">
-                Une journee type au bureau
+            <div className="text-center mb-16">
+              <span className="text-sm font-bold text-terra uppercase tracking-widest">Le quotidien</span>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+                Une journée, deux réalités
               </h2>
-              <p className="mt-4 text-text-light text-lg max-w-xl mx-auto">
-                Cliquez pour comparer la journee d&apos;une collaboratrice avec et sans EVE & CO
-              </p>
             </div>
           </ScrollReveal>
 
@@ -180,62 +202,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════ ARGUMENTS ═══════════════ */}
-      <section id="arguments" className="py-20 lg:py-28 bg-navy text-white rounded-[2rem] mx-4 lg:mx-8">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* ═══════ 6 ARGUMENTS ═══════ */}
+      <section id="preuves" className="py-24 lg:py-32">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <span className="text-blush font-bold text-sm uppercase tracking-wider">Les arguments qui comptent</span>
-              <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                Convainquez votre direction en 5 points
+              <span className="text-sm font-bold text-terra uppercase tracking-widest">Les preuves</span>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+                6 arguments pour convaincre votre CODIR
               </h2>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                number: "01",
-                title: "RSE mesurable et verifiable",
-                desc: "Chaque kit deploye genere des donnees d'impact (dechets evites, CO2 economise). Integrable directement dans votre rapport RSE annuel.",
-                accent: "text-blush",
+                num: "01",
+                title: "RSE quantifiable",
+                desc: "Rapport d'impact chiffré. Tonnes de déchets évités, CO2 économisé. Intégrable dans votre DPEF.",
               },
               {
-                number: "02",
-                title: "ROI positif des le 1er semestre",
-                desc: "Le cout d'un kit EVE & CO est amorti en 6-8 mois vs. les protections jetables. Sur 5 ans, l'economie est de 300€ par collaboratrice.",
-                accent: "text-blush",
+                num: "02",
+                title: "ROI en 6 mois",
+                desc: "150€/personne sur 5 ans vs 300€ en jetables. Le calcul parle de lui-même.",
               },
               {
-                number: "03",
-                title: "Reduction de l'absenteisme",
-                desc: "28% des femmes disent avoir deja manque le travail a cause de leurs regles. Le confort menstruel reduit ce chiffre concretement.",
-                accent: "text-blush",
+                num: "03",
+                title: "-28% d'absentéisme",
+                desc: "28% des femmes manquent le travail à cause de règles. Le confort, c'est la solution.",
               },
               {
-                number: "04",
-                title: "Marque employeur renforcee",
-                desc: "73% des candidats preferent une entreprise engagee socialement. EVE & CO est un avantage concret a mettre en avant en entretien.",
-                accent: "text-blush",
+                num: "04",
+                title: "Attractivité employeur",
+                desc: "73% des talents choisissent une entreprise engagée. C'est une vraie différence.",
               },
               {
-                number: "05",
-                title: "Certification B Corp",
-                desc: "Nos produits sont audites par un organisme independant. Gouvernance, environnement, impact social — tout est verifie et certifie.",
-                accent: "text-blush",
+                num: "05",
+                title: "B Corp auditée",
+                desc: "Pas d'auto-déclaration. Vérification indépendante de notre gouvernance et impact social.",
               },
               {
-                number: "06",
-                title: "Zero charge logistique",
-                desc: "On gere tout : plateforme de commande individuelle, livraison discrete, supports de communication interne. Vous n'avez rien a faire.",
-                accent: "text-blush",
+                num: "06",
+                title: "Zéro logistique",
+                desc: "Commande en ligne, livraison discrète, supports de com fournis. Votre seul effort : dire oui.",
               },
             ].map((arg, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
-                <div className="bg-white/5 backdrop-blur rounded-2xl p-8 h-full border border-white/10 transition-all duration-300 hover:bg-white/10">
-                  <span className={`text-3xl font-bold ${arg.accent}`}>{arg.number}</span>
-                  <h3 className="text-lg font-bold text-white mt-3 mb-2">{arg.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">{arg.desc}</p>
+                <div className="bg-card rounded-3xl p-10 border border-warm-gray hover:border-terra transition-colors duration-300">
+                  <div className="text-5xl font-bold text-terra/30 mb-2">{arg.num}</div>
+                  <h3 className="text-xl font-bold text-deep mb-3">{arg.title}</h3>
+                  <p className="text-text-light leading-relaxed">{arg.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -243,48 +259,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════ TEMOIGNAGES ═══════════════ */}
-      <section className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* ═══════ TEMOIGNAGES ═══════ */}
+      <section className="py-24 lg:py-32 bg-cream/40">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <span className="text-forest font-bold text-sm uppercase tracking-wider">Temoignages</span>
-              <h2 className="mt-4 text-3xl md:text-4xl font-bold text-navy">
-                Ce que disent nos clients
-              </h2>
+              <span className="text-sm font-bold text-terra uppercase tracking-widest">Témoignages</span>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep">Elles l'ont fait. 💪</h2>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "Le deploiement a pris 2 semaines. Le taux d'adoption a atteint 97% en un mois. Notre meilleure initiative bien-etre, de loin.",
+                quote: "97% d'adoption en un mois. Notre meilleure initiative bien-être, de très loin.",
                 name: "Marie Dupont",
-                role: "DRH — NaturaCorp (120 salariees)",
-                bg: "bg-sand-light",
+                title: "DRH",
+                company: "NaturaCorp (120 collab.)",
               },
               {
-                quote: "On cherchait un levier RSE concret, pas du greenwashing. EVE & CO nous fournit un rapport d'impact chiffre qu'on met directement dans notre bilan.",
+                quote: "Un levier RSE concret avec des chiffres réels. Exactement ce qu'on cherchait.",
                 name: "Pierre Martin",
-                role: "Directeur RSE — GreenTech (450 salariees)",
-                bg: "bg-forest/5",
+                title: "Directeur RSE",
+                company: "GreenTech (450 collab.)",
               },
               {
-                quote: "Nos collaboratrices nous remercient. C'est rare pour une decision RH. Ca change l'ambiance et ca montre qu'on prend soin de tout le monde.",
+                quote: "10 jours de déploiement. Des mails de remerciement qu'on n'attendait pas.",
                 name: "Sophie Laurent",
-                role: "Office Manager — Studio Nantes (35 salariees)",
-                bg: "bg-blush-light/40",
+                title: "Office Manager",
+                company: "Studio Nantes (35 collab.)",
               },
             ].map((t, i) => (
-              <ScrollReveal key={i} animation="scaleIn" delay={i * 120}>
-                <div className={`${t.bg} rounded-3xl p-8 lg:p-10 h-full flex flex-col`}>
-                  <svg width="32" height="24" viewBox="0 0 32 24" fill="none" className="text-forest/20 mb-4 shrink-0">
-                    <path d="M0 24V14.4C0 6.08 4.48 1.28 13.44 0l1.28 4.16C9.28 5.44 7.04 8.64 6.72 12H12.8V24H0zm18.56 0V14.4c0-8.32 4.48-13.12 13.44-14.4l1.28 4.16C27.84 5.44 25.6 8.64 25.28 12h6.08V24H18.56z" fill="currentColor"/>
-                  </svg>
-                  <p className="text-navy leading-relaxed mb-6 flex-1">{t.quote}</p>
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
+                <div className="bg-card rounded-3xl p-10 border border-warm-gray">
+                  <p className="text-deep text-lg leading-relaxed italic mb-6">
+                    "{t.quote}"
+                  </p>
                   <div>
-                    <p className="font-bold text-navy text-sm">{t.name}</p>
-                    <p className="text-text-light text-xs mt-0.5">{t.role}</p>
+                    <p className="font-bold text-deep text-sm">{t.name}</p>
+                    <p className="text-text-light text-xs mt-1">{t.title}</p>
+                    <p className="text-terra text-xs font-bold mt-2">{t.company}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -293,42 +307,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════ DEVIS ═══════════════ */}
-      <section id="devis" className="py-20 lg:py-28 bg-sand-light">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <span className="text-forest font-bold text-sm uppercase tracking-wider">Devis gratuit</span>
-              <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight">
-                Pret a equiper vos equipes ?
-              </h2>
-              <p className="mt-4 text-text-light text-lg max-w-xl mx-auto">
-                Remplissez ce formulaire et recevez un devis personnalise en moins de 48h. Sans engagement.
-              </p>
-            </div>
-          </ScrollReveal>
+      {/* ═══════ CTA DEVIS ═══════ */}
+      <section id="devis" className="py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-terra/5 via-transparent to-sage/5" />
 
-          <ScrollReveal animation="fadeUp">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-              <div className="lg:col-span-2 bg-card-bg rounded-3xl p-8 lg:p-10 border border-sand">
-                <ContactForm />
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 relative z-10">
+          <ScrollReveal>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              {/* Left — copy */}
+              <div>
+                <span className="text-sm font-bold text-terra uppercase tracking-widest">Devis gratuit</span>
+                <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+                  On y va ?
+                </h2>
+                <p className="mt-6 text-lg text-text-light leading-relaxed">
+                  Remplissez le formulaire. Notre équipe vous contacte dans les 48h avec un devis adapté à votre structure.
+                </p>
+
+                <div className="mt-12 space-y-5">
+                  {[
+                    { icon: "✓", label: "Réponse en 48h", desc: "Garantie." },
+                    { icon: "✓", label: "Échantillons offerts", desc: "Testez avant de décider." },
+                    { icon: "✓", label: "Zéro engagement", desc: "Si ça matche pas, pas de souci." },
+                    { icon: "✓", label: "Accompagnement total", desc: "On gère tout." },
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4 items-start">
+                      <span className="text-terra font-bold text-lg mt-0.5">{item.icon}</span>
+                      <div>
+                        <p className="font-bold text-deep">{item.label}</p>
+                        <p className="text-text-light text-sm">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-12 pt-8 border-t border-warm-gray">
+                  <p className="text-xs text-text-light uppercase tracking-widest font-bold mb-4">Contact direct</p>
+                  <p className="text-base font-semibold text-deep mb-2">hello@eveandco.fr</p>
+                  <p className="text-base font-semibold text-deep">+33 1 23 45 67 89</p>
+                </div>
               </div>
 
-              <div className="space-y-4">
-                {[
-                  { icon: "⚡", title: "Reponse en 48h", desc: "On est rapides et on tient nos delais." },
-                  { icon: "🎁", title: "Echantillons gratuits", desc: "Testez avant de vous engager." },
-                  { icon: "📊", title: "Rapport d'impact", desc: "Donnees RSE clef en main." },
-                  { icon: "🤝", title: "Interlocuteur dedie", desc: "Un humain, pas un bot." },
-                ].map((item, i) => (
-                  <div key={i} className="bg-card-bg rounded-2xl p-5 flex gap-4 items-start border border-sand">
-                    <span className="text-xl shrink-0">{item.icon}</span>
-                    <div>
-                      <h4 className="font-bold text-navy text-sm">{item.title}</h4>
-                      <p className="text-xs text-text-light mt-0.5">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
+              {/* Right — form */}
+              <div className="bg-card rounded-3xl p-12 border border-warm-gray">
+                <ContactForm />
               </div>
             </div>
           </ScrollReveal>
