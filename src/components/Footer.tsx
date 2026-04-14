@@ -29,20 +29,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Entreprise */}
-            <div>
-              <p className="text-xs font-bold text-terra uppercase tracking-widest mb-8">Entreprise</p>
-              <div className="bg-warm-gray/20 rounded-2xl p-8 space-y-6">
-                <img src="/images/bcorp-badge.svg" alt="B Corp Certified" className="w-32 h-32 mx-auto" />
-                <div className="text-center">
-                  <p className="text-sm font-bold text-deep mb-1">Certifiée B Corp</p>
-                  <p className="text-xs text-text-light mb-4">Audit externe annuel</p>
-                  <p className="text-xs text-text-light leading-relaxed">
-                    EVE AND CO respecte des normes sociales et environnementales élevées, vérifiées par audit indépendant chaque année.
-                  </p>
-                </div>
-              </div>
-            </div>
 
             {/* Contact & Socials */}
             <div>

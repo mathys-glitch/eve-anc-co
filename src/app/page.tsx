@@ -178,22 +178,6 @@ export default function Home() {
             ))}
           </div>
 
-          <ScrollReveal animation="fadeUp" className="mt-16">
-            <div className="bg-white rounded-3xl p-12 border-2 border-warm-gray text-center space-y-6">
-              <div className="flex justify-center">
-                <img src="/images/bcorp-badge.svg" alt="B Corp Certified" className="w-32 h-32" />
-              </div>
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-terra uppercase tracking-widest">Certification & Engagement</p>
-                <p className="text-lg font-bold text-deep">
-                  Marque française N°1 • Certifiée B Corp • Coton bio GOTS • Fabriquée en France
-                </p>
-              </div>
-              <p className="text-sm text-text-light leading-relaxed">
-                Audit indépendant. Impact mesurable et vérifiable. Zéro greenwashing.
-              </p>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
