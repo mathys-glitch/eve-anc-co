@@ -32,17 +32,15 @@ export default function Footer() {
             {/* Entreprise */}
             <div>
               <p className="text-xs font-bold text-terra uppercase tracking-widest mb-8">Entreprise</p>
-              <div className="bg-warm-gray/20 rounded-2xl p-6">
-                <div className="flex items-start gap-4 mb-4">
-                  <img src="/images/bcrop-logo.webp" alt="B Corp Certified" className="w-16 h-16 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm font-bold text-deep">Certifiée B Corp</p>
-                    <p className="text-xs text-text-light">Audit externe annuel</p>
-                  </div>
+              <div className="bg-warm-gray/20 rounded-2xl p-8 space-y-6">
+                <img src="/images/bcrop-logo.webp" alt="B Corp Certified" className="w-24 h-24 mx-auto" />
+                <div className="text-center">
+                  <p className="text-sm font-bold text-deep mb-1">Certifiée B Corp</p>
+                  <p className="text-xs text-text-light mb-4">Audit externe annuel</p>
+                  <p className="text-xs text-text-light leading-relaxed">
+                    EVE AND CO respecte des normes sociales et environnementales élevées, vérifiées par audit indépendant chaque année.
+                  </p>
                 </div>
-                <p className="text-xs text-text-light leading-relaxed">
-                  EVE AND CO respecte des normes sociales et environnementales élevées, vérifiées par audit indépendant chaque année.
-                </p>
               </div>
             </div>
 
