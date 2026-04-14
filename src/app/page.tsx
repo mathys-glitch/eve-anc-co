@@ -139,7 +139,7 @@ export default function Home() {
                 desc: "Bureau, réunions, routine. Le classique parfait pour les flux légers à modérés. Discrète et confortable toute la journée.",
                 features: ["Coton bio GOTS", "XS au 3XL", "300+ lavages", "Sechage rapide"],
                 colors: ["rose", "noir", "beige"],
-                image: "/images/products/quotidienne.webp",
+                image: "/images/La culotte menstruelle.webp",
               },
               {
                 id: "active",
@@ -149,7 +149,7 @@ export default function Home() {
                 desc: "Réunion, escaliers, vélo-taf, sport. Maintien sportif renforcé et séchage ultra-rapide. Flux modérés sans compromis.",
                 features: ["Tissu respirant", "Maintien sportif", "Anti-fuites", "Sechage express"],
                 colors: ["rose", "bleu", "noir"],
-                image: "/images/products/active.webp",
+                image: "/images/Le shorty menstruel.webp",
               },
               {
                 id: "serenite",
@@ -159,7 +159,7 @@ export default function Home() {
                 desc: "Flux abondants, longues journées, nuits tranquilles. La tranquillité absolue du matin au soir. Ultra-douce et ultra-protégée.",
                 features: ["Absorption max", "Anti-fuites garanties", "Ultra-douce", "Nuit tranquille"],
                 colors: ["rose", "noir", "prune"],
-                image: "/images/products/serenite.webp",
+                image: "/images/Le tanga menstruel.webp",
               },
             ].map((product, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
