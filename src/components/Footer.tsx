@@ -74,8 +74,30 @@ export default function Footer() {
 
           {/* Bottom Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end pt-8">
-            {/* Left: Contact */}
+            {/* Left: Payment + Contact */}
             <div>
+              {/* Payment Icons */}
+              <div className="flex items-center gap-2 mb-4">
+                <div className="bg-[#1A1F71] text-white text-[7px] font-bold px-2 py-1.5 rounded leading-none">AMEX</div>
+                <div className="bg-white border border-gray-200 rounded px-1.5 py-1">
+                  <svg width="28" height="12" viewBox="0 0 28 12" fill="none"><path d="M7.5 0.5v11h3v-11h-3z" fill="#000"/><path d="M11 6a5.5 5.5 0 00-3.5-5.13v10.26A5.5 5.5 0 0011 6z" fill="#000"/><circle cx="18" cy="6" r="5.5" fill="none" stroke="#000" strokeWidth="0.5"/></svg>
+                </div>
+                <div className="bg-white border border-gray-200 rounded px-2 py-1">
+                  <span className="text-[9px] font-semibold text-gray-600">G Pay</span>
+                </div>
+                <div className="w-8 h-5 bg-white border border-gray-200 rounded flex items-center justify-center overflow-hidden">
+                  <svg width="20" height="14" viewBox="0 0 32 20"><circle cx="11" cy="10" r="9" fill="#EB001B"/><circle cx="21" cy="10" r="9" fill="#F79E1B"/><path d="M16 3a9 9 0 000 14 9 9 0 000-14z" fill="#FF5F00"/></svg>
+                </div>
+                <div className="bg-white border border-gray-200 rounded px-1.5 py-1">
+                  <span className="text-[8px] font-bold text-[#5C2D82]">bancontact</span>
+                </div>
+                <div className="bg-white border border-gray-200 rounded px-1.5 py-1">
+                  <span className="text-[9px] font-bold text-[#003087]">Pay</span><span className="text-[9px] font-bold text-[#009CDE]">Pal</span>
+                </div>
+                <div className="bg-white border border-gray-200 rounded px-1.5 py-1">
+                  <span className="text-[9px] font-bold text-[#1A1F71]">VISA</span>
+                </div>
+              </div>
               <p className="text-sm text-deep">24h/24 7j/7 : mathys@eve-and-co.com</p>
             </div>
 
