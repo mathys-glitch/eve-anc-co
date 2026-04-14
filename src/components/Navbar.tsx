@@ -10,7 +10,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-warm-gray/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F4F1EE] backdrop-blur-lg border-b border-warm-gray/30">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[72px]">
         <a href="#" className="text-deep font-bold text-xl tracking-tight">
           EVE AND CO
