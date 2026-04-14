@@ -13,7 +13,8 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-terra/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-sage/5 rounded-full blur-3xl" />
 
-        <div className="max-w-6xl mx-auto px-6 lg:px-10 py-32 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-3xl">
             {/* Badge */}
             <div className="hero-animate hero-animate-delay-1 inline-flex items-center gap-2 mb-8 px-4 py-2 bg-cream rounded-full border border-warm-gray">
@@ -45,7 +46,7 @@ export default function Home() {
             </div>
 
             {/* Trust indicators */}
-            <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 mt-20 pt-20 border-t border-warm-gray">
+            <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-warm-gray">
               {[
                 { stat: "Certifié", label: "B Corp" },
                 { stat: "300K+", label: "Utilisatrices" },
@@ -58,11 +59,46 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* Right side - Certifications & Badges */}
+          <div className="hero-animate hero-animate-delay-4 hidden lg:flex flex-col gap-6 h-full justify-center">
+            <div className="space-y-4">
+              {[
+                { icon: "✓", label: "B Corp Certifiée", color: "bg-terra/10 text-terra" },
+                { icon: "🌱", label: "Coton Bio GOTS", color: "bg-sage/10 text-sage" },
+                { icon: "🇫🇷", label: "Marque Française", color: "bg-terra/5 text-deep" },
+                { icon: "⭐", label: "N°1 en France", color: "bg-terra/10 text-terra" },
+              ].map((badge, i) => (
+                <div
+                  key={i}
+                  className={`${badge.color} rounded-xl p-4 flex items-center gap-3 border border-warm-gray hover:border-terra transition-colors duration-300`}
+                >
+                  <span className="text-2xl">{badge.icon}</span>
+                  <span className="font-semibold text-sm">{badge.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Impact visuel */}
+            <div className="mt-8 pt-8 border-t border-warm-gray space-y-3">
+              <p className="text-xs font-bold text-text-light uppercase tracking-widest">Impact sur 5 ans</p>
+              {[
+                { value: "1 200+", desc: "déchets évités par femme" },
+                { value: "150€", desc: "d'économies par personne" },
+              ].map((item, i) => (
+                <div key={i} className="bg-cream rounded-lg p-3">
+                  <p className="text-lg font-bold text-terra">{item.value}</p>
+                  <p className="text-xs text-text-light">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          </div>
         </div>
       </section>
 
       {/* ═══════ LE CONTEXTE ═══════ */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -123,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ LA RÉPONSE EVE AND CO ═══════ */}
-      <section className="py-24 lg:py-32 bg-gradient-to-br from-white via-cream/20 to-white">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-white via-cream/20 to-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -177,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ CALCULATEUR ═══════ */}
-      <section id="impact" className="py-24 lg:py-32 bg-terra/5">
+      <section id="impact" className="py-16 lg:py-20 bg-terra/5">
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -203,7 +239,7 @@ export default function Home() {
       <ProductShowcase />
 
       {/* ═══════ COMPARAISON QUOTIDIENNE ═══════ */}
-      <section id="quotidien" className="py-24 lg:py-32 bg-cream">
+      <section id="quotidien" className="py-16 lg:py-20 bg-cream">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -221,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ 6 ARGUMENTS CODIR ═══════ */}
-      <section id="preuves" className="py-24 lg:py-32">
+      <section id="preuves" className="py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -280,7 +316,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ TESTIMONIALS ═══════ */}
-      <section className="py-24 lg:py-32 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -328,7 +364,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ CTA FINAL ═══════ */}
-      <section id="devis" className="py-24 lg:py-32 bg-terra">
+      <section id="devis" className="py-16 lg:py-20 bg-terra">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

@@ -10,7 +10,7 @@ export default function ProductShowcase() {
       absorption: "Flux abondant",
       tagline: "La protection au quotidien",
       desc: "La culotte de base, confortable et discrète. Parfaite pour le bureau, les réunions, la routine. Protection fiable et durable pour les flux abondants.",
-      features: ["Coton bio GOTS certifié", "XS au 3XL", "300+ lavages minimum", "Fabrication française", "100% noir", "Confort maximal"],
+      features: ["Coton bio certifié GOTS", "XXS au 5XL", "12H de protection"],
       image: "/images/La culotte menstruelle.webp",
     },
     {
@@ -19,7 +19,7 @@ export default function ProductShowcase() {
       absorption: "Flux abondant",
       tagline: "Pour plus de maintien",
       desc: "Coupe plus cintrée avec maintien renforcé. Idéal pour les réunions, les déplacements, le sport léger. Même protection fiable en flux abondant, avec plus de légèreté.",
-      features: ["Coupe ajustée et maintien", "Coton bio GOTS certifié", "Sechage ultra-rapide", "Respirant", "100% noir", "Design épuré"],
+      features: ["Coton bio certifié GOTS", "XXS au 5XL", "12H de protection"],
       image: "/images/Le shorty menstruel.webp",
     },
     {
@@ -28,13 +28,13 @@ export default function ProductShowcase() {
       absorption: "Flux modéré",
       tagline: "Discrétion et confort",
       desc: "Le minimaliste à porter sous n'importe quoi. Idéal pour les flux modérés, les journées légères. Tellement discret qu'on oublie qu'on le porte.",
-      features: ["Coupe ultra-minimaliste", "Coton bio GOTS certifié", "Imperceptible sous les vêtements", "Anti-fuite malgré la finesse", "100% noir", "Léger et confortable"],
+      features: ["Coton bio certifié GOTS", "XXS au 5XL", "12H de protection"],
       image: "/images/Le tanga menstruel.webp",
     },
   ];
 
   return (
-    <section id="produits" className="py-24 lg:py-32 bg-cream/40">
+    <section id="produits" className="py-16 lg:py-20 bg-cream/40">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <ScrollReveal>
           <div className="text-center mb-20">
