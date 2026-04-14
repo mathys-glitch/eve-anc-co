@@ -2,7 +2,6 @@ import ScrollReveal from "@/components/ScrollReveal";
 import WasteCalculator from "@/components/WasteCalculator";
 import DayComparison from "@/components/DayComparison";
 import ContactForm from "@/components/ContactForm";
-import ProductShowcase from "@/components/ProductShowcase";
 
 export default function Home() {
   return (
@@ -22,15 +21,15 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="hero-animate hero-animate-delay-2 text-5xl md:text-6xl lg:text-7xl font-bold text-deep leading-tight tracking-tight mb-8">
-              Le confort menstruel<br />
-              n&apos;est pas un luxe.<br />
-              C&apos;est un <span className="text-terra">droit.</span>
+            <h1 className="hero-animate hero-animate-delay-2 font-poppins text-5xl md:text-6xl lg:text-7xl font-extrabold text-deep leading-tight tracking-tight mb-8">
+              15€ par personne.<br />
+              <span className="text-terra">Une seule fois.</span><br />
+              <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-light">Votre meilleur ROI CSE</span>
             </h1>
 
             {/* Subheading */}
-            <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12">
-              Offrez à vos collaboratrices une vraie solution. Réduisez l'absentéisme de 28%, multipliez l'impact environnemental, et créez une initiative RSE avec des résultats mesurables. Une seule fois. Pour toujours.
+            <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12 font-poppins">
+              Pendant que Salle de sport coûte 360€/personne/an et Team building 80€, EVE AND CO offre une solution durable: 15€ par collaboratrice, investissement unique. -28% d'absentéisme, 1.2T de déchets évités, 97% d'adoption garantie.
             </p>
 
             {/* CTA */}
@@ -66,12 +65,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Le contexte</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
-                Le meilleur ROI de votre budget CSE
+              <span className="text-xs font-bold text-terra uppercase tracking-widest">Comparaison par utilisateur</span>
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+                Comparez vraiment : coût par collaboratrice
               </h2>
               <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-                Comparé aux initiatives bien-être traditionnelles, EVE AND CO offre la plus forte adoption, la récurrence garantie, et le meilleur impact mesurable.
+                Toutes les initiatives bien-être ne se valent pas. Voici les vrais chiffres, par personne, pour votre prise de décision.
               </p>
             </div>
           </ScrollReveal>
@@ -83,34 +82,34 @@ export default function Home() {
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-warm-gray bg-cream/50">
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">POSTE</th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">COÛT / AN</th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">RÉCURRENCE</th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">SATISFACTION</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">INITIATIVE</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">COÛT / PERSONNE / AN</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">DURÉE</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">ADOPTION</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-warm-gray">
                       <td className="px-6 py-5 text-sm text-deep font-medium">Salle de sport</td>
-                      <td className="px-6 py-5 text-sm text-deep font-medium">36 000 €</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">360 €</td>
                       <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
                       <td className="px-6 py-5 text-sm text-text-light">~40 %</td>
                     </tr>
                     <tr className="border-b border-warm-gray">
                       <td className="px-6 py-5 text-sm text-deep font-medium">Team building</td>
-                      <td className="px-6 py-5 text-sm text-deep font-medium">8 000 €</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">80 €</td>
                       <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
                       <td className="px-6 py-5 text-sm text-text-light">~55 %</td>
                     </tr>
                     <tr className="border-b border-warm-gray">
                       <td className="px-6 py-5 text-sm text-deep font-medium">Bons Noël</td>
-                      <td className="px-6 py-5 text-sm text-deep font-medium">5 000 €</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">50 €</td>
                       <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
                       <td className="px-6 py-5 text-sm text-text-light">~60 %</td>
                     </tr>
                     <tr className="bg-terra/5">
                       <td className="px-6 py-5 text-sm font-bold text-terra">EVE AND CO</td>
-                      <td className="px-6 py-5 text-sm font-bold text-terra">1 500 €*</td>
+                      <td className="px-6 py-5 text-sm font-bold text-terra">15 €*</td>
                       <td className="px-6 py-5 text-sm"><span className="text-sage font-semibold">Une seule fois</span></td>
                       <td className="px-6 py-5 text-sm"><span className="text-sage font-bold">97% ✓</span></td>
                     </tr>
@@ -118,7 +117,7 @@ export default function Home() {
                 </table>
               </div>
               <div className="px-6 py-4 bg-warm-gray/30 text-xs text-text-light">
-                * 1 500 € (une fois / 100 pers., annualisé sur 5 ans). Éligible CSE. Exonéré URSSAF.
+                * 15 € par personne investissement unique. Amorti sur 5 ans = 3€/personne/an. Éligible CSE. Exonéré URSSAF.
               </div>
             </div>
           </ScrollReveal>
@@ -203,9 +202,6 @@ export default function Home() {
           </ScrollReveal>
         </div>
       </section>
-
-      {/* ═══════ PRODUITS ═══════ */}
-      <ProductShowcase />
 
       {/* ═══════ COMPARAISON QUOTIDIENNE ═══════ */}
       <section id="quotidien" className="py-16 lg:py-20 bg-cream">
@@ -374,8 +370,7 @@ export default function Home() {
 
                 <div className="mt-12 pt-8 border-t border-white/30">
                   <p className="text-white/70 text-sm mb-4">Contact direct</p>
-                  <p className="text-white font-semibold text-lg">hello@eveandco.fr</p>
-                  <p className="text-white font-semibold text-lg">+33 1 23 45 67 89</p>
+                  <p className="text-white font-semibold text-lg">mathys@eve-and-co.com</p>
                 </div>
               </div>
 
