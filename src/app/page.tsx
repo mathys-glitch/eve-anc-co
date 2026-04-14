@@ -21,15 +21,14 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="hero-animate hero-animate-delay-2 font-poppins text-5xl md:text-6xl lg:text-7xl font-extrabold text-deep leading-tight tracking-tight mb-8">
-              15€ par personne.<br />
-              <span className="text-terra">Une seule fois.</span><br />
-              <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-light">Votre meilleur ROI CSE</span>
+            <h1 className="hero-animate hero-animate-delay-2 font-poppins text-4xl md:text-5xl lg:text-6xl font-extrabold text-deep leading-tight tracking-tight mb-8">
+              Vos collaboratrices méritent mieux que des tampons dans les toilettes.<br />
+              <span className="text-terra">Culottes menstruelles bio.</span>
             </h1>
 
             {/* Subheading */}
             <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12 font-poppins">
-              Pendant que Salle de sport coûte 360€/personne/an et Team building 80€, EVE AND CO offre une solution durable: 15€ par collaboratrice, investissement unique. -28% d'absentéisme, 1.2T de déchets évités, 97% d'adoption garantie.
+              15€ par personne. Une seule fois. -28% d'absentéisme, 1.2T de déchets évités, 97% d'adoption garantie. Certifiée B Corp.
             </p>
 
             {/* CTA */}
