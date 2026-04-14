@@ -8,12 +8,12 @@ export default function Home() {
   return (
     <>
       {/* ═══════ HERO CONVAINCANT ═══════ */}
-      <section className="min-h-screen flex items-center relative overflow-hidden">
+      <section className="py-24 lg:py-32 flex items-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cream via-white to-white" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-terra/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-sage/5 rounded-full blur-3xl" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-3xl">
             {/* Badge */}
@@ -60,37 +60,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right side - Certifications & Badges */}
-          <div className="hero-animate hero-animate-delay-4 hidden lg:flex flex-col gap-6 h-full justify-center">
-            <div className="space-y-4">
-              {[
-                { icon: "✓", label: "B Corp Certifiée", color: "bg-terra/10 text-terra" },
-                { icon: "🌱", label: "Coton Bio GOTS", color: "bg-sage/10 text-sage" },
-                { icon: "🇫🇷", label: "Marque Française", color: "bg-terra/5 text-deep" },
-                { icon: "⭐", label: "N°1 en France", color: "bg-terra/10 text-terra" },
-              ].map((badge, i) => (
-                <div
-                  key={i}
-                  className={`${badge.color} rounded-xl p-4 flex items-center gap-3 border border-warm-gray hover:border-terra transition-colors duration-300`}
-                >
-                  <span className="text-2xl">{badge.icon}</span>
-                  <span className="font-semibold text-sm">{badge.label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Impact visuel */}
-            <div className="mt-8 pt-8 border-t border-warm-gray space-y-3">
-              <p className="text-xs font-bold text-text-light uppercase tracking-widest">Impact sur 5 ans</p>
-              {[
-                { value: "1 200+", desc: "déchets évités par femme" },
-                { value: "150€", desc: "d'économies par personne" },
-              ].map((item, i) => (
-                <div key={i} className="bg-cream rounded-lg p-3">
-                  <p className="text-lg font-bold text-terra">{item.value}</p>
-                  <p className="text-xs text-text-light">{item.desc}</p>
-                </div>
-              ))}
+          {/* Right side - Product Image */}
+          <div className="hero-animate hero-animate-delay-4 hidden lg:flex items-center justify-center">
+            <div className="relative w-full max-w-md aspect-square">
+              <img
+                src="/images/La culotte menstruelle.webp"
+                alt="La culotte menstruelle"
+                className="w-full h-full object-contain drop-shadow-2xl"
+              />
             </div>
           </div>
           </div>
