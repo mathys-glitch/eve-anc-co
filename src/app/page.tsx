@@ -123,56 +123,66 @@ export default function Home() {
       </section>
 
       {/* ═══════ LA RÉPONSE EVE AND CO ═══════ */}
-      <section className="py-16 lg:py-20 bg-gradient-to-br from-white via-cream/20 to-white">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-terra/5 to-sage/5">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-20">
-              <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-6">LA RÉPONSE EVE AND CO</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-deep leading-tight">
-                Une vraie action RSE,<br />des vrais résultats
+            <div className="text-center mb-16">
+              <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-4">LA RÉPONSE EVE AND CO</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-deep leading-tight">
+                Une vraie action RSE, des vrais résultats
               </h2>
-              <p className="mt-8 text-xl text-text-light max-w-2xl mx-auto">
-                Marque française n°1, certifiée B Corp. 300 000+ utilisatrices satisfaites. Un engagement total envers le confort et la durabilité.
-              </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: "♻️",
-                number: "300+",
-                title: "utilisations par culotte",
-                desc: "Coton bio certifié GOTS • Zéro substance controversée • Fabriquée en France",
+                icon: "🌱",
+                stat: "1.2T",
+                label: "Déchets évités",
+                sublabel: "par femme en 5 ans",
+              },
+              {
+                icon: "💚",
+                stat: "-28%",
+                label: "Moins d'absentéisme",
+                sublabel: "lié aux règles",
               },
               {
                 icon: "💰",
-                number: "150€",
-                title: "d'économies par personne",
-                desc: "Sur 5 ans vs protections jetables (300€) • ROI garanti • Eligible CSE",
+                stat: "150€",
+                label: "Économies",
+                sublabel: "par personne / 5 ans",
               },
               {
-                icon: "🌍",
-                number: "97%",
-                title: "taux d'adoption",
-                desc: "300 000+ utilisatrices • 4.5/5 Trustpilot • Impact prouvé",
+                icon: "⭐",
+                stat: "97%",
+                label: "Taux d'adoption",
+                sublabel: "300K+ utilisatrices",
               },
             ].map((item, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-terra/20 to-terra/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative bg-white rounded-2xl p-10 border-2 border-warm-gray hover:border-terra transition-all duration-300 h-full">
-                    <div className="text-5xl mb-6">{item.icon}</div>
-                    <div className="mb-4">
-                      <div className="text-4xl font-bold text-terra">{item.number}</div>
-                      <h3 className="text-lg font-bold text-deep mt-2">{item.title}</h3>
-                    </div>
-                    <p className="text-sm text-text-light leading-relaxed">{item.desc}</p>
-                  </div>
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
+                <div className="text-center p-8 bg-white rounded-2xl border-2 border-warm-gray hover:border-terra hover:shadow-lg transition-all duration-300">
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <div className="text-3xl lg:text-4xl font-bold text-terra mb-2">{item.stat}</div>
+                  <h3 className="text-sm font-bold text-deep mb-1">{item.label}</h3>
+                  <p className="text-xs text-text-light">{item.sublabel}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal animation="fadeUp" className="mt-12">
+            <div className="bg-white rounded-2xl p-8 border-2 border-warm-gray text-center">
+              <p className="text-text-light mb-2">Certification & Engagement</p>
+              <p className="text-lg font-bold text-deep mb-4">
+                Marque française N°1 • Certifiée B Corp • Coton bio GOTS • Fabriquée en France
+              </p>
+              <p className="text-sm text-text-light">
+                Audit indépendant. Impact mesurable et vérifiable. Zéro greenwashing.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
