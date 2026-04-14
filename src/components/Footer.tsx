@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <span className="text-xl font-bold">EVE <span className="text-terra">AND</span> CO</span>
+            <span className="text-xl font-bold">EVE AND CO</span>
             <p className="mt-3 text-white/50 text-sm leading-relaxed">Marque N°1 en France de culottes menstruelles. Certifiée B Corp. 🇫🇷</p>
           </div>
           <div className="space-y-4">

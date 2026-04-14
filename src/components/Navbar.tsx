@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-warm-gray/30">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[72px]">
         <a href="#" className="text-deep font-bold text-xl tracking-tight">
-          EVE <span className="text-terra">AND</span> CO
+          EVE AND CO
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
