@@ -33,10 +33,8 @@ export default function Footer() {
             <div>
               <p className="text-xs font-bold text-terra uppercase tracking-widest mb-8">Entreprise</p>
               <div className="bg-warm-gray/20 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 border-2 border-terra rounded-full flex items-center justify-center">
-                    <span className="text-lg font-bold text-terra">B</span>
-                  </div>
+                <div className="flex items-start gap-4 mb-4">
+                  <img src="/images/bcorp-logo.webp" alt="B Corp Certified" className="w-16 h-16 flex-shrink-0" />
                   <div>
                     <p className="text-sm font-bold text-deep">Certifiée B Corp</p>
                     <p className="text-xs text-text-light">Audit externe annuel</p>
