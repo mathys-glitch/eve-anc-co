@@ -5,44 +5,33 @@ import ScrollReveal from "./ScrollReveal";
 export default function ProductShowcase() {
   const products = [
     {
-      id: "quotidienne",
-      name: "La Quotidienne",
-      absorption: "3 tampons • 8h",
-      tagline: "L'incontournable du quotidien",
-      desc: "Bureau, réunions, routine. Le classique parfait pour les flux légers à modérés. Discrète et confortable toute la journée.",
-      features: ["Coton bio GOTS", "XS au 3XL", "300+ lavages", "Sechage rapide"],
-      colors: ["rose", "noir", "beige"],
+      id: "culotte",
+      name: "La culotte menstruelle",
+      absorption: "Flux abondant",
+      tagline: "La protection au quotidien",
+      desc: "La culotte de base, confortable et discrète. Parfaite pour le bureau, les réunions, la routine. Protection fiable et durable pour les flux abondants.",
+      features: ["Coton bio GOTS certifié", "XS au 3XL", "300+ lavages minimum", "Fabrication française", "100% noir", "Confort maximal"],
       image: "/images/La culotte menstruelle.webp",
     },
     {
-      id: "active",
-      name: "L'Active",
-      absorption: "4 tampons • 10h",
-      tagline: "Pour les femmes actives",
-      desc: "Réunion, escaliers, vélo-taf, sport. Maintien sportif renforcé et séchage ultra-rapide. Flux modérés sans compromis.",
-      features: ["Tissu respirant", "Maintien sportif", "Anti-fuites", "Sechage express"],
-      colors: ["rose", "bleu", "noir"],
+      id: "shorty",
+      name: "Le shorty menstruel",
+      absorption: "Flux abondant",
+      tagline: "Pour plus de maintien",
+      desc: "Coupe plus cintrée avec maintien renforcé. Idéal pour les réunions, les déplacements, le sport léger. Même protection fiable en flux abondant, avec plus de légèreté.",
+      features: ["Coupe ajustée et maintien", "Coton bio GOTS certifié", "Sechage ultra-rapide", "Respirant", "100% noir", "Design épuré"],
       image: "/images/Le shorty menstruel.webp",
     },
     {
-      id: "serenite",
-      name: "La Sérénité",
-      absorption: "5 tampons • 12h",
-      tagline: "La protection maximale",
-      desc: "Flux abondants, longues journées, nuits tranquilles. La tranquillité absolue du matin au soir. Ultra-douce et ultra-protégée.",
-      features: ["Absorption max", "Anti-fuites garanties", "Ultra-douce", "Nuit tranquille"],
-      colors: ["rose", "noir", "prune"],
+      id: "tanga",
+      name: "Le tanga menstruel",
+      absorption: "Flux modéré",
+      tagline: "Discrétion et confort",
+      desc: "Le minimaliste à porter sous n'importe quoi. Idéal pour les flux modérés, les journées légères. Tellement discret qu'on oublie qu'on le porte.",
+      features: ["Coupe ultra-minimaliste", "Coton bio GOTS certifié", "Imperceptible sous les vêtements", "Anti-fuite malgré la finesse", "100% noir", "Léger et confortable"],
       image: "/images/Le tanga menstruel.webp",
     },
   ];
-
-  const colorMap: { [key: string]: string } = {
-    rose: "#FF6B9D",
-    noir: "#1F2937",
-    beige: "#F5EDE3",
-    bleu: "#00B4D8",
-    prune: "#8B5CF6",
-  };
 
   return (
     <section id="produits" className="py-24 lg:py-32 bg-cream/40">
@@ -94,17 +83,9 @@ export default function ProductShowcase() {
                     ))}
                   </div>
 
-                  {/* Colors */}
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs text-text-light font-semibold">Coloris :</span>
-                    {product.colors.map((color, j) => (
-                      <div
-                        key={j}
-                        className="w-6 h-6 rounded-full border-2 border-warm-gray hover:border-terra transition-colors cursor-pointer"
-                        style={{ backgroundColor: colorMap[color] || "#E5E7EB" }}
-                        title={color}
-                      />
-                    ))}
+                  {/* Color badge */}
+                  <div className="inline-block bg-deep/10 text-deep text-xs font-bold px-3 py-1.5 rounded-full">
+                    100% Noir
                   </div>
                 </div>
               </div>
