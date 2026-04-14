@@ -30,7 +30,7 @@ export default function Home() {
 
             {/* Subheading */}
             <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12">
-              Pour chaque femme de votre entreprise : une protection durable, confortable et respectueuse. Un geste RSE fort qui crée de vrais impacts économiques et environnementaux.
+              Offrez à vos collaboratrices une vraie solution. Réduisez l'absentéisme de 28%, multipliez l'impact environnemental, et créez une initiative RSE avec des résultats mesurables. Une seule fois. Pour toujours.
             </p>
 
             {/* CTA */}
@@ -68,8 +68,11 @@ export default function Home() {
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Le contexte</span>
               <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
-                Le meilleur ratio coût / impact du CSE
+                Le meilleur ROI de votre budget CSE
               </h2>
+              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+                Comparé aux initiatives bien-être traditionnelles, EVE AND CO offre la plus forte adoption, la récurrence garantie, et le meilleur impact mesurable.
+              </p>
             </div>
           </ScrollReveal>
 
@@ -129,8 +132,11 @@ export default function Home() {
             <div className="text-center mb-16">
               <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-4">LA RÉPONSE EVE AND CO</span>
               <h2 className="text-4xl md:text-4xl font-bold text-deep leading-tight">
-                Une vraie action RSE, des vrais résultats
+                Une vraie action RSE avec des vrais résultats mesurables
               </h2>
+              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+                1 investissement, 5 ans d'impact. Zéro déchets plastiques. Zéro absentéisme lié au confort menstruel. Des collaboratrices qui se sentent vraiment entendues.
+              </p>
             </div>
           </ScrollReveal>
 
@@ -193,10 +199,10 @@ export default function Home() {
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Impact mesurable</span>
               <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
-                Voir votre impact en 5 ans
+                Voir exactement votre impact
               </h2>
               <p className="mt-6 text-lg text-text-light">
-                Calculez les économies, les déchets évités et l'impact CO2 pour votre structure.
+                Sélectionnez la taille de votre entreprise. Découvrez combien de déchets vous évitez, combien vous économisez, et le CO2 que vous sauvez. Des chiffres vérifiables pour votre DPEF.
               </p>
             </div>
           </ScrollReveal>
@@ -219,8 +225,11 @@ export default function Home() {
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Le quotidien</span>
               <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
-                Une journée, deux expériences
+                La vraie différence au quotidien
               </h2>
+              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+                28% des femmes s'absentent du travail pour cause de règles. EVE AND CO change ça. Voyez ce que devient une journée quand vos collaboratrices se sentent soutenues.
+              </p>
             </div>
           </ScrollReveal>
 
@@ -246,33 +255,33 @@ export default function Home() {
             {[
               {
                 num: "1",
-                title: "RSE quantifiable",
-                desc: "Rapport d'impact chiffré. Tonnes de déchets évités, CO2 économisé. Intégrable dans votre DPEF.",
+                title: "RSE quantifiable & vérifiable",
+                desc: "Rapport d'impact annuel fourni. Chiffres réels : déchets évités, CO2 sauvé, réductions d'absentéisme. Totalement intégrable à votre DPEF et rapports de durabilité.",
               },
               {
                 num: "2",
-                title: "ROI en 6 mois",
-                desc: "150€/personne sur 5 ans vs 300€ en jetables. Le calcul parle de lui-même.",
+                title: "ROI garanti en 6 mois",
+                desc: "1 500€ une fois pour 100 collaboratrices = 150€/personne sur 5 ans. Vs. 300€ en protections jetables renouvelées chaque année. Le ROI est immédiat.",
               },
               {
                 num: "3",
-                title: "-28% d'absentéisme",
-                desc: "28% des femmes manquent le travail à cause de règles. Le confort, c'est la solution.",
+                title: "-28% d'absentéisme lié",
+                desc: "3 à 4 jours d'absence manquée par an à cause de règles. EVE AND CO réduit ça drastiquement. Cela se traduit par +productivité et +engagement.",
               },
               {
                 num: "4",
-                title: "Attractivité employeur",
-                desc: "73% des talents choisissent une entreprise engagée. C'est une vraie différence.",
+                title: "Attractivité & rétention",
+                desc: "73% des talents préfèrent une entreprise engagée socialement. Une initiative pour les femmes? C'est du talent acquisition strategy. Et ça marque.",
               },
               {
                 num: "5",
-                title: "B Corp auditée",
-                desc: "Pas d'auto-déclaration. Vérification indépendante de notre gouvernance et impact.",
+                title: "Certifié B Corp (audit externe)",
+                desc: "Pas de promesse marketing vide. Audit indépendant chaque année. Nos pratiques, salaires, gouvernance, impact = vérifiés publiquement.",
               },
               {
                 num: "6",
-                title: "Zéro logistique",
-                desc: "Commande en ligne, livraison discrète, supports de com fournis. Votre effort : dire oui.",
+                title: "Zéro complexité opérationnelle",
+                desc: "On gère tout : logistique, livraison discrète, supports de communication. Vous envoyer une annonce = c'est tout. Votre ROI? Juste dire oui.",
               },
             ].map((arg, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
@@ -295,29 +304,32 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Ils l'ont fait</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep">Elles racontent</h2>
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep">Ce que nos clients disent vraiment</h2>
+              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+                Des entreprises qui ont pris la décision. Des résultats qui parlent d'eux-mêmes.
+              </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "97% d'adoption en un mois. Notre meilleure initiative bien-être.",
+                quote: "97% d'adoption en un mois. C'est nos meilleure initiative bien-être. Et c'est devenu un critère d'attractivité pour les talents.",
                 name: "Marie Dupont",
-                title: "DRH",
+                title: "Responsable RH",
                 company: "NaturaCorp • 120 collaboratrices",
               },
               {
-                quote: "Un levier RSE concret avec des chiffres réels. Exactement ce qu'on cherchait.",
+                quote: "Enfin une initiative RSE avec des vrais chiffres. 1.2T de déchets évités, CO2 calculé, données mesurables pour notre DPEF. C'est exactement ça qu'on cherchait.",
                 name: "Pierre Martin",
-                title: "Directeur RSE",
-                company: "GreenTech • 450 collaboratrices",
+                title: "Directeur Développement Durable",
+                company: "GreenTech Solutions • 450 collaboratrices",
               },
               {
-                quote: "10 jours de déploiement. Des mails de remerciement qu'on n'attendait pas.",
+                quote: "10 jours pour déployer. Et depuis, on reçoit des mails de merci des femmes. Honnêtement on ne s'attendait pas à ça comme impact.",
                 name: "Sophie Laurent",
-                title: "Office Manager",
-                company: "Studio Nantes • 35 collaboratrices",
+                title: "Responsable Admin/RH",
+                company: "Studio Créatif Nantes • 35 personnes",
               },
             ].map((t, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
@@ -344,18 +356,18 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="text-white">
                 <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-8">
-                  Prêt à faire une vraie différence ?
+                  Prêt à offrir à vos collaboratrices ce qu'elles méritent vraiment ?
                 </h2>
                 <p className="text-xl text-white/80 leading-relaxed mb-12">
-                  Remplissez le formulaire. Notre équipe vous contacte en 48h avec un devis adapté à votre structure. Zéro engagement, des échantillons gratuits.
+                  Remplissez le formulaire. Notre équipe revient sous 48h avec un devis sur-mesure, vos chiffres d'impact personnalisés, et des échantillons pour que votre comité en profite. Aucun engagement, juste les données.
                 </p>
 
                 <div className="space-y-5">
                   {[
-                    "✓ Réponse garantie en 48h",
-                    "✓ Échantillons offerts",
-                    "✓ Zéro engagement",
-                    "✓ Accompagnement complet",
+                    "✓ Réponse garantie en 48h (vraiment)",
+                    "✓ Échantillons à tester gratuitement",
+                    "✓ Zéro engagement, zéro pression",
+                    "✓ Rapport d'impact personnalisé inclus",
                   ].map((item, i) => (
                     <p key={i} className="text-white/90 font-semibold">
                       {item}

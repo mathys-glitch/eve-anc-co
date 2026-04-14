@@ -8,8 +8,8 @@ export default function ProductShowcase() {
       id: "culotte",
       name: "La culotte menstruelle",
       absorption: "Flux abondant",
-      tagline: "La protection au quotidien",
-      desc: "La culotte de base, confortable et discrète. Parfaite pour le bureau, les réunions, la routine. Protection fiable et durable pour les flux abondants.",
+      tagline: "La référence tous les jours",
+      desc: "La base incontournable. Confortable, fiable, invisible sous les vêtements. Parfaite pour le travail, les déplacements, la routine. 300+ utilisations sans perte de qualité. La protection que vos collaboratrices vont vraiment aimer.",
       features: ["Coton bio certifié GOTS", "XXS au 5XL", "12H de protection"],
       image: "/images/La culotte menstruelle.webp",
     },
@@ -17,8 +17,8 @@ export default function ProductShowcase() {
       id: "shorty",
       name: "Le shorty menstruel",
       absorption: "Flux abondant",
-      tagline: "Pour plus de maintien",
-      desc: "Coupe plus cintrée avec maintien renforcé. Idéal pour les réunions, les déplacements, le sport léger. Même protection fiable en flux abondant, avec plus de légèreté.",
+      tagline: "Maintien renforcé et discrétion",
+      desc: "Pour qui veut plus de maintien sans sacrifier le confort. Coupe ajustée, zéro glissement, protection maximale. Idéale pour les jours chargés, le sport léger, ou les collaboratrices qui préfèrent sentir bien maintenues.",
       features: ["Coton bio certifié GOTS", "XXS au 5XL", "12H de protection"],
       image: "/images/Le shorty menstruel.webp",
     },
@@ -26,8 +26,8 @@ export default function ProductShowcase() {
       id: "tanga",
       name: "Le tanga menstruel",
       absorption: "Flux modéré",
-      tagline: "Discrétion et confort",
-      desc: "Le minimaliste à porter sous n'importe quoi. Idéal pour les flux modérés, les journées légères. Tellement discret qu'on oublie qu'on le porte.",
+      tagline: "L'invisible discret",
+      desc: "Le secret pour les journées légères. Tellement minimaliste qu'on l'oublie une fois enfilé. Anti-fuite malgré sa finesse extrême. Idéal sous une robe fine, en voyage, ou pour celles qui veulent zéro sensation.",
       features: ["Coton bio certifié GOTS", "XXS au 5XL", "12H de protection"],
       image: "/images/Le tanga menstruel.webp",
     },
@@ -40,10 +40,10 @@ export default function ProductShowcase() {
           <div className="text-center mb-20">
             <span className="text-sm font-bold text-terra uppercase tracking-widest">Notre gamme</span>
             <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
-              Trois modèles, un seul objectif : ton confort
+              Trois modèles pour chaque collaboratrice
             </h2>
             <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-              Coton bio certifié GOTS, zéro substance controversée, fabriquées en France. Chaque modèle est conçu pour un type de flux et un style de vie.
+              100% coton bio GOTS certifié. Zéro matière toxique. Fabriquées en France. 300+ utilisations par pièce. Chaque modèle pour un flux, un style de vie. Parce que chaque femme mérite une vraie option.
             </p>
           </div>
         </ScrollReveal>
