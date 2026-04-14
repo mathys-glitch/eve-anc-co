@@ -240,10 +240,10 @@ export default function Home() {
       </section>
 
       {/* ═══════ 6 ARGUMENTS CODIR ═══════ */}
-      <section id="preuves" className="py-16 lg:py-20">
+      <section id="preuves" className="py-16 lg:py-20 bg-cream/30">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-20">
+            <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Arguments décisifs</span>
               <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
                 6 bonnes raisons de dire oui au CODIR
@@ -251,48 +251,54 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-max">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 num: "1",
+                icon: "📊",
                 title: "RSE quantifiable & vérifiable",
-                desc: "Rapport d'impact annuel détaillé. Vous avez les chiffres : déchets plastiques évités, tonnes de CO2 économisées, réductions mesurées d'absentéisme. Directement intégrable à votre DPEF et rapports RSE. Les données parlent au CODIR.",
+                desc: "Rapport d'impact chiffré chaque année. Déchets évités, CO2 économisé, absentéisme réduit. Directement intégrable à votre DPEF.",
               },
               {
                 num: "2",
+                icon: "💰",
                 title: "ROI payant dès 6 mois",
-                desc: "1 500€ unique pour 100 femmes = 150€/tête sur 5 ans. Vs. 300€/personne/an en jetables renouvelées. Le calcul est transparent. C'est 50% moins cher et ça dure 5 ans.",
+                desc: "1 500€ une fois pour 100 femmes = 150€/tête/5 ans. Vs. 300€/personne/an en jetables. C'est 50% moins cher.",
               },
               {
                 num: "3",
+                icon: "📈",
                 title: "-28% d'absentéisme règles",
-                desc: "Fait : 28% des femmes s'absentent à cause de règles. EVE AND CO réduit drastiquement ça. Traduction : plus de jours de présence, plus de productivité, plus d'engagement direct.",
+                desc: "28% des femmes s'absentent. EVE AND CO réduit ça drastiquement. Plus de jours présents, plus de productivité.",
               },
               {
                 num: "4",
+                icon: "⭐",
                 title: "Talent acquisition & rétention",
-                desc: "73% des talents élisent une entreprise socialement engagée. Une initiative vraie pour les femmes? C'est du recrutement, c'est de la fidélisation. Ça se voit sur vos ratios.",
+                desc: "73% des talents préfèrent une entreprise engagée. Une initiative vraie pour les femmes, ça marque dans le recrutement.",
               },
               {
                 num: "5",
-                title: "Certifié B Corp (vérifié)",
-                desc: "Zéro autopromotion. Audit tiers indépendant chaque année. Nos salaires, gouvernance, impact social & environnemental = publiquement vérifiés. Pas de greenwashing.",
+                icon: "✓",
+                title: "Certifié B Corp (audit externe)",
+                desc: "Pas d'autopromotion. Audit tiers indépendant chaque année. Salaires, gouvernance, impact = vérifiés publiquement.",
               },
               {
                 num: "6",
+                icon: "🎯",
                 title: "Zéro charge pour vous",
-                desc: "On assume tout : logistique, livraison discrète, emails de lancement, guides. Votre boulot : valider et envoyer l'annonce. On gère le reste. ROI : juste dire oui.",
+                desc: "On gère tout : logistique, communication, déploiement. Vous envoyez l'annonce. C'est tout. Votre ROI : juste dire oui.",
               },
             ].map((arg, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 60}>
-                <div className="bg-white rounded-3xl p-8 border-2 border-warm-gray hover:border-terra hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-terra/20 to-terra/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl font-bold text-terra">{arg.num}</span>
+                <div className="bg-white rounded-2xl p-8 border border-warm-gray hover:border-terra hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl flex-shrink-0">{arg.icon}</div>
+                    <div className="flex-grow">
+                      <h3 className="text-lg font-bold text-deep mb-2">{arg.title}</h3>
+                      <p className="text-sm text-text-light leading-relaxed">{arg.desc}</p>
                     </div>
-                    <h3 className="text-lg font-bold text-deep leading-tight">{arg.title}</h3>
                   </div>
-                  <p className="text-sm text-text-light leading-relaxed flex-grow">{arg.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
