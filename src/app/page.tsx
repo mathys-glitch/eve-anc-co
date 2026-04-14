@@ -22,13 +22,13 @@ export default function Home() {
 
             {/* Headline */}
             <h1 className="hero-animate hero-animate-delay-2 font-poppins text-4xl md:text-5xl lg:text-6xl font-extrabold text-deep leading-tight tracking-tight mb-8">
-              Vos collaboratrices méritent mieux.<br />
+              Vos collaboratrices méritent mieux que des tampons.<br />
               <span className="text-terra">Culottes menstruelles bio.</span>
             </h1>
 
             {/* Subheading */}
             <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12 font-poppins">
-              15€ par personne. Une seule fois. -28% d'absentéisme, 1.2T de déchets évités, 97% d'adoption garantie. Certifiée B Corp.
+              Offrez des culottes menstruelles bio certifiées B Corp à vos équipes. 15€ par personne, investissement unique. Confortables, durables, zéro déchet. -28% d'absentéisme et 97% d'adoption garantie.
             </p>
 
             {/* CTA */}
