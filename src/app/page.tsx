@@ -251,7 +251,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-max">
             {[
               {
                 num: "1",
@@ -284,13 +284,15 @@ export default function Home() {
                 desc: "On assume tout : logistique, livraison discrète, emails de lancement, guides. Votre boulot : valider et envoyer l'annonce. On gère le reste. ROI : juste dire oui.",
               },
             ].map((arg, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
-                <div className="bg-white rounded-2xl p-10 border-2 border-warm-gray hover:border-terra transition-colors duration-300">
-                  <div className="w-12 h-12 bg-terra/10 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-terra">{arg.num}</span>
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 60}>
+                <div className="bg-white rounded-3xl p-8 border-2 border-warm-gray hover:border-terra hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-terra/20 to-terra/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl font-bold text-terra">{arg.num}</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-deep leading-tight">{arg.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-deep mb-3">{arg.title}</h3>
-                  <p className="text-text-light leading-relaxed">{arg.desc}</p>
+                  <p className="text-sm text-text-light leading-relaxed flex-grow">{arg.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
