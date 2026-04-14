@@ -3,8 +3,8 @@ export default function Footer() {
     <footer className="bg-white border-t border-warm-gray">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         {/* Main Footer Content */}
-        <div className="py-20">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="py-24">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
             {/* Navigation */}
             <div>
               <p className="text-xs font-bold text-terra uppercase tracking-widest mb-8">Navigation</p>

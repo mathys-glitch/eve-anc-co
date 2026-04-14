@@ -178,16 +178,18 @@ export default function Home() {
             ))}
           </div>
 
-          <ScrollReveal animation="fadeUp" className="mt-12">
-            <div className="bg-white rounded-2xl p-8 border-2 border-warm-gray text-center">
-              <div className="flex justify-center mb-6">
-                <img src="/images/bcrop-logo.webp" alt="B Corp Certified" className="w-20 h-20" />
+          <ScrollReveal animation="fadeUp" className="mt-16">
+            <div className="bg-white rounded-3xl p-12 border-2 border-warm-gray text-center space-y-6">
+              <div className="flex justify-center">
+                <img src="/images/bcrop-logo.webp" alt="B Corp Certified" className="w-28 h-28" />
               </div>
-              <p className="text-text-light mb-2">Certification & Engagement</p>
-              <p className="text-lg font-bold text-deep mb-4">
-                Marque française N°1 • Certifiée B Corp • Coton bio GOTS • Fabriquée en France
-              </p>
-              <p className="text-sm text-text-light">
+              <div className="space-y-2">
+                <p className="text-xs font-bold text-terra uppercase tracking-widest">Certification & Engagement</p>
+                <p className="text-lg font-bold text-deep">
+                  Marque française N°1 • Certifiée B Corp • Coton bio GOTS • Fabriquée en France
+                </p>
+              </div>
+              <p className="text-sm text-text-light leading-relaxed">
                 Audit indépendant. Impact mesurable et vérifiable. Zéro greenwashing.
               </p>
             </div>
