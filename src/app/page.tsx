@@ -256,32 +256,32 @@ export default function Home() {
               {
                 num: "1",
                 title: "RSE quantifiable & vérifiable",
-                desc: "Rapport d'impact annuel fourni. Chiffres réels : déchets évités, CO2 sauvé, réductions d'absentéisme. Totalement intégrable à votre DPEF et rapports de durabilité.",
+                desc: "Rapport d'impact annuel détaillé. Vous avez les chiffres : déchets plastiques évités, tonnes de CO2 économisées, réductions mesurées d'absentéisme. Directement intégrable à votre DPEF et rapports RSE. Les données parlent au CODIR.",
               },
               {
                 num: "2",
-                title: "ROI garanti en 6 mois",
-                desc: "1 500€ une fois pour 100 collaboratrices = 150€/personne sur 5 ans. Vs. 300€ en protections jetables renouvelées chaque année. Le ROI est immédiat.",
+                title: "ROI payant dès 6 mois",
+                desc: "1 500€ unique pour 100 femmes = 150€/tête sur 5 ans. Vs. 300€/personne/an en jetables renouvelées. Le calcul est transparent. C'est 50% moins cher et ça dure 5 ans.",
               },
               {
                 num: "3",
-                title: "-28% d'absentéisme lié",
-                desc: "3 à 4 jours d'absence manquée par an à cause de règles. EVE AND CO réduit ça drastiquement. Cela se traduit par +productivité et +engagement.",
+                title: "-28% d'absentéisme règles",
+                desc: "Fait : 28% des femmes s'absentent à cause de règles. EVE AND CO réduit drastiquement ça. Traduction : plus de jours de présence, plus de productivité, plus d'engagement direct.",
               },
               {
                 num: "4",
-                title: "Attractivité & rétention",
-                desc: "73% des talents préfèrent une entreprise engagée socialement. Une initiative pour les femmes? C'est du talent acquisition strategy. Et ça marque.",
+                title: "Talent acquisition & rétention",
+                desc: "73% des talents élisent une entreprise socialement engagée. Une initiative vraie pour les femmes? C'est du recrutement, c'est de la fidélisation. Ça se voit sur vos ratios.",
               },
               {
                 num: "5",
-                title: "Certifié B Corp (audit externe)",
-                desc: "Pas de promesse marketing vide. Audit indépendant chaque année. Nos pratiques, salaires, gouvernance, impact = vérifiés publiquement.",
+                title: "Certifié B Corp (vérifié)",
+                desc: "Zéro autopromotion. Audit tiers indépendant chaque année. Nos salaires, gouvernance, impact social & environnemental = publiquement vérifiés. Pas de greenwashing.",
               },
               {
                 num: "6",
-                title: "Zéro complexité opérationnelle",
-                desc: "On gère tout : logistique, livraison discrète, supports de communication. Vous envoyer une annonce = c'est tout. Votre ROI? Juste dire oui.",
+                title: "Zéro charge pour vous",
+                desc: "On assume tout : logistique, livraison discrète, emails de lancement, guides. Votre boulot : valider et envoyer l'annonce. On gère le reste. ROI : juste dire oui.",
               },
             ].map((arg, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
