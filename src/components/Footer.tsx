@@ -25,7 +25,7 @@ export default function Footer() {
                 <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Notre engagement RSE</a>
                 <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Certifications & Audits</a>
                 <a href="https://eve-and-co.com/pages/presse" target="_blank" rel="noopener noreferrer" className="block text-sm text-text-light hover:text-terra transition-colors">Presse & Média</a>
-                <a href="#" className="block text-sm text-text-light hover:text-terra transition-colors">Contact</a>
+                <a href="mailto:mathys@eve-and-co.com" className="block text-sm text-text-light hover:text-terra transition-colors">Contact</a>
               </div>
             </div>
 
@@ -36,18 +36,18 @@ export default function Footer() {
               <div className="space-y-6">
                 <div>
                   <p className="text-xs text-text-light mb-2">Email</p>
-                  <a href="mailto:hello@eveandco.fr" className="text-sm font-semibold text-deep hover:text-terra transition-colors">hello@eveandco.fr</a>
+                  <a href="mailto:mathys@eve-and-co.com" className="text-sm font-semibold text-deep hover:text-terra transition-colors">mathys@eve-and-co.com</a>
                 </div>
                 <div>
                   <p className="text-xs text-text-light mb-3">Réseaux</p>
                   <div className="flex gap-4">
-                    <a href="#" className="text-text-light hover:text-terra transition-colors">
+                    <a href="https://www.facebook.com/EveandcoFrance" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-terra transition-colors">
                       <span className="text-lg">f</span>
                     </a>
-                    <a href="#" className="text-text-light hover:text-terra transition-colors">
+                    <a href="https://www.instagram.com/EveandcoFrance/" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-terra transition-colors">
                       <span className="text-lg">@</span>
                     </a>
-                    <a href="#" className="text-text-light hover:text-terra transition-colors">
+                    <a href="https://www.linkedin.com/company/eve-and-co/" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-terra transition-colors">
                       <span className="text-lg">in</span>
                     </a>
                   </div>
@@ -66,7 +66,7 @@ export default function Footer() {
 
               <div className="text-center">
                 <p className="text-xs text-text-light mb-4">Moyens de contact</p>
-                <p className="text-sm font-semibold text-deep">24h/24 7j/7 • hello@eveandco.fr</p>
+                <p className="text-sm font-semibold text-deep">24h/24 7j/7 • mathys@eve-and-co.com</p>
               </div>
 
               <div className="text-right">
@@ -79,8 +79,8 @@ export default function Footer() {
             <div className="mt-8 pt-8 border-t border-warm-gray/50">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-light">
                 <div className="flex gap-6">
-                  <a href="#" className="hover:text-terra transition-colors">Mentions légales</a>
-                  <a href="#" className="hover:text-terra transition-colors">Conditions générales</a>
+                  <a href="https://eve-and-co.com/pages/mentions-legales" target="_blank" rel="noopener noreferrer" className="hover:text-terra transition-colors">Mentions légales</a>
+                  <a href="https://eve-and-co.com/pages/cgv" target="_blank" rel="noopener noreferrer" className="hover:text-terra transition-colors">Conditions générales</a>
                   <a href="#" className="hover:text-terra transition-colors">Politique de confidentialité</a>
                 </div>
                 <p>Marque française • Tous droits réservés</p>
