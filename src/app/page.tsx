@@ -13,9 +13,8 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-terra/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-sage/5 rounded-full blur-3xl" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-3xl">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10 relative z-10 w-full">
+          <div className="text-center">
             {/* Badge */}
             <div className="hero-animate hero-animate-delay-1 inline-flex items-center gap-2 mb-8 px-4 py-2 bg-cream rounded-full border border-warm-gray">
               <span className="text-sm">👑</span>
@@ -30,12 +29,12 @@ export default function Home() {
             </h1>
 
             {/* Subheading */}
-            <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed max-w-2xl mb-12">
+            <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12">
               Pour chaque femme de votre entreprise : une protection durable, confortable et respectueuse. Un geste RSE fort qui crée de vrais impacts économiques et environnementaux.
             </p>
 
             {/* CTA */}
-            <div className="hero-animate hero-animate-delay-4 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <div className="hero-animate hero-animate-delay-4 flex flex-col sm:flex-row gap-4 items-center justify-center mb-16">
               <a href="#devis" className="group relative px-8 py-4 bg-terra text-white font-semibold rounded-lg hover:bg-terra-dark transition-all duration-300 hover:shadow-2xl overflow-hidden">
                 <span className="relative z-10">Demander un devis →</span>
                 <div className="absolute inset-0 bg-terra-dark translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
@@ -46,7 +45,7 @@ export default function Home() {
             </div>
 
             {/* Trust indicators */}
-            <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-warm-gray">
+            <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 pt-16 border-t border-warm-gray">
               {[
                 { stat: "Certifié", label: "B Corp" },
                 { stat: "300K+", label: "Utilisatrices" },
@@ -58,18 +57,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Right side - Product Image */}
-          <div className="hero-animate hero-animate-delay-4 hidden lg:flex items-center justify-center">
-            <div className="relative w-full max-w-md aspect-square">
-              <img
-                src="/images/La culotte menstruelle.webp"
-                alt="La culotte menstruelle"
-                className="w-full h-full object-contain drop-shadow-2xl"
-              />
-            </div>
-          </div>
           </div>
         </div>
       </section>
