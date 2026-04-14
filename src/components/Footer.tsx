@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-warm-gray">
+    <footer className="bg-[#F4F1EE] border-t border-warm-gray">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         {/* Main Footer Content */}
         <div className="py-20">
@@ -34,8 +34,8 @@ export default function Footer() {
             <div>
               <h3 className="text-sm font-bold text-deep uppercase tracking-widest mb-8">Entreprise</h3>
               <div className="flex items-start gap-4 mb-8">
-                <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center">
-                  <div className="text-4xl">🅑</div>
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                  <img src="/images/logo-bcorp.png" alt="B Corp Certified" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-deep mb-2">
