@@ -35,7 +35,7 @@ export default function DayComparison() {
       <div className="bg-terra/5 rounded-3xl p-10 border border-terra/20 hover:border-terra/40 transition-colors duration-300">
         <div className="flex items-center gap-3 mb-10">
           <span className="text-2xl">😰</span>
-          <h3 className="text-xl font-bold text-deep">Sans EVE & CO</h3>
+          <h3 className="text-xl font-bold text-deep">Sans EVE AND CO</h3>
         </div>
         <div className="space-y-8">
           {WITHOUT.map((item, i) => (
@@ -63,7 +63,7 @@ export default function DayComparison() {
       <div className="bg-sage/5 rounded-3xl p-10 border border-sage/20 hover:border-sage/40 transition-colors duration-300">
         <div className="flex items-center gap-3 mb-10">
           <span className="text-2xl">😌</span>
-          <h3 className="text-xl font-bold text-deep">Avec EVE & CO</h3>
+          <h3 className="text-xl font-bold text-deep">Avec EVE AND CO</h3>
         </div>
         <div className="space-y-8">
           {WITH.map((item, i) => (

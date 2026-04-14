@@ -4,8 +4,8 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <span className="text-xl font-bold">EVE<span className="text-terra">&</span>CO</span>
-            <p className="mt-3 text-white/50 text-sm leading-relaxed">Culottes menstruelles B Corp pour entreprises engagées. Made in Paris. 🇫🇷</p>
+            <span className="text-xl font-bold">EVE <span className="text-terra">AND</span> CO</span>
+            <p className="mt-3 text-white/50 text-sm leading-relaxed">Marque N°1 en France de culottes menstruelles. Certifiée B Corp. 🇫🇷</p>
           </div>
           <div className="space-y-4">
             <p className="text-xs text-white/40 font-bold uppercase tracking-widest">Contact</p>
@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-white/10 text-xs text-white/30 text-center">
-          &copy; {new Date().getFullYear()} EVE & CO — Tous droits réservés
+          &copy; {new Date().getFullYear()} EVE AND CO — Tous droits réservés
         </div>
       </div>
     </footer>

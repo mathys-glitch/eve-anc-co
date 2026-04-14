@@ -17,8 +17,8 @@ export default function Home() {
           <div className="max-w-3xl">
             {/* Badge */}
             <div className="hero-animate hero-animate-delay-1 inline-flex items-center gap-2 mb-8 px-4 py-2 bg-cream rounded-full border border-warm-gray">
-              <span className="text-sm">🏅</span>
-              <span className="text-xs font-semibold text-text-light">B Corp Certifiée • Fabriquée en France</span>
+              <span className="text-sm">👑</span>
+              <span className="text-xs font-semibold text-text-light">Marque N°1 en France • Certifiée B Corp</span>
             </div>
 
             {/* Headline */}
@@ -47,12 +47,12 @@ export default function Home() {
             {/* Trust indicators */}
             <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 mt-20 pt-20 border-t border-warm-gray">
               {[
-                { stat: "200+", label: "Entreprises satisfaites" },
-                { stat: "15K+", label: "Femmes équipées" },
-                { stat: "97%", label: "Taux d'adoption" },
+                { stat: "Certifié", label: "B Corp" },
+                { stat: "300K+", label: "Utilisatrices" },
+                { stat: "4.5/5", label: "Trustpilot" },
               ].map((item, i) => (
                 <div key={i} className="text-center">
-                  <div className="text-3xl font-bold text-terra mb-2">{item.stat}</div>
+                  <div className="text-2xl font-bold text-terra mb-1">{item.stat}</div>
                   <p className="text-sm text-text-light">{item.label}</p>
                 </div>
               ))}
@@ -61,53 +61,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ LE PROBLÈME ═══════ */}
+      {/* ═══════ LE CONTEXTE ═══════ */}
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <span className="text-xs font-bold text-terra uppercase tracking-widest">Le contexte</span>
-                <h2 className="mt-4 text-4xl font-bold text-deep leading-tight">
-                  45 milliards de protections jetées par an
-                </h2>
-                <p className="mt-6 text-lg text-text-light leading-relaxed">
-                  500 ans pour se décomposer. Des matériaux toxiques pour la santé. Et pour vos collaboratrices : stress, inconfort, absentéisme.
-                </p>
-                <ul className="mt-8 space-y-4">
-                  {[
-                    "28% des femmes manquent le travail à cause de douleurs menstruelles",
-                    "Les protections jetables coûtent 300€ par personne sur 5 ans",
-                    "73% des talents préfèrent une entreprise socialement engagée",
-                  ].map((item, i) => (
-                    <li key={i} className="flex gap-4 items-start">
-                      <span className="text-terra font-bold text-lg mt-0.5">✓</span>
-                      <span className="text-text-light">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold text-terra uppercase tracking-widest">Le contexte</span>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
+                Le meilleur ratio coût / impact du CSE
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          {/* Comparison Table */}
+          <ScrollReveal animation="fadeUp">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-warm-gray">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-warm-gray bg-cream/50">
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">POSTE</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">COÛT / AN</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">RÉCURRENCE</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">SATISFACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-warm-gray">
+                      <td className="px-6 py-5 text-sm text-deep font-medium">Salle de sport</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">36 000 €</td>
+                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
+                      <td className="px-6 py-5 text-sm text-text-light">~40 %</td>
+                    </tr>
+                    <tr className="border-b border-warm-gray">
+                      <td className="px-6 py-5 text-sm text-deep font-medium">Team building</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">8 000 €</td>
+                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
+                      <td className="px-6 py-5 text-sm text-text-light">~55 %</td>
+                    </tr>
+                    <tr className="border-b border-warm-gray">
+                      <td className="px-6 py-5 text-sm text-deep font-medium">Bons Noël</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">5 000 €</td>
+                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
+                      <td className="px-6 py-5 text-sm text-text-light">~60 %</td>
+                    </tr>
+                    <tr className="bg-terra/5">
+                      <td className="px-6 py-5 text-sm font-bold text-terra">EVE AND CO</td>
+                      <td className="px-6 py-5 text-sm font-bold text-terra">1 500 €*</td>
+                      <td className="px-6 py-5 text-sm"><span className="text-sage font-semibold">Une seule fois</span></td>
+                      <td className="px-6 py-5 text-sm"><span className="text-sage font-bold">97% ✓</span></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div className="bg-white rounded-2xl p-12 shadow-lg border border-warm-gray">
-                <p className="text-5xl font-bold text-terra mb-4">45B</p>
-                <p className="text-2xl font-bold text-deep mb-4">protections</p>
-                <p className="text-lg text-text-light leading-relaxed">
-                  jetées chaque année. Des déchets qui polluent pendant 5 siècles. Il est temps d'agir.
-                </p>
+              <div className="px-6 py-4 bg-warm-gray/30 text-xs text-text-light">
+                * 1 500 € (une fois / 100 pers., annualisé sur 5 ans). Éligible CSE. Exonéré URSSAF.
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ═══════ LA SOLUTION ═══════ */}
-      <section className="py-24 lg:py-32">
+      {/* ═══════ LA RÉPONSE EVE AND CO ═══════ */}
+      <section className="py-24 lg:py-32 bg-gradient-to-br from-white via-cream/20 to-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">La réponse EVE & CO</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight">
-                Une vraie action RSE, des vrais résultats
+              <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-6">LA RÉPONSE EVE AND CO</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-deep leading-tight">
+                Une vraie action RSE,<br />des vrais résultats
               </h2>
+              <p className="mt-8 text-xl text-text-light max-w-2xl mx-auto">
+                Marque française n°1, certifiée B Corp. 300 000+ utilisatrices satisfaites. Un engagement total envers le confort et la durabilité.
+              </p>
             </div>
           </ScrollReveal>
 
@@ -115,25 +141,34 @@ export default function Home() {
             {[
               {
                 icon: "♻️",
-                title: "300+ utilisations",
-                desc: "Chaque culotte = 300 protections jetées évitées. Coton bio certifié GOTS, zéro substance controversée.",
+                number: "300+",
+                title: "utilisations par culotte",
+                desc: "Coton bio certifié GOTS • Zéro substance controversée • Fabriquée en France",
               },
               {
                 icon: "💰",
-                title: "150€ d'économies par personne",
-                desc: "Sur 5 ans. Calculé vs protections jetables (300€). L'investissement se rentabilise.",
+                number: "150€",
+                title: "d'économies par personne",
+                desc: "Sur 5 ans vs protections jetables (300€) • ROI garanti • Eligible CSE",
               },
               {
-                icon: "📊",
-                title: "Rapport d'impact chiffré",
-                desc: "Tonnes de déchets évités. CO2 économisé. Intégrable directement dans votre DPEF.",
+                icon: "🌍",
+                number: "97%",
+                title: "taux d'adoption",
+                desc: "300 000+ utilisatrices • 4.5/5 Trustpilot • Impact prouvé",
               },
             ].map((item, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
-                <div className="bg-cream rounded-2xl p-10 border-2 border-warm-gray hover:border-terra transition-colors duration-300">
-                  <div className="text-5xl mb-4">{item.icon}</div>
-                  <h3 className="text-2xl font-bold text-deep mb-3">{item.title}</h3>
-                  <p className="text-text-light leading-relaxed">{item.desc}</p>
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
+                <div className="group relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-terra/20 to-terra/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="relative bg-white rounded-2xl p-10 border-2 border-warm-gray hover:border-terra transition-all duration-300 h-full">
+                    <div className="text-5xl mb-6">{item.icon}</div>
+                    <div className="mb-4">
+                      <div className="text-4xl font-bold text-terra">{item.number}</div>
+                      <h3 className="text-lg font-bold text-deep mt-2">{item.title}</h3>
+                    </div>
+                    <p className="text-sm text-text-light leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}

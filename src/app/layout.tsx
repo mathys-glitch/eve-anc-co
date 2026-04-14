@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EVE & CO | Culottes Menstruelles pour Entreprises",
+  title: "EVE AND CO | Marque N°1 Culottes Menstruelles - Certifiée B Corp",
   description:
-    "Integrez le confort menstruel dans votre politique RSE avec EVE & CO. Culottes menstruelles certifiees B Corp pour les entreprises engagees.",
+    "Marque française N°1 de culottes menstruelles. 300K+ utilisatrices satisfaites. Certifiée B Corp. Intégrez une vraie action RSE avec impact mensurable.",
 };
 
 export default function RootLayout({
