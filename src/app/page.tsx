@@ -379,60 +379,10 @@ export default function Home() {
       </section>
 
       {/* ═══════ TESTIMONIALS ═══════ */}
-      <section className="py-16 lg:py-20 bg-cream">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Témoignages</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep font-poppins">Ils ont dit oui. Voici ce qui s&apos;est passé.</h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                quote: "97% d'adoption en un mois. On n'a jamais eu un taux pareil sur une initiative bien-être. Les femmes en parlent entre elles, et les candidats posent la question en entretien.",
-                name: "Marie Dupont",
-                title: "Responsable RH",
-                company: "NaturaCorp, 120 collaboratrices",
-                avatar: "/images/avatar-marie.jpg",
-              },
-              {
-                quote: "Pour notre DPEF, on avait besoin de données solides. Déchets évités, CO2, taux d'adoption : tout est documenté. C'est la première initiative RSE qu'on peut vraiment chiffrer.",
-                name: "Pierre Martin",
-                title: "Directeur Développement Durable",
-                company: "GreenTech Solutions, 450 collaboratrices",
-                avatar: "/images/avatar-pierre.jpg",
-              },
-              {
-                quote: "Déployé en 10 jours. Depuis, on reçoit des mails de remerciement spontanés. Des femmes qui disent que c'est la première fois qu'elles se sentent vraiment considérées au travail.",
-                name: "Sophie Laurent",
-                title: "Responsable Admin et RH",
-                company: "Studio Créatif Nantes, 35 personnes",
-                avatar: "/images/avatar-sophie.jpg",
-              },
-            ].map((t, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
-                <div className="bg-white rounded-2xl p-10 border-2 border-warm-gray h-full flex flex-col">
-                  <p className="text-[14px] text-deep leading-relaxed italic mb-8 text-center flex-grow">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div className="flex flex-col items-center text-center">
-                    <img
-                      src={t.avatar}
-                      alt={t.name}
-                      className="w-14 h-14 rounded-full object-cover grayscale mb-3"
-                    />
-                    <p className="font-bold text-deep">{t.name}</p>
-                    <p className="text-sm text-text-light mt-1">{t.title}</p>
-                    <p className="text-xs text-terra font-semibold mt-2">{t.company}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* TODO: Réintégrer la section Témoignages quand les premiers avis clients B2B seront disponibles.
+          Structure prête: 3 cartes avec avatar en noir & blanc, citation en italique, nom, poste, entreprise.
+          Images d'avatars déjà présentes dans /public/images/avatar-*.jpg.
+          Voir l'historique Git pour retrouver le code complet (commit précédent). */}
 
       {/* ═══════ CTA FINAL ═══════ */}
       <section id="devis" className="relative py-20 lg:py-28 bg-sage-dark overflow-hidden">
