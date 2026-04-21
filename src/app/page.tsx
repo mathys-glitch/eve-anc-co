@@ -49,8 +49,8 @@ export default function Home() {
                 { stat: "4.5/5", label: "Trustpilot" },
               ].map((item, i) => (
                 <div key={i} className="text-center">
-                  <div className="text-2xl font-bold text-terra mb-1">{item.stat}</div>
-                  <p className="text-sm text-text-light">{item.label}</p>
+                  <div className="text-4xl font-extrabold text-terra mb-2 font-poppins">{item.stat}</div>
+                  <p className="text-base text-text-light">{item.label}</p>
                 </div>
               ))}
             </div>
