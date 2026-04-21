@@ -8,7 +8,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-sage-dark/80 backdrop-blur-md border-b border-white/5">
+    <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 flex items-center justify-between h-[72px]">
         {/* Logo */}
         <a href="#" className="flex items-center">

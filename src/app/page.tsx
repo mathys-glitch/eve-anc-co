@@ -7,34 +7,29 @@ export default function Home() {
   return (
     <>
       {/* ═══════ HERO ═══════ */}
-      <section className="relative min-h-screen bg-sage-dark overflow-hidden pt-[72px]">
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-sage-dark via-sage-dark to-[#0F2A20]" />
+      <section className="relative min-h-screen overflow-hidden">
+        {/* Fullscreen photo background */}
+        <img
+          src="/images/hero-photo.jpg"
+          alt="EVE AND CO - Culotte menstruelle bio"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
 
-        {/* Photo on right side */}
-        <div className="absolute top-0 right-0 bottom-0 w-full lg:w-1/2 z-0">
-          <div className="relative h-full w-full">
-            <img
-              src="/images/hero-photo.jpg"
-              alt="EVE AND CO - Culotte menstruelle bio"
-              className="h-full w-full object-cover object-center opacity-70 lg:opacity-100"
-            />
-            {/* Gradient mask from left */}
-            <div className="absolute inset-0 bg-gradient-to-r from-sage-dark via-sage-dark/60 to-transparent lg:via-transparent lg:from-sage-dark/80" />
-          </div>
-        </div>
+        {/* Gradient overlay from left to right for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sage-dark/95 via-sage-dark/60 to-sage-dark/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-sage-dark/30 via-transparent to-sage-dark/40" />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-20 lg:pt-32 pb-16 min-h-screen flex flex-col">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 lg:pt-40 pb-16 min-h-screen flex flex-col">
           <div className="grid lg:grid-cols-2 gap-10 items-center flex-grow">
             {/* Left Column: Text */}
             <div className="max-w-xl">
-              {/* Headline */}
+              {/* Headline — 2 lines max */}
               <h1 className="hero-animate hero-animate-delay-2 font-poppins text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6">
-                Vos collaboratrices méritent mieux que des <span className="text-lime italic">tampons.</span>
+                Elles méritent mieux que des <span className="text-lime italic">tampons.</span>
               </h1>
 
               {/* Subheading */}
-              <p className="hero-animate hero-animate-delay-3 text-base lg:text-lg text-white/75 leading-relaxed mb-10 max-w-lg">
+              <p className="hero-animate hero-animate-delay-3 text-base lg:text-lg text-white/85 leading-relaxed mb-10 max-w-lg">
                 Culottes menstruelles bio, certifiées B Corp. Un investissement unique qui réduit l&apos;absentéisme de 28% et affiche 97% d&apos;adoption. L&apos;initiative CSE dont tout le monde parle.
               </p>
 
@@ -43,19 +38,19 @@ export default function Home() {
                 <a href="#devis" className="inline-flex items-center justify-center px-7 py-3.5 bg-lime text-sage-dark font-bold rounded-full hover:bg-lime-dark transition-all duration-300 text-sm">
                   Recevoir un devis gratuit →
                 </a>
-                <a href="#impact" className="inline-flex items-center justify-center px-7 py-3.5 text-white font-semibold border border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 text-sm">
+                <a href="#impact" className="inline-flex items-center justify-center px-7 py-3.5 text-white font-semibold border border-white/40 bg-white/5 backdrop-blur-md rounded-full hover:bg-white/15 transition-all duration-300 text-sm">
                   Calculer mon impact
                 </a>
               </div>
 
               {/* Bottom Card — B Corp testimonial style */}
-              <div className="hero-animate hero-animate-delay-4 mt-12 lg:mt-20 max-w-sm bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex items-center gap-4">
+              <div className="hero-animate hero-animate-delay-4 mt-12 lg:mt-16 max-w-sm bg-white/10 backdrop-blur-lg border border-white/15 rounded-2xl p-4 flex items-center gap-4">
                 <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center overflow-hidden p-2">
                   <img src="/images/logo-bcorp.png" alt="B Corp" className="w-full h-full object-contain brightness-0 invert opacity-90" />
                 </div>
                 <div className="flex-grow">
-                  <p className="text-[11px] text-white/60 uppercase tracking-wider mb-1 font-semibold">Certifiée B Corp</p>
-                  <p className="text-xs text-white/85 leading-snug">Entreprise à impact. Audit tiers indépendant.</p>
+                  <p className="text-[11px] text-white/70 uppercase tracking-wider mb-1 font-semibold">Certifiée B Corp</p>
+                  <p className="text-xs text-white/90 leading-snug">Entreprise à impact. Audit tiers indépendant.</p>
                 </div>
                 <a href="#preuves" className="flex-shrink-0 px-3 py-1.5 bg-lime text-sage-dark text-[11px] font-bold rounded-full hover:bg-lime-dark transition-all">
                   En savoir +
@@ -63,29 +58,37 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Photo space with floating badges */}
-            <div className="relative hidden lg:block h-[600px]">
-              {/* Floating stat badges */}
-              <div className="hero-animate hero-animate-delay-3 absolute top-20 right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white text-xs font-semibold">
+            {/* Right Column: Floating badges around the woman */}
+            <div className="relative hidden lg:block h-full min-h-[600px]">
+              {/* Badge - top right */}
+              <div className="hero-animate hero-animate-delay-3 absolute top-[8%] right-[2%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
                 -28% ABSENTÉISME
               </div>
-              <div className="hero-animate hero-animate-delay-3 absolute top-40 right-16 bg-lime text-sage-dark rounded-full px-4 py-2 text-xs font-bold">
+              {/* Badge lime - mid top right */}
+              <div className="hero-animate hero-animate-delay-3 absolute top-[25%] right-[15%] bg-lime text-sage-dark rounded-full px-4 py-2 text-xs font-bold shadow-lg">
                 97% ADOPTION
               </div>
-              <div className="hero-animate hero-animate-delay-4 absolute top-[280px] right-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white text-xs font-semibold">
+              {/* Badge - mid right */}
+              <div className="hero-animate hero-animate-delay-4 absolute top-[45%] right-[-2%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
                 1.2T DÉCHETS ÉVITÉS
               </div>
-              <div className="hero-animate hero-animate-delay-4 absolute top-[380px] right-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white text-xs font-semibold">
+              {/* Badge - mid left on woman */}
+              <div className="hero-animate hero-animate-delay-3 absolute top-[38%] left-[5%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
+                100% COTON BIO
+              </div>
+              {/* Badge - bottom mid */}
+              <div className="hero-animate hero-animate-delay-4 absolute top-[65%] right-[8%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
                 300+ UTILISATIONS
               </div>
-              <div className="hero-animate hero-animate-delay-4 absolute top-[480px] right-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white text-xs font-semibold">
-                100% COTON BIO
+              {/* Badge - bottom left on woman */}
+              <div className="hero-animate hero-animate-delay-4 absolute top-[78%] left-[10%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
+                CERTIFIÉ B CORP
               </div>
             </div>
           </div>
 
           {/* Trust indicators at bottom */}
-          <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 pt-12 mt-auto border-t border-white/10">
+          <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 pt-10 mt-auto border-t border-white/15">
             {[
               { stat: "Certifié", label: "B Corp" },
               { stat: "300K+", label: "Utilisatrices" },
@@ -93,7 +96,7 @@ export default function Home() {
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl md:text-3xl font-extrabold text-lime mb-1 font-poppins">{item.stat}</div>
-                <p className="text-sm text-white/60">{item.label}</p>
+                <p className="text-sm text-white/70">{item.label}</p>
               </div>
             ))}
           </div>
@@ -149,7 +152,7 @@ export default function Home() {
                     </tr>
                     <tr className="bg-terra/5">
                       <td className="px-6 py-5 text-sm font-bold text-terra">EVE AND CO</td>
-                      <td className="px-6 py-5 text-sm font-bold text-terra">15 €*</td>
+                      <td className="px-6 py-5 text-sm font-bold text-terra">39 €*</td>
                       <td className="px-6 py-5 text-sm"><span className="text-sage font-semibold">Une seule fois</span></td>
                       <td className="px-6 py-5 text-sm"><span className="text-sage font-bold">97% ✓</span></td>
                     </tr>
