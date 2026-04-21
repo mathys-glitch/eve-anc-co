@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ RÉSULTATS CONCRETS ═══════ */}
-      <section className="py-16 lg:py-20 bg-gradient-to-br from-terra/5 to-sage/5">
+      <section className="py-16 lg:py-20 bg-[#F9F5F0]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -137,42 +137,66 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: "🌱",
-                stat: "1.2T",
-                label: "Déchets évités",
-                sublabel: "par collaboratrice en 5 ans",
-              },
-              {
-                icon: "📉",
-                stat: "-28%",
-                label: "d'absentéisme",
-                sublabel: "lié aux règles",
-              },
-              {
-                icon: "♻️",
-                stat: "300+",
-                label: "utilisations",
-                sublabel: "par culotte menstruelle",
-              },
-              {
-                icon: "💯",
-                stat: "97%",
-                label: "d'adoption",
-                sublabel: "dès le premier mois",
-              },
-            ].map((item, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
-                <div className="text-center p-8 bg-white rounded-2xl border-2 border-warm-gray hover:border-terra hover:shadow-lg transition-all duration-300">
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <div className="text-3xl lg:text-4xl font-bold text-terra mb-2">{item.stat}</div>
-                  <h3 className="text-sm font-bold text-deep mb-1">{item.label}</h3>
-                  <p className="text-xs text-text-light">{item.sublabel}</p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* Déchets évités */}
+            <ScrollReveal animation="fadeUp" delay={0}>
+              <div className="relative bg-white rounded-3xl p-8 text-center overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-terra/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-terra/10 flex items-center justify-center">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4956D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5 0.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 00-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+                  </div>
+                  <div className="text-4xl lg:text-5xl font-extrabold text-terra mb-2 font-poppins">1.2T</div>
+                  <h3 className="text-sm font-bold text-deep mb-1">Déchets évités</h3>
+                  <p className="text-xs text-text-light">par collaboratrice en 5 ans</p>
                 </div>
-              </ScrollReveal>
-            ))}
+              </div>
+            </ScrollReveal>
+
+            {/* Absentéisme */}
+            <ScrollReveal animation="fadeUp" delay={100}>
+              <div className="relative bg-white rounded-3xl p-8 text-center overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-sage/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-sage/10 flex items-center justify-center">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8B9A7F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                  </div>
+                  <div className="text-4xl lg:text-5xl font-extrabold text-sage mb-2 font-poppins">-28%</div>
+                  <h3 className="text-sm font-bold text-deep mb-1">d&apos;absentéisme</h3>
+                  <p className="text-xs text-text-light">lié aux règles</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Utilisations */}
+            <ScrollReveal animation="fadeUp" delay={200}>
+              <div className="relative bg-white rounded-3xl p-8 text-center overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-terra/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-terra/10 flex items-center justify-center">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4956D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                  </div>
+                  <div className="text-4xl lg:text-5xl font-extrabold text-terra mb-2 font-poppins">300+</div>
+                  <h3 className="text-sm font-bold text-deep mb-1">utilisations</h3>
+                  <p className="text-xs text-text-light">par culotte menstruelle</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Adoption */}
+            <ScrollReveal animation="fadeUp" delay={300}>
+              <div className="relative bg-white rounded-3xl p-8 text-center overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-sage/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-sage/10 flex items-center justify-center">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8B9A7F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <div className="text-4xl lg:text-5xl font-extrabold text-sage mb-2 font-poppins">97%</div>
+                  <h3 className="text-sm font-bold text-deep mb-1">d&apos;adoption</h3>
+                  <p className="text-xs text-text-light">dès le premier mois</p>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
 
         </div>
