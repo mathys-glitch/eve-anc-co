@@ -35,33 +35,33 @@ export default function WasteCalculator() {
   return (
     <div>
       {/* Presets */}
-      <div className="grid grid-cols-3 gap-4 mb-16">
+      <div className="grid grid-cols-3 gap-3 mb-8">
         {PRESETS.map((p, i) => (
           <button
             key={i}
             onClick={() => setSelected(i)}
-            className={`rounded-2xl px-6 py-8 border-2 transition-all duration-300 cursor-pointer ${
+            className={`rounded-xl px-4 py-4 border-2 transition-all duration-300 cursor-pointer ${
               selected === i
                 ? "border-terra bg-terra/10"
                 : "border-warm-gray hover:border-terra/40 bg-white"
             }`}
           >
-            <span className="text-4xl block mb-3">{p.icon}</span>
-            <span className="text-sm font-bold text-deep block">{p.label}</span>
-            <span className="text-xs text-text-light block mt-1">{p.employees} collab.</span>
+            <span className="text-2xl block mb-1">{p.icon}</span>
+            <span className="text-xs font-bold text-deep block">{p.label}</span>
+            <span className="text-[10px] text-text-light block mt-0.5">{p.employees} collab.</span>
           </button>
         ))}
       </div>
 
       {/* Results */}
-      <div className="space-y-10">
+      <div className="space-y-5">
         {bars.map((bar, i) => (
           <div key={`${selected}-${i}`}>
-            <div className="flex justify-between items-end mb-3">
-              <span className="text-sm font-medium text-text-light">{bar.label}</span>
-              <span className="text-3xl font-bold text-deep">{bar.display}</span>
+            <div className="flex justify-between items-end mb-1.5">
+              <span className="text-xs font-medium text-text-light">{bar.label}</span>
+              <span className="text-xl font-bold text-deep">{bar.display}</span>
             </div>
-            <div className="w-full h-4 bg-warm-gray rounded-full overflow-hidden">
+            <div className="w-full h-2.5 bg-warm-gray rounded-full overflow-hidden">
               <div
                 className={`h-full ${bar.color} bar-animate rounded-full`}
                 style={{ "--bar-width": `${(bar.value / bar.max) * 100}%` } as React.CSSProperties}
@@ -71,8 +71,8 @@ export default function WasteCalculator() {
         ))}
       </div>
 
-      <p className="mt-10 text-xs text-text-light text-center">
-        📊 Projection sur 5 ans (240 protections/an) — Données moyennes
+      <p className="mt-6 text-[10px] text-text-light text-center">
+        Projection sur 5 ans (240 protections/an) — Données moyennes
       </p>
     </div>
   );

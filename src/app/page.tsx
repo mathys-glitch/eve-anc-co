@@ -179,22 +179,22 @@ export default function Home() {
       </section>
 
       {/* ═══════ CALCULATEUR ═══════ */}
-      <section id="impact" className="py-16 lg:py-20 bg-terra/5">
-        <div className="max-w-4xl mx-auto px-6 lg:px-10">
+      <section id="impact" className="py-14 lg:py-16 bg-terra/5">
+        <div className="max-w-2xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Impact mesurable</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
-                Voir exactement votre impact
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+                Votre impact en un coup d&apos;oeil
               </h2>
-              <p className="mt-6 text-lg text-text-light">
-                Sélectionnez la taille de votre entreprise. Découvrez combien de déchets vous évitez, combien vous économisez, et le CO2 que vous sauvez. Des chiffres vérifiables pour votre DPEF.
+              <p className="mt-4 text-sm text-text-light max-w-lg mx-auto">
+                Sélectionnez la taille de votre entreprise et découvrez votre impact sur 5 ans.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal animation="fadeUp">
-            <div className="bg-white rounded-2xl p-12 border-2 border-warm-gray shadow-lg">
+            <div className="bg-white rounded-2xl p-8 border border-warm-gray shadow-sm">
               <WasteCalculator />
             </div>
           </ScrollReveal>
