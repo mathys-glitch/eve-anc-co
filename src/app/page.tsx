@@ -64,33 +64,29 @@ export default function Home() {
               <div className="hero-animate hero-animate-delay-3 absolute top-[8%] right-[2%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
                 -28% ABSENTÉISME
               </div>
-              {/* Badge lime - mid top right */}
+              {/* Badge lime - mid top right (ACTION CONCRÈTE) */}
               <div className="hero-animate hero-animate-delay-3 absolute top-[25%] right-[15%] bg-lime text-sage-dark rounded-full px-4 py-2 text-xs font-bold shadow-lg">
-                97% ADOPTION
+                ACTION CONCRÈTE
               </div>
               {/* Badge - mid right */}
               <div className="hero-animate hero-animate-delay-4 absolute top-[45%] right-[-2%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
-                1.2T DÉCHETS ÉVITÉS
+                −90% D&apos;EMPREINTE CARBONE
               </div>
               {/* Badge - mid left on woman */}
               <div className="hero-animate hero-animate-delay-3 absolute top-[38%] left-[5%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
-                100% COTON BIO
+                DÉDUCTIBLE À 100%
               </div>
               {/* Badge - bottom mid */}
               <div className="hero-animate hero-animate-delay-4 absolute top-[65%] right-[8%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
-                300+ UTILISATIONS
-              </div>
-              {/* Badge - bottom left on woman */}
-              <div className="hero-animate hero-animate-delay-4 absolute top-[78%] left-[10%] bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 text-white text-xs font-semibold shadow-lg">
-                CERTIFIÉ B CORP
+                INDEX ÉGAPRO BOOSTÉ
               </div>
             </div>
           </div>
 
           {/* Trust indicators at bottom */}
-          <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 pt-10 mt-auto border-t border-white/15">
+          <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 pt-10 mt-auto">
             {[
-              { stat: "Certifié", label: "B Corp" },
+              { stat: "N°1", label: "En France" },
               { stat: "300K+", label: "Utilisatrices" },
               { stat: "4.5/5", label: "Trustpilot" },
             ].map((item, i) => (
@@ -150,11 +146,20 @@ export default function Home() {
                       <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
                       <td className="px-6 py-5 text-sm text-text-light">~60 %</td>
                     </tr>
-                    <tr className="bg-terra/5">
-                      <td className="px-6 py-5 text-sm font-bold text-terra">EVE AND CO</td>
-                      <td className="px-6 py-5 text-sm font-bold text-terra">39 €*</td>
-                      <td className="px-6 py-5 text-sm"><span className="text-sage font-semibold">Une seule fois</span></td>
-                      <td className="px-6 py-5 text-sm"><span className="text-sage font-bold">97% ✓</span></td>
+                    <tr className="bg-sage-dark">
+                      <td className="px-6 py-5 text-sm font-bold text-white">
+                        <div className="flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
+                          EVE AND CO
+                        </div>
+                      </td>
+                      <td className="px-6 py-5 text-sm font-bold text-lime">39 €*</td>
+                      <td className="px-6 py-5">
+                        <span className="inline-flex items-center gap-1.5 bg-lime text-sage-dark text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                          ✓ Une seule fois
+                        </span>
+                      </td>
+                      <td className="px-6 py-5 text-sm"><span className="text-lime font-bold">97% ✓</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -172,7 +177,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-4">Résultats concrets</span>
+              <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-4">Impact mesuré</span>
               <h2 className="text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
                 Des chiffres, pas des promesses
               </h2>
@@ -193,7 +198,7 @@ export default function Home() {
                   </div>
                   <div className="text-4xl lg:text-5xl font-extrabold text-terra mb-2 font-poppins">1.2T</div>
                   <h3 className="text-sm font-bold text-deep mb-1">Déchets évités</h3>
-                  <p className="text-xs text-text-light">par collaboratrice en 5 ans</p>
+                  <p className="text-xs text-text-light">pour 100 collaboratrices équipées / 5 ans</p>
                 </div>
               </div>
             </ScrollReveal>
