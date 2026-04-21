@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 export default function Home() {
   return (
     <>
-      {/* ═══════ HERO CONVAINCANT ═══════ */}
+      {/* ═══════ HERO ═══════ */}
       <section className="py-24 lg:py-32 flex items-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cream via-white to-white" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-terra/5 rounded-full blur-3xl" />
@@ -17,7 +17,7 @@ export default function Home() {
             {/* Badge */}
             <div className="hero-animate hero-animate-delay-1 inline-flex items-center gap-2 mb-8 px-4 py-2 bg-cream rounded-full border border-warm-gray">
               <span className="text-sm">👑</span>
-              <span className="text-xs font-semibold text-text-light">Marque N°1 en France • Certifiée B Corp</span>
+              <span className="text-xs font-semibold text-text-light">Marque N°1 en France · Certifiée B Corp</span>
             </div>
 
             {/* Headline */}
@@ -26,18 +26,18 @@ export default function Home() {
             </h1>
 
             {/* Subheading */}
-            <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12 font-poppins">
-              Offrez des culottes menstruelles bio certifiées B Corp à vos équipes. Confortables, durables, zéro déchet. -28% d'absentéisme et 97% d'adoption garantie.
+            <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12 font-poppins max-w-2xl">
+              Culottes menstruelles bio, certifiées B Corp. Un investissement unique qui réduit l&apos;absentéisme de 28% et affiche 97% d&apos;adoption. L&apos;initiative CSE dont tout le monde parle.
             </p>
 
             {/* CTA */}
             <div className="hero-animate hero-animate-delay-4 flex flex-col sm:flex-row gap-4 items-center justify-center mb-16">
               <a href="#devis" className="group relative px-8 py-4 bg-terra text-white font-semibold rounded-lg hover:bg-terra-dark transition-all duration-300 hover:shadow-2xl overflow-hidden">
-                <span className="relative z-10">Demander un devis →</span>
+                <span className="relative z-10">Recevoir un devis gratuit →</span>
                 <div className="absolute inset-0 bg-terra-dark translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
               </a>
               <a href="#impact" className="px-8 py-4 text-terra font-semibold border-2 border-terra rounded-lg hover:bg-terra hover:text-white transition-all duration-300">
-                Voir l&apos;impact chiffré
+                Calculer mon impact
               </a>
             </div>
 
@@ -58,17 +58,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ LE CONTEXTE ═══════ */}
+      {/* ═══════ COMPARAISON DES COÛTS ═══════ */}
       <section className="py-16 lg:py-20 bg-cream">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Comparaison par utilisateur</span>
+              <span className="text-xs font-bold text-terra uppercase tracking-widest">Le vrai comparatif</span>
               <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
-                Comparez vraiment : coût par collaboratrice
+                Mettez vos initiatives CSE côte à côte
               </h2>
               <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-                Toutes les initiatives bien-être ne se valent pas. Voici les vrais chiffres, par personne, pour votre prise de décision.
+                Le résultat parle de lui-même.
               </p>
             </div>
           </ScrollReveal>
@@ -115,24 +115,24 @@ export default function Home() {
                 </table>
               </div>
               <div className="px-6 py-4 bg-warm-gray/30 text-xs text-text-light">
-                * 15 € par personne investissement unique. Amorti sur 5 ans = 3€/personne/an. Éligible CSE. Exonéré URSSAF.
+                * Investissement unique par personne, amorti sur 5 ans. Éligible CSE. Exonéré URSSAF.
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ═══════ LA RÉPONSE EVE AND CO ═══════ */}
+      {/* ═══════ RÉSULTATS CONCRETS ═══════ */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-terra/5 to-sage/5">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-4">LA RÉPONSE EVE AND CO</span>
-              <h2 className="text-4xl md:text-4xl font-bold text-deep leading-tight">
-                Une vraie action RSE avec des vrais résultats mesurables
+              <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-4">Résultats concrets</span>
+              <h2 className="text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+                Des chiffres, pas des promesses
               </h2>
               <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-                1 investissement, 5 ans d'impact. Zéro déchets plastiques. Zéro absentéisme lié au confort menstruel. Des collaboratrices qui se sentent vraiment entendues.
+                Chaque culotte menstruelle EVE AND CO remplace 5 ans de protections jetables. Voici ce que ça change concrètement pour votre entreprise.
               </p>
             </div>
           </ScrollReveal>
@@ -143,25 +143,25 @@ export default function Home() {
                 icon: "🌱",
                 stat: "1.2T",
                 label: "Déchets évités",
-                sublabel: "par femme en 5 ans",
+                sublabel: "par collaboratrice en 5 ans",
               },
               {
-                icon: "💚",
+                icon: "📉",
                 stat: "-28%",
-                label: "Moins d'absentéisme",
+                label: "d'absentéisme",
                 sublabel: "lié aux règles",
               },
               {
                 icon: "♻️",
                 stat: "300+",
-                label: "Utilisations",
+                label: "utilisations",
                 sublabel: "par culotte menstruelle",
               },
               {
-                icon: "⭐",
+                icon: "💯",
                 stat: "97%",
-                label: "Taux d'adoption",
-                sublabel: "300K+ utilisatrices",
+                label: "d'adoption",
+                sublabel: "dès le premier mois",
               },
             ].map((item, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
@@ -183,12 +183,12 @@ export default function Home() {
         <div className="max-w-2xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-10">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Impact mesurable</span>
+              <span className="text-xs font-bold text-terra uppercase tracking-widest">Simulateur</span>
               <h2 className="mt-3 text-3xl md:text-4xl font-bold text-deep leading-tight font-poppins">
-                Votre impact en un coup d&apos;oeil
+                Calculez votre impact
               </h2>
               <p className="mt-4 text-sm text-text-light max-w-lg mx-auto">
-                Sélectionnez la taille de votre entreprise et découvrez votre impact sur 5 ans.
+                Choisissez la taille de votre entreprise. On fait le reste.
               </p>
             </div>
           </ScrollReveal>
@@ -206,12 +206,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Le quotidien</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
-                La vraie différence au quotidien
+              <span className="text-xs font-bold text-terra uppercase tracking-widest">Avant / Après</span>
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+                Ce que ça change, concrètement
               </h2>
               <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-                28% des femmes s'absentent du travail pour cause de règles. EVE AND CO change ça. Voyez ce que devient une journée quand vos collaboratrices se sentent soutenues.
+                Chaque mois, 28% des femmes adaptent leur journée à cause de leurs règles. Inconfort, stress, absence. Voici à quoi ressemble une journée quand le problème est résolu.
               </p>
             </div>
           </ScrollReveal>
@@ -227,7 +227,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <span className="text-xs font-semibold text-terra uppercase tracking-[0.2em]">Arguments décisifs</span>
+              <span className="text-xs font-semibold text-terra uppercase tracking-[0.2em]">Pour convaincre en interne</span>
               <h2 className="mt-5 text-4xl md:text-5xl font-bold text-deep leading-tight font-poppins">
                 6 raisons de dire oui au CODIR
               </h2>
@@ -241,11 +241,11 @@ export default function Home() {
               <div className="md:col-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-terra to-terra-dark p-10 h-full min-h-[280px] flex flex-col justify-between group">
                 <div className="absolute top-4 right-6 text-[120px] font-black text-white/10 leading-none select-none">01</div>
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">RSE quantifiable, vérifiable</h3>
-                  <p className="text-sm text-white/75 leading-relaxed">Rapport d&apos;impact chiffré chaque année. Déchets évités, CO2 économisé, absentéisme réduit. Directement intégrable à votre DPEF.</p>
+                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">Des chiffres, pas des mots</h3>
+                  <p className="text-sm text-white/75 leading-relaxed">Déchets évités, CO2 économisé, absentéisme réduit : chaque donnée est traçable et intégrable à votre DPEF. Vos équipes RSE vont adorer.</p>
                 </div>
                 <div className="relative z-10 mt-6">
-                  <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">Impact mesurable</span>
+                  <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">Impact vérifiable</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -260,8 +260,8 @@ export default function Home() {
                       <span className="text-terra text-xl font-bold">€</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">ROI positif dès 6 mois</h3>
-                      <p className="text-sm text-text-light leading-relaxed">Un investissement unique contre un coût récurrent chaque année en protections jetables. Demandez un devis personnalisé pour connaître le montant exact.</p>
+                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Rentable dès le premier jour</h3>
+                      <p className="text-sm text-text-light leading-relaxed">Un seul investissement contre un coût récurrent chaque année. Pas de renouvellement, pas de surprise. Le budget est maîtrisé dès le départ.</p>
                     </div>
                   </div>
                 </div>
@@ -274,8 +274,8 @@ export default function Home() {
                       <span className="text-sage text-xl font-bold">↓</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">-28% d&apos;absentéisme lié aux règles</h3>
-                      <p className="text-sm text-text-light leading-relaxed">28% des femmes s&apos;absentent à cause de leurs règles. EVE AND CO réduit ça drastiquement. Plus de jours présents, plus de productivité.</p>
+                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Moins d&apos;absences, plus de présence</h3>
+                      <p className="text-sm text-text-light leading-relaxed">28% des femmes s&apos;absentent chaque mois à cause de leurs règles. Une solution adaptée change la donne. Résultat : des équipes plus stables et plus sereines.</p>
                     </div>
                   </div>
                 </div>
@@ -292,8 +292,8 @@ export default function Home() {
                       <span className="text-terra text-xl font-bold">★</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Attirer et retenir les talents</h3>
-                      <p className="text-sm text-text-light leading-relaxed">73% des talents préfèrent une entreprise engagée. Une initiative concrète pour les femmes, ça fait la différence dans le recrutement.</p>
+                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Ce que les talents regardent vraiment</h3>
+                      <p className="text-sm text-text-light leading-relaxed">73% des candidats choisissent une entreprise pour ses engagements concrets. Pas pour un baby-foot. Une initiative comme celle-ci se remarque dès l&apos;entretien.</p>
                     </div>
                   </div>
                 </div>
@@ -306,8 +306,8 @@ export default function Home() {
                       <span className="text-sage text-xl font-bold">✓</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Certifié B Corp, audité chaque année</h3>
-                      <p className="text-sm text-text-light leading-relaxed">Pas d&apos;autopromotion. Un audit tiers indépendant chaque année. Salaires, gouvernance, impact : tout est vérifié publiquement.</p>
+                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Vérifié par des tiers, pas par nous</h3>
+                      <p className="text-sm text-text-light leading-relaxed">La certification B Corp, c&apos;est un audit indépendant chaque année. Salaires, gouvernance, impact environnemental : tout est public. Zéro greenwashing.</p>
                     </div>
                   </div>
                 </div>
@@ -319,8 +319,8 @@ export default function Home() {
               <div className="md:col-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-sage to-sage/70 p-10 h-full min-h-[280px] flex flex-col justify-between group">
                 <div className="absolute top-4 right-6 text-[120px] font-black text-white/10 leading-none select-none">06</div>
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">Zéro charge pour vous</h3>
-                  <p className="text-sm text-white/75 leading-relaxed">On gère tout : logistique, communication, déploiement. Vous envoyez l&apos;annonce, c&apos;est tout. Votre seule action : dire oui.</p>
+                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">On s&apos;occupe de tout</h3>
+                  <p className="text-sm text-white/75 leading-relaxed">Logistique, distribution, communication interne : on prend tout en charge. Vous validez le projet, on déploie. Votre seul effort : envoyer un mail.</p>
                 </div>
                 <div className="relative z-10 mt-6">
                   <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">Clé en main</span>
@@ -336,32 +336,29 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Ils l'ont fait</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep">Ce que nos clients disent vraiment</h2>
-              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-                Des entreprises qui ont pris la décision. Des résultats qui parlent d'eux-mêmes.
-              </p>
+              <span className="text-xs font-bold text-terra uppercase tracking-widest">Témoignages</span>
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep font-poppins">Ils ont dit oui. Voici ce qui s&apos;est passé.</h2>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "97% d'adoption en un mois. C'est notre meilleure initiative bien-être. Et c'est devenu un critère d'attractivité pour les talents.",
+                quote: "97% d'adoption en un mois. On n'a jamais eu un taux pareil sur une initiative bien-être. Les femmes en parlent entre elles, et les candidats posent la question en entretien.",
                 name: "Marie Dupont",
                 title: "Responsable RH",
                 company: "NaturaCorp, 120 collaboratrices",
                 avatar: "/images/avatar-marie.jpg",
               },
               {
-                quote: "Enfin une initiative RSE avec des vrais chiffres. 1.2T de déchets évités, CO2 calculé, données mesurables pour notre DPEF. C'est exactement ce qu'on cherchait.",
+                quote: "Pour notre DPEF, on avait besoin de données solides. Déchets évités, CO2, taux d'adoption : tout est documenté. C'est la première initiative RSE qu'on peut vraiment chiffrer.",
                 name: "Pierre Martin",
                 title: "Directeur Développement Durable",
                 company: "GreenTech Solutions, 450 collaboratrices",
                 avatar: "/images/avatar-pierre.jpg",
               },
               {
-                quote: "10 jours pour déployer. Et depuis, on reçoit des mails de remerciement des femmes. Honnêtement on ne s'attendait pas à un tel impact.",
+                quote: "Déployé en 10 jours. Depuis, on reçoit des mails de remerciement spontanés. Des femmes qui disent que c'est la première fois qu'elles se sentent vraiment considérées au travail.",
                 name: "Sophie Laurent",
                 title: "Responsable Admin et RH",
                 company: "Studio Créatif Nantes, 35 personnes",
@@ -396,17 +393,17 @@ export default function Home() {
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="text-white">
-                <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-8">
-                  Prêt à offrir à vos collaboratrices ce qu'elles méritent vraiment ?
+                <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-8 font-poppins">
+                  Et si c&apos;était le moment ?
                 </h2>
                 <p className="text-xl text-white/80 leading-relaxed mb-12">
-                  Remplissez le formulaire. Notre équipe revient sous 48h avec un devis sur-mesure, vos chiffres d'impact personnalisés, et des échantillons pour que votre comité en profite. Aucun engagement, juste les données.
+                  Un devis sur-mesure, vos chiffres d&apos;impact personnalisés, et des échantillons gratuits pour votre comité. Aucun engagement. Juste les données pour décider.
                 </p>
 
                 <div className="space-y-5">
                   {[
-                    "✓ Réponse garantie en 48h (vraiment)",
-                    "✓ Échantillons à tester gratuitement",
+                    "✓ Réponse sous 48h, vraiment",
+                    "✓ Échantillons gratuits pour tester",
                     "✓ Zéro engagement, zéro pression",
                     "✓ Rapport d'impact personnalisé inclus",
                   ].map((item, i) => (
