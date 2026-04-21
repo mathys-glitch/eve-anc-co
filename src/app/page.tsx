@@ -27,7 +27,7 @@ export default function Home() {
 
             {/* Subheading */}
             <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12 font-poppins">
-              Offrez des culottes menstruelles bio certifiées B Corp à vos équipes. 15€ par personne, investissement unique. Confortables, durables, zéro déchet. -28% d'absentéisme et 97% d'adoption garantie.
+              Offrez des culottes menstruelles bio certifiées B Corp à vos équipes. Confortables, durables, zéro déchet. -28% d'absentéisme et 97% d'adoption garantie.
             </p>
 
             {/* CTA */}
@@ -152,10 +152,10 @@ export default function Home() {
                 sublabel: "lié aux règles",
               },
               {
-                icon: "💰",
-                stat: "150€",
-                label: "Économies",
-                sublabel: "par personne / 5 ans",
+                icon: "♻️",
+                stat: "300+",
+                label: "Utilisations",
+                sublabel: "par culotte menstruelle",
               },
               {
                 icon: "⭐",
@@ -261,7 +261,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-deep mb-2 font-poppins">ROI positif dès 6 mois</h3>
-                      <p className="text-sm text-text-light leading-relaxed">15€ par personne, une seule fois. Contre 300€ par personne par an en protections jetables. C&apos;est 50% moins cher sur 5 ans.</p>
+                      <p className="text-sm text-text-light leading-relaxed">Un investissement unique contre un coût récurrent chaque année en protections jetables. Demandez un devis personnalisé pour connaître le montant exact.</p>
                     </div>
                   </div>
                 </div>
