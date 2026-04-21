@@ -104,8 +104,8 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Le vrai comparatif</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-deep leading-tight font-poppins">
-                39€. <span className="text-sage">Une fois.</span> Pour toujours.
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+                39€. Une fois. Pour toujours.
               </h2>
               <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
                 Le résultat parle de lui-même.
