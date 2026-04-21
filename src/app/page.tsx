@@ -148,10 +148,7 @@ export default function Home() {
                     </tr>
                     <tr style={{ backgroundColor: '#3E5A4A' }}>
                       <td className="px-6 py-5 text-sm font-bold text-white">
-                        <div className="flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-lime animate-pulse flex-shrink-0" />
-                          <img src="/images/logo-white.png" alt="EVE AND CO" className="h-4 w-auto" />
-                        </div>
+                        <img src="/images/logo-white.png" alt="EVE AND CO" className="h-[14px] w-auto" />
                       </td>
                       <td className="px-6 py-5 text-sm font-bold text-lime">39 €*</td>
                       <td className="px-6 py-5">
