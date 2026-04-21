@@ -347,30 +347,38 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "97% d'adoption en un mois. C'est nos meilleure initiative bien-être. Et c'est devenu un critère d'attractivité pour les talents.",
+                quote: "97% d'adoption en un mois. C'est notre meilleure initiative bien-être. Et c'est devenu un critère d'attractivité pour les talents.",
                 name: "Marie Dupont",
                 title: "Responsable RH",
-                company: "NaturaCorp • 120 collaboratrices",
+                company: "NaturaCorp, 120 collaboratrices",
+                avatar: "/images/avatar-marie.jpg",
               },
               {
-                quote: "Enfin une initiative RSE avec des vrais chiffres. 1.2T de déchets évités, CO2 calculé, données mesurables pour notre DPEF. C'est exactement ça qu'on cherchait.",
+                quote: "Enfin une initiative RSE avec des vrais chiffres. 1.2T de déchets évités, CO2 calculé, données mesurables pour notre DPEF. C'est exactement ce qu'on cherchait.",
                 name: "Pierre Martin",
                 title: "Directeur Développement Durable",
-                company: "GreenTech Solutions • 450 collaboratrices",
+                company: "GreenTech Solutions, 450 collaboratrices",
+                avatar: "/images/avatar-pierre.jpg",
               },
               {
-                quote: "10 jours pour déployer. Et depuis, on reçoit des mails de merci des femmes. Honnêtement on ne s'attendait pas à ça comme impact.",
+                quote: "10 jours pour déployer. Et depuis, on reçoit des mails de remerciement des femmes. Honnêtement on ne s'attendait pas à un tel impact.",
                 name: "Sophie Laurent",
-                title: "Responsable Admin/RH",
-                company: "Studio Créatif Nantes • 35 personnes",
+                title: "Responsable Admin et RH",
+                company: "Studio Créatif Nantes, 35 personnes",
+                avatar: "/images/avatar-sophie.jpg",
               },
             ].map((t, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
                 <div className="bg-white rounded-2xl p-10 border-2 border-warm-gray">
                   <p className="text-lg text-deep leading-relaxed italic mb-8 text-center">
-                    "{t.quote}"
+                    &ldquo;{t.quote}&rdquo;
                   </p>
-                  <div className="text-center">
+                  <div className="flex flex-col items-center text-center">
+                    <img
+                      src={t.avatar}
+                      alt={t.name}
+                      className="w-14 h-14 rounded-full object-cover grayscale mb-3"
+                    />
                     <p className="font-bold text-deep">{t.name}</p>
                     <p className="text-sm text-text-light mt-1">{t.title}</p>
                     <p className="text-xs text-terra font-semibold mt-2">{t.company}</p>
