@@ -223,12 +223,12 @@ export default function Home() {
       </section>
 
       {/* ═══════ 6 ARGUMENTS CODIR ═══════ */}
-      <section id="preuves" className="py-20 lg:py-28 bg-[#1A1A1A]">
+      <section id="preuves" className="py-20 lg:py-28 bg-[#F4F1EE]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-20">
               <span className="text-xs font-semibold text-terra uppercase tracking-[0.2em]">Arguments décisifs</span>
-              <h2 className="mt-5 text-4xl md:text-5xl font-bold text-white leading-tight font-poppins">
+              <h2 className="mt-5 text-4xl md:text-5xl font-bold text-deep leading-tight font-poppins">
                 6 raisons de dire oui au CODIR
               </h2>
             </div>
@@ -241,7 +241,7 @@ export default function Home() {
               <div className="md:col-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-terra to-terra-dark p-10 h-full min-h-[280px] flex flex-col justify-between group">
                 <div className="absolute top-4 right-6 text-[120px] font-black text-white/10 leading-none select-none">01</div>
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">RSE quantifiable & vérifiable</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">RSE quantifiable, vérifiable</h3>
                   <p className="text-sm text-white/75 leading-relaxed">Rapport d&apos;impact chiffré chaque année. Déchets évités, CO2 économisé, absentéisme réduit. Directement intégrable à votre DPEF.</p>
                 </div>
                 <div className="relative z-10 mt-6">
@@ -253,29 +253,29 @@ export default function Home() {
             {/* Card 2 + 3 stacked */}
             <div className="md:col-span-2 grid grid-rows-2 gap-4">
               <ScrollReveal animation="fadeUp" delay={80}>
-                <div className="relative overflow-hidden rounded-3xl bg-[#222222] p-8 group hover:bg-[#2a2a2a] transition-colors duration-300">
-                  <div className="absolute top-2 right-6 text-[80px] font-black text-white/5 leading-none select-none">02</div>
+                <div className="relative overflow-hidden rounded-3xl bg-white p-8 group hover:shadow-lg transition-all duration-300 border border-warm-gray">
+                  <div className="absolute top-2 right-6 text-[80px] font-black text-terra/5 leading-none select-none">02</div>
                   <div className="relative z-10 flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-terra/20 flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-terra/10 flex items-center justify-center">
                       <span className="text-terra text-xl font-bold">€</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2 font-poppins">ROI payant dès 6 mois</h3>
-                      <p className="text-sm text-white/50 leading-relaxed">1 500€ une fois pour 100 femmes = 150€/tête/5 ans. Vs. 300€/personne/an en jetables. C&apos;est 50% moins cher.</p>
+                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">ROI positif dès 6 mois</h3>
+                      <p className="text-sm text-text-light leading-relaxed">15€ par personne, une seule fois. Contre 300€ par personne par an en protections jetables. C&apos;est 50% moins cher sur 5 ans.</p>
                     </div>
                   </div>
                 </div>
               </ScrollReveal>
               <ScrollReveal animation="fadeUp" delay={160}>
-                <div className="relative overflow-hidden rounded-3xl bg-[#222222] p-8 group hover:bg-[#2a2a2a] transition-colors duration-300">
-                  <div className="absolute top-2 right-6 text-[80px] font-black text-white/5 leading-none select-none">03</div>
+                <div className="relative overflow-hidden rounded-3xl bg-white p-8 group hover:shadow-lg transition-all duration-300 border border-warm-gray">
+                  <div className="absolute top-2 right-6 text-[80px] font-black text-sage/5 leading-none select-none">03</div>
                   <div className="relative z-10 flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sage/20 flex items-center justify-center">
-                      <span className="text-sage-light text-xl font-bold">↓</span>
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sage/10 flex items-center justify-center">
+                      <span className="text-sage text-xl font-bold">↓</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2 font-poppins">-28% d&apos;absentéisme règles</h3>
-                      <p className="text-sm text-white/50 leading-relaxed">28% des femmes s&apos;absentent. EVE AND CO réduit ça drastiquement. Plus de jours présents, plus de productivité.</p>
+                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">-28% d&apos;absentéisme lié aux règles</h3>
+                      <p className="text-sm text-text-light leading-relaxed">28% des femmes s&apos;absentent à cause de leurs règles. EVE AND CO réduit ça drastiquement. Plus de jours présents, plus de productivité.</p>
                     </div>
                   </div>
                 </div>
@@ -285,29 +285,29 @@ export default function Home() {
             {/* Card 4 + 5 stacked */}
             <div className="md:col-span-2 grid grid-rows-2 gap-4">
               <ScrollReveal animation="fadeUp" delay={240}>
-                <div className="relative overflow-hidden rounded-3xl bg-[#222222] p-8 group hover:bg-[#2a2a2a] transition-colors duration-300">
-                  <div className="absolute top-2 right-6 text-[80px] font-black text-white/5 leading-none select-none">04</div>
+                <div className="relative overflow-hidden rounded-3xl bg-white p-8 group hover:shadow-lg transition-all duration-300 border border-warm-gray">
+                  <div className="absolute top-2 right-6 text-[80px] font-black text-terra/5 leading-none select-none">04</div>
                   <div className="relative z-10 flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-terra/20 flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-terra/10 flex items-center justify-center">
                       <span className="text-terra text-xl font-bold">★</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2 font-poppins">Talent acquisition & rétention</h3>
-                      <p className="text-sm text-white/50 leading-relaxed">73% des talents préfèrent une entreprise engagée. Une initiative vraie pour les femmes, ça marque dans le recrutement.</p>
+                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Attirer et retenir les talents</h3>
+                      <p className="text-sm text-text-light leading-relaxed">73% des talents préfèrent une entreprise engagée. Une initiative concrète pour les femmes, ça fait la différence dans le recrutement.</p>
                     </div>
                   </div>
                 </div>
               </ScrollReveal>
               <ScrollReveal animation="fadeUp" delay={320}>
-                <div className="relative overflow-hidden rounded-3xl bg-[#222222] p-8 group hover:bg-[#2a2a2a] transition-colors duration-300">
-                  <div className="absolute top-2 right-6 text-[80px] font-black text-white/5 leading-none select-none">05</div>
+                <div className="relative overflow-hidden rounded-3xl bg-white p-8 group hover:shadow-lg transition-all duration-300 border border-warm-gray">
+                  <div className="absolute top-2 right-6 text-[80px] font-black text-sage/5 leading-none select-none">05</div>
                   <div className="relative z-10 flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sage/20 flex items-center justify-center">
-                      <span className="text-sage-light text-xl font-bold">✓</span>
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sage/10 flex items-center justify-center">
+                      <span className="text-sage text-xl font-bold">✓</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2 font-poppins">Certifié B Corp (audit externe)</h3>
-                      <p className="text-sm text-white/50 leading-relaxed">Pas d&apos;autopromotion. Audit tiers indépendant chaque année. Salaires, gouvernance, impact = vérifiés publiquement.</p>
+                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Certifié B Corp, audité chaque année</h3>
+                      <p className="text-sm text-text-light leading-relaxed">Pas d&apos;autopromotion. Un audit tiers indépendant chaque année. Salaires, gouvernance, impact : tout est vérifié publiquement.</p>
                     </div>
                   </div>
                 </div>
@@ -320,7 +320,7 @@ export default function Home() {
                 <div className="absolute top-4 right-6 text-[120px] font-black text-white/10 leading-none select-none">06</div>
                 <div className="relative z-10">
                   <h3 className="text-xl font-bold text-white mb-3 font-poppins">Zéro charge pour vous</h3>
-                  <p className="text-sm text-white/75 leading-relaxed">On gère tout : logistique, communication, déploiement. Vous envoyez l&apos;annonce. C&apos;est tout. Votre ROI : juste dire oui.</p>
+                  <p className="text-sm text-white/75 leading-relaxed">On gère tout : logistique, communication, déploiement. Vous envoyez l&apos;annonce, c&apos;est tout. Votre seule action : dire oui.</p>
                 </div>
                 <div className="relative z-10 mt-6">
                   <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">Clé en main</span>
