@@ -146,11 +146,11 @@ export default function Home() {
                       <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
                       <td className="px-6 py-5 text-sm text-text-light">~60 %</td>
                     </tr>
-                    <tr className="bg-sage-dark">
+                    <tr style={{ backgroundColor: '#3E5A4A' }}>
                       <td className="px-6 py-5 text-sm font-bold text-white">
                         <div className="flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
-                          EVE AND CO
+                          <span className="w-2 h-2 rounded-full bg-lime animate-pulse flex-shrink-0" />
+                          <img src="/images/logo-white.png" alt="EVE AND CO" className="h-4 w-auto" />
                         </div>
                       </td>
                       <td className="px-6 py-5 text-sm font-bold text-lime">39 €*</td>
