@@ -8,11 +8,15 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F4F1EE]">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16 flex items-center justify-between h-[72px]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-sage-dark/80 backdrop-blur-md border-b border-white/5">
+      <div className="max-w-[1400px] mx-auto px-8 lg:px-12 flex items-center justify-between h-[72px]">
         {/* Logo */}
-        <a href="#" className="text-deep font-bold text-xl tracking-wide font-poppins">
-          EVE AND CO
+        <a href="#" className="flex items-center">
+          <img
+            src="/images/logo-white.png"
+            alt="EVE AND CO"
+            className="h-5 lg:h-6 w-auto"
+          />
         </a>
 
         {/* Center Links */}
@@ -21,7 +25,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-xs text-deep/70 hover:text-deep tracking-[0.15em] font-medium transition-colors duration-300"
+              className="text-xs text-white/70 hover:text-white tracking-[0.15em] font-medium transition-colors duration-300"
             >
               {link.label}
             </a>
@@ -32,7 +36,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <a
             href="#devis"
-            className="bg-deep text-white text-xs font-semibold tracking-wider px-6 py-2.5 rounded-full hover:bg-deep/80 transition-all duration-300"
+            className="bg-lime text-sage-dark text-xs font-bold tracking-wider px-6 py-2.5 rounded-full hover:bg-lime-dark transition-all duration-300"
           >
             DEVIS GRATUIT
           </a>

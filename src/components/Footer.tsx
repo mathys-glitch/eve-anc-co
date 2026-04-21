@@ -127,7 +127,11 @@ export default function Footer() {
 
             {/* Center: Big Logo */}
             <div className="text-center">
-              <p className="text-5xl md:text-6xl font-bold tracking-wide" style={{ color: '#EEE8E3' }}>EVE AND CO</p>
+              <img
+                src="/images/logo-black.png"
+                alt="EVE AND CO"
+                className="h-12 md:h-16 w-auto mx-auto opacity-[0.08]"
+              />
             </div>
 
             {/* Right: Copyright */}

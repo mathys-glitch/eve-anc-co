@@ -7,53 +7,95 @@ export default function Home() {
   return (
     <>
       {/* ═══════ HERO ═══════ */}
-      <section className="py-24 lg:py-32 flex items-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cream via-white to-white" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-terra/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-sage/5 rounded-full blur-3xl" />
+      <section className="relative min-h-screen bg-sage-dark overflow-hidden pt-[72px]">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-sage-dark via-sage-dark to-[#0F2A20]" />
 
-        <div className="max-w-4xl mx-auto px-6 lg:px-10 relative z-10 w-full">
-          <div className="text-center">
-            {/* Badge */}
-            <div className="hero-animate hero-animate-delay-1 inline-flex items-center gap-2 mb-8 px-4 py-2 bg-cream rounded-full border border-warm-gray">
-              <span className="text-sm">👑</span>
-              <span className="text-xs font-semibold text-text-light">Marque N°1 en France · Certifiée B Corp</span>
-            </div>
+        {/* Photo on right side */}
+        <div className="absolute top-0 right-0 bottom-0 w-full lg:w-1/2 z-0">
+          <div className="relative h-full w-full">
+            <img
+              src="/images/hero-photo.jpg"
+              alt="EVE AND CO - Culotte menstruelle bio"
+              className="h-full w-full object-cover object-center opacity-70 lg:opacity-100"
+            />
+            {/* Gradient mask from left */}
+            <div className="absolute inset-0 bg-gradient-to-r from-sage-dark via-sage-dark/60 to-transparent lg:via-transparent lg:from-sage-dark/80" />
+          </div>
+        </div>
 
-            {/* Headline */}
-            <h1 className="hero-animate hero-animate-delay-2 font-poppins text-4xl md:text-5xl lg:text-6xl font-extrabold text-deep leading-tight tracking-tight mb-8">
-              Vos collaboratrices méritent mieux que des <span className="text-terra">tampons.</span>
-            </h1>
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-20 lg:pt-32 pb-16 min-h-screen flex flex-col">
+          <div className="grid lg:grid-cols-2 gap-10 items-center flex-grow">
+            {/* Left Column: Text */}
+            <div className="max-w-xl">
+              {/* Headline */}
+              <h1 className="hero-animate hero-animate-delay-2 font-poppins text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6">
+                Vos collaboratrices méritent mieux que des <span className="text-lime italic">tampons.</span>
+              </h1>
 
-            {/* Subheading */}
-            <p className="hero-animate hero-animate-delay-3 text-xl text-text-light leading-relaxed mx-auto mb-12 font-poppins max-w-2xl">
-              Culottes menstruelles bio, certifiées B Corp. Un investissement unique qui réduit l&apos;absentéisme de 28% et affiche 97% d&apos;adoption. L&apos;initiative CSE dont tout le monde parle.
-            </p>
+              {/* Subheading */}
+              <p className="hero-animate hero-animate-delay-3 text-base lg:text-lg text-white/75 leading-relaxed mb-10 max-w-lg">
+                Culottes menstruelles bio, certifiées B Corp. Un investissement unique qui réduit l&apos;absentéisme de 28% et affiche 97% d&apos;adoption. L&apos;initiative CSE dont tout le monde parle.
+              </p>
 
-            {/* CTA */}
-            <div className="hero-animate hero-animate-delay-4 flex flex-col sm:flex-row gap-4 items-center justify-center mb-16">
-              <a href="#devis" className="group relative px-8 py-4 bg-terra text-white font-semibold rounded-lg hover:bg-terra-dark transition-all duration-300 hover:shadow-2xl overflow-hidden">
-                <span className="relative z-10">Recevoir un devis gratuit →</span>
-                <div className="absolute inset-0 bg-terra-dark translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
-              </a>
-              <a href="#impact" className="px-8 py-4 text-terra font-semibold border-2 border-terra rounded-lg hover:bg-terra hover:text-white transition-all duration-300">
-                Calculer mon impact
-              </a>
-            </div>
+              {/* CTAs */}
+              <div className="hero-animate hero-animate-delay-4 flex flex-col sm:flex-row gap-3 mb-10">
+                <a href="#devis" className="inline-flex items-center justify-center px-7 py-3.5 bg-lime text-sage-dark font-bold rounded-full hover:bg-lime-dark transition-all duration-300 text-sm">
+                  Recevoir un devis gratuit →
+                </a>
+                <a href="#impact" className="inline-flex items-center justify-center px-7 py-3.5 text-white font-semibold border border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 text-sm">
+                  Calculer mon impact
+                </a>
+              </div>
 
-            {/* Trust indicators */}
-            <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 pt-16 border-t border-warm-gray">
-              {[
-                { stat: "Certifié", label: "B Corp" },
-                { stat: "300K+", label: "Utilisatrices" },
-                { stat: "4.5/5", label: "Trustpilot" },
-              ].map((item, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-4xl font-extrabold text-terra mb-2 font-poppins">{item.stat}</div>
-                  <p className="text-base text-text-light">{item.label}</p>
+              {/* Bottom Card — B Corp testimonial style */}
+              <div className="hero-animate hero-animate-delay-4 mt-12 lg:mt-20 max-w-sm bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex items-center gap-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center overflow-hidden p-2">
+                  <img src="/images/logo-bcorp.png" alt="B Corp" className="w-full h-full object-contain brightness-0 invert opacity-90" />
                 </div>
-              ))}
+                <div className="flex-grow">
+                  <p className="text-[11px] text-white/60 uppercase tracking-wider mb-1 font-semibold">Certifiée B Corp</p>
+                  <p className="text-xs text-white/85 leading-snug">Entreprise à impact. Audit tiers indépendant.</p>
+                </div>
+                <a href="#preuves" className="flex-shrink-0 px-3 py-1.5 bg-lime text-sage-dark text-[11px] font-bold rounded-full hover:bg-lime-dark transition-all">
+                  En savoir +
+                </a>
+              </div>
             </div>
+
+            {/* Right Column: Photo space with floating badges */}
+            <div className="relative hidden lg:block h-[600px]">
+              {/* Floating stat badges */}
+              <div className="hero-animate hero-animate-delay-3 absolute top-20 right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white text-xs font-semibold">
+                -28% ABSENTÉISME
+              </div>
+              <div className="hero-animate hero-animate-delay-3 absolute top-40 right-16 bg-lime text-sage-dark rounded-full px-4 py-2 text-xs font-bold">
+                97% ADOPTION
+              </div>
+              <div className="hero-animate hero-animate-delay-4 absolute top-[280px] right-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white text-xs font-semibold">
+                1.2T DÉCHETS ÉVITÉS
+              </div>
+              <div className="hero-animate hero-animate-delay-4 absolute top-[380px] right-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white text-xs font-semibold">
+                300+ UTILISATIONS
+              </div>
+              <div className="hero-animate hero-animate-delay-4 absolute top-[480px] right-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white text-xs font-semibold">
+                100% COTON BIO
+              </div>
+            </div>
+          </div>
+
+          {/* Trust indicators at bottom */}
+          <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 pt-12 mt-auto border-t border-white/10">
+            {[
+              { stat: "Certifié", label: "B Corp" },
+              { stat: "300K+", label: "Utilisatrices" },
+              { stat: "4.5/5", label: "Trustpilot" },
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <div className="text-2xl md:text-3xl font-extrabold text-lime mb-1 font-poppins">{item.stat}</div>
+                <p className="text-sm text-white/60">{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -144,7 +186,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-terra/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative z-10">
                   <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-terra/10 flex items-center justify-center">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4956D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5 0.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 00-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5D7A5A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5 0.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 00-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
                   </div>
                   <div className="text-4xl lg:text-5xl font-extrabold text-terra mb-2 font-poppins">1.2T</div>
                   <h3 className="text-sm font-bold text-deep mb-1">Déchets évités</h3>
@@ -174,7 +216,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-terra/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative z-10">
                   <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-terra/10 flex items-center justify-center">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4956D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5D7A5A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9m-9 9a9 9 0 019-9"/></svg>
                   </div>
                   <div className="text-4xl lg:text-5xl font-extrabold text-terra mb-2 font-poppins">300+</div>
                   <h3 className="text-sm font-bold text-deep mb-1">utilisations</h3>

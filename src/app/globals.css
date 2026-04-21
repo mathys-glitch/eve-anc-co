@@ -3,18 +3,21 @@
 :root {
   --background: #FFFFFF;
   --foreground: #1A1A1A;
-  --terra: #D4956D;
-  --terra-light: #E5B5A0;
-  --terra-dark: #B87C4C;
+  --terra: #5D7A5A;
+  --terra-light: #8FAE8B;
+  --terra-dark: #3E5A3B;
   --deep: #1A1A1A;
-  --cream: #F9F5F0;
-  --sage: #8B9A7F;
-  --sage-light: #A8B89B;
-  --warm-gray: #E8DDD6;
+  --cream: #F4F1EC;
+  --sage: #5D7A5A;
+  --sage-light: #8FAE8B;
+  --sage-dark: #1F3D2E;
+  --lime: #B8E87B;
+  --lime-dark: #98CC5E;
+  --warm-gray: #E4E2DE;
   --text: #1A1A1A;
-  --text-light: #7A7A7A;
+  --text-light: #6B7A6B;
   --card: #FFFFFF;
-  --accent-gold: #D4A574;
+  --accent-gold: #5D7A5A;
 }
 
 @theme inline {
@@ -27,6 +30,9 @@
   --color-cream: var(--cream);
   --color-sage: var(--sage);
   --color-sage-light: var(--sage-light);
+  --color-sage-dark: var(--sage-dark);
+  --color-lime: var(--lime);
+  --color-lime-dark: var(--lime-dark);
   --color-warm-gray: var(--warm-gray);
   --color-charcoal: var(--foreground);
   --color-navy: var(--deep);
@@ -34,9 +40,9 @@
   --color-text-light: var(--text-light);
   --color-card: var(--card);
   --color-beige: var(--cream);
-  --color-accent: var(--terra);
-  --color-accent-dark: var(--terra-dark);
-  --color-forest: var(--sage);
+  --color-accent: var(--sage);
+  --color-accent-dark: var(--sage-dark);
+  --color-forest: var(--sage-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-poppins: var(--font-poppins);
