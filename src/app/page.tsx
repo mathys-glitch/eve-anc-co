@@ -10,7 +10,7 @@ export default function Home() {
       <section className="relative min-h-screen overflow-hidden">
         {/* Fullscreen photo background */}
         <img
-          src="/images/hero-photo.jpg"
+          src="/images/superphoto.png"
           alt="EVE AND CO - Culotte menstruelle bio"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
