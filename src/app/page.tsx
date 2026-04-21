@@ -435,8 +435,18 @@ export default function Home() {
       </section>
 
       {/* ═══════ CTA FINAL ═══════ */}
-      <section id="devis" className="py-16 lg:py-20 bg-terra">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+      <section id="devis" className="relative py-20 lg:py-28 overflow-hidden">
+        {/* Background image */}
+        <img
+          src="/images/cta-bg.jpg"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sage-dark/95 via-sage-dark/85 to-sage-dark/60" />
+        <div className="absolute inset-0 bg-sage-dark/30" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="text-white">
