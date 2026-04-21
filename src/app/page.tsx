@@ -442,9 +442,9 @@ export default function Home() {
           alt=""
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sage-dark/95 via-sage-dark/85 to-sage-dark/60" />
-        <div className="absolute inset-0 bg-sage-dark/30" />
+        {/* Lighter overlay for better image visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-sage-dark/80 via-sage-dark/40 to-transparent" />
+        <div className="absolute inset-0 bg-sage-dark/10" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
