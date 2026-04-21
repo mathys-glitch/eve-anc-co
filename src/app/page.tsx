@@ -22,8 +22,7 @@ export default function Home() {
 
             {/* Headline */}
             <h1 className="hero-animate hero-animate-delay-2 font-poppins text-4xl md:text-5xl lg:text-6xl font-extrabold text-deep leading-tight tracking-tight mb-8">
-              Vos collaboratrices méritent mieux que des tampons.<br />
-              <span className="text-terra">Culottes menstruelles bio.</span>
+              Vos collaboratrices méritent mieux que des <span className="text-terra">tampons.</span>
             </h1>
 
             {/* Subheading */}
