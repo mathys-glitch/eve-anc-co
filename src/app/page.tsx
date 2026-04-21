@@ -414,7 +414,7 @@ export default function Home() {
             ].map((t, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
                 <div className="bg-white rounded-2xl p-10 border-2 border-warm-gray h-full flex flex-col">
-                  <p className="text-lg text-deep leading-relaxed italic mb-8 text-center flex-grow">
+                  <p className="text-[14px] text-deep leading-relaxed italic mb-8 text-center flex-grow">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <div className="flex flex-col items-center text-center">
