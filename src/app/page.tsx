@@ -1,5 +1,4 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import WasteCalculator from "@/components/WasteCalculator";
 import DayComparison from "@/components/DayComparison";
 import ContactForm from "@/components/ContactForm";
 
@@ -170,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ RÉSULTATS CONCRETS ═══════ */}
-      <section className="py-16 lg:py-20 bg-[#F9F5F0]">
+      <section id="impact" className="py-16 lg:py-20 bg-[#F9F5F0]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -246,29 +245,6 @@ export default function Home() {
             </ScrollReveal>
           </div>
 
-        </div>
-      </section>
-
-      {/* ═══════ CALCULATEUR ═══════ */}
-      <section id="impact" className="py-14 lg:py-16 bg-terra/5">
-        <div className="max-w-2xl mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <div className="text-center mb-10">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Simulateur</span>
-              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-deep leading-tight font-poppins">
-                Calculez votre impact
-              </h2>
-              <p className="mt-4 text-sm text-text-light max-w-lg mx-auto">
-                Choisissez la taille de votre entreprise. On fait le reste.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal animation="fadeUp">
-            <div className="bg-white rounded-2xl p-8 border border-warm-gray shadow-sm">
-              <WasteCalculator />
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
