@@ -17,12 +17,12 @@ export default function MobileMenu() {
     <>
       <button
         onClick={() => setOpen(!open)}
-        className="md:hidden p-2 cursor-pointer hover:bg-warm-gray/30 rounded-full transition-colors duration-300"
+        className="md:hidden p-2 cursor-pointer hover:bg-white/10 rounded-full transition-colors duration-300"
         aria-label={open ? "Fermer" : "Menu"}
       >
-        <span className={`block w-6 h-0.5 bg-deep transition-all duration-300 ${open ? "rotate-45 translate-y-[8px]" : ""}`} />
-        <span className={`block w-6 h-0.5 bg-deep mt-1.5 transition-all duration-300 ${open ? "opacity-0" : ""}`} />
-        <span className={`block w-6 h-0.5 bg-deep mt-1.5 transition-all duration-300 ${open ? "-rotate-45 -translate-y-[8px]" : ""}`} />
+        <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${open ? "rotate-45 translate-y-[8px]" : ""}`} />
+        <span className={`block w-6 h-0.5 bg-white mt-1.5 transition-all duration-300 ${open ? "opacity-0" : ""}`} />
+        <span className={`block w-6 h-0.5 bg-white mt-1.5 transition-all duration-300 ${open ? "-rotate-45 -translate-y-[8px]" : ""}`} />
       </button>
       {open && (
         <div className="fixed inset-0 top-[72px] bg-background z-50 md:hidden flex flex-col items-center justify-center gap-12 px-6">

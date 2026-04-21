@@ -194,7 +194,7 @@ export default function Home() {
                   </div>
                   <div className="text-4xl lg:text-5xl font-extrabold text-terra mb-2 font-poppins">1.2T</div>
                   <h3 className="text-sm font-bold text-deep mb-1">Déchets évités</h3>
-                  <p className="text-xs text-text-light">pour 100 collaboratrices équipées / 5 ans</p>
+                  <p className="text-xs text-text-light">pour 100 collaboratrices équipées</p>
                 </div>
               </div>
             </ScrollReveal>
