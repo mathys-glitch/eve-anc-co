@@ -223,68 +223,110 @@ export default function Home() {
       </section>
 
       {/* ═══════ 6 ARGUMENTS CODIR ═══════ */}
-      <section id="preuves" className="py-16 lg:py-20 bg-cream/30">
+      <section id="preuves" className="py-20 lg:py-28 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Arguments décisifs</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight">
-                6 bonnes raisons de dire oui au CODIR
+            <div className="text-center mb-20">
+              <span className="text-xs font-semibold text-terra uppercase tracking-[0.2em]">Arguments décisifs</span>
+              <h2 className="mt-5 text-4xl md:text-5xl font-bold text-white leading-tight font-poppins">
+                6 raisons de dire oui au CODIR
               </h2>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                num: "1",
-                icon: "📊",
-                title: "RSE quantifiable & vérifiable",
-                desc: "Rapport d'impact chiffré chaque année. Déchets évités, CO2 économisé, absentéisme réduit. Directement intégrable à votre DPEF.",
-              },
-              {
-                num: "2",
-                icon: "💰",
-                title: "ROI payant dès 6 mois",
-                desc: "1 500€ une fois pour 100 femmes = 150€/tête/5 ans. Vs. 300€/personne/an en jetables. C'est 50% moins cher.",
-              },
-              {
-                num: "3",
-                icon: "📈",
-                title: "-28% d'absentéisme règles",
-                desc: "28% des femmes s'absentent. EVE AND CO réduit ça drastiquement. Plus de jours présents, plus de productivité.",
-              },
-              {
-                num: "4",
-                icon: "⭐",
-                title: "Talent acquisition & rétention",
-                desc: "73% des talents préfèrent une entreprise engagée. Une initiative vraie pour les femmes, ça marque dans le recrutement.",
-              },
-              {
-                num: "5",
-                icon: "✓",
-                title: "Certifié B Corp (audit externe)",
-                desc: "Pas d'autopromotion. Audit tiers indépendant chaque année. Salaires, gouvernance, impact = vérifiés publiquement.",
-              },
-              {
-                num: "6",
-                icon: "🎯",
-                title: "Zéro charge pour vous",
-                desc: "On gère tout : logistique, communication, déploiement. Vous envoyez l'annonce. C'est tout. Votre ROI : juste dire oui.",
-              },
-            ].map((arg, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 60}>
-                <div className="bg-white rounded-2xl p-8 border border-warm-gray hover:border-terra hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-3xl flex-shrink-0">{arg.icon}</div>
-                    <div className="flex-grow">
-                      <h3 className="text-lg font-bold text-deep mb-2">{arg.title}</h3>
-                      <p className="text-sm text-text-light leading-relaxed">{arg.desc}</p>
+          {/* Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Card 1 — Large */}
+            <ScrollReveal animation="fadeUp" delay={0}>
+              <div className="md:col-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-terra to-terra-dark p-10 h-full min-h-[280px] flex flex-col justify-between group">
+                <div className="absolute top-4 right-6 text-[120px] font-black text-white/10 leading-none select-none">01</div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">RSE quantifiable & vérifiable</h3>
+                  <p className="text-sm text-white/75 leading-relaxed">Rapport d&apos;impact chiffré chaque année. Déchets évités, CO2 économisé, absentéisme réduit. Directement intégrable à votre DPEF.</p>
+                </div>
+                <div className="relative z-10 mt-6">
+                  <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">Impact mesurable</span>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Card 2 + 3 stacked */}
+            <div className="md:col-span-2 grid grid-rows-2 gap-4">
+              <ScrollReveal animation="fadeUp" delay={80}>
+                <div className="relative overflow-hidden rounded-3xl bg-[#222222] p-8 group hover:bg-[#2a2a2a] transition-colors duration-300">
+                  <div className="absolute top-2 right-6 text-[80px] font-black text-white/5 leading-none select-none">02</div>
+                  <div className="relative z-10 flex items-start gap-6">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-terra/20 flex items-center justify-center">
+                      <span className="text-terra text-xl font-bold">€</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2 font-poppins">ROI payant dès 6 mois</h3>
+                      <p className="text-sm text-white/50 leading-relaxed">1 500€ une fois pour 100 femmes = 150€/tête/5 ans. Vs. 300€/personne/an en jetables. C&apos;est 50% moins cher.</p>
                     </div>
                   </div>
                 </div>
               </ScrollReveal>
-            ))}
+              <ScrollReveal animation="fadeUp" delay={160}>
+                <div className="relative overflow-hidden rounded-3xl bg-[#222222] p-8 group hover:bg-[#2a2a2a] transition-colors duration-300">
+                  <div className="absolute top-2 right-6 text-[80px] font-black text-white/5 leading-none select-none">03</div>
+                  <div className="relative z-10 flex items-start gap-6">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sage/20 flex items-center justify-center">
+                      <span className="text-sage-light text-xl font-bold">↓</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2 font-poppins">-28% d&apos;absentéisme règles</h3>
+                      <p className="text-sm text-white/50 leading-relaxed">28% des femmes s&apos;absentent. EVE AND CO réduit ça drastiquement. Plus de jours présents, plus de productivité.</p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Card 4 + 5 stacked */}
+            <div className="md:col-span-2 grid grid-rows-2 gap-4">
+              <ScrollReveal animation="fadeUp" delay={240}>
+                <div className="relative overflow-hidden rounded-3xl bg-[#222222] p-8 group hover:bg-[#2a2a2a] transition-colors duration-300">
+                  <div className="absolute top-2 right-6 text-[80px] font-black text-white/5 leading-none select-none">04</div>
+                  <div className="relative z-10 flex items-start gap-6">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-terra/20 flex items-center justify-center">
+                      <span className="text-terra text-xl font-bold">★</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2 font-poppins">Talent acquisition & rétention</h3>
+                      <p className="text-sm text-white/50 leading-relaxed">73% des talents préfèrent une entreprise engagée. Une initiative vraie pour les femmes, ça marque dans le recrutement.</p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal animation="fadeUp" delay={320}>
+                <div className="relative overflow-hidden rounded-3xl bg-[#222222] p-8 group hover:bg-[#2a2a2a] transition-colors duration-300">
+                  <div className="absolute top-2 right-6 text-[80px] font-black text-white/5 leading-none select-none">05</div>
+                  <div className="relative z-10 flex items-start gap-6">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sage/20 flex items-center justify-center">
+                      <span className="text-sage-light text-xl font-bold">✓</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2 font-poppins">Certifié B Corp (audit externe)</h3>
+                      <p className="text-sm text-white/50 leading-relaxed">Pas d&apos;autopromotion. Audit tiers indépendant chaque année. Salaires, gouvernance, impact = vérifiés publiquement.</p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Card 6 — Large */}
+            <ScrollReveal animation="fadeUp" delay={400}>
+              <div className="md:col-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-sage to-sage/70 p-10 h-full min-h-[280px] flex flex-col justify-between group">
+                <div className="absolute top-4 right-6 text-[120px] font-black text-white/10 leading-none select-none">06</div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">Zéro charge pour vous</h3>
+                  <p className="text-sm text-white/75 leading-relaxed">On gère tout : logistique, communication, déploiement. Vous envoyez l&apos;annonce. C&apos;est tout. Votre ROI : juste dire oui.</p>
+                </div>
+                <div className="relative z-10 mt-6">
+                  <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">Clé en main</span>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
