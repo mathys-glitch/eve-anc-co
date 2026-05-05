@@ -41,8 +41,8 @@ export default function Home() {
 
               {/* Bottom Card — B Corp testimonial style */}
               <div className="hero-animate hero-animate-delay-4 mt-12 lg:mt-16 max-w-sm bg-white/10 backdrop-blur-lg border border-white/15 rounded-2xl p-4 flex items-center gap-4">
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-white flex items-center justify-center overflow-hidden p-1.5">
-                  <img src="/images/logo-bcorp.png" alt="B Corp" className="w-full h-full object-contain" />
+                <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center overflow-hidden p-1">
+                  <img src="/images/logo-bcorp.png" alt="B Corp" className="w-full h-full object-contain brightness-0 invert" />
                 </div>
                 <div className="flex-grow">
                   <p className="text-[11px] text-white/70 uppercase tracking-wider mb-1 font-semibold">Certifiée B Corp</p>
