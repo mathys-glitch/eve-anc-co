@@ -2,51 +2,6 @@ import ScrollReveal from "@/components/ScrollReveal";
 import DayComparison from "@/components/DayComparison";
 import ContactForm from "@/components/ContactForm";
 
-const REASONS = [
-  {
-    role: "DAF",
-    headline: "Un investissement, pas un abonnement.",
-    stat: "39€ une fois",
-    statContext: "Soit 9× moins qu’une salle de sport — et jamais à renégocier.",
-    color: "#5D7A5A",
-  },
-  {
-    role: "DRH",
-    headline: "Moins d’absences, plus de présence.",
-    stat: "−28%",
-    statContext: "d’absentéisme lié aux règles. Des équipes plus stables, moins d’imprévus.",
-    color: "#D97757",
-  },
-  {
-    role: "Marque employeur",
-    headline: "Ce que les talents regardent vraiment.",
-    stat: "73%",
-    statContext: "des candidats choisissent une entreprise pour ses engagements concrets, pas un baby-foot.",
-    color: "#98CC5E",
-  },
-  {
-    role: "RSE",
-    headline: "Des chiffres traçables, pas des promesses.",
-    stat: "1,2T",
-    statContext: "de déchets évités pour 100 collaboratrices. Vérifiable, intégrable au DPEF.",
-    color: "#1F3D2E",
-  },
-  {
-    role: "Direction Générale",
-    headline: "Audité par des tiers. Pas par nous.",
-    stat: "B Corp",
-    statContext: "Certification indépendante annuelle. Salaires, gouvernance, impact : tout est public.",
-    color: "#3E5A4A",
-  },
-  {
-    role: "Office Manager",
-    headline: "Zéro charge mentale en plus.",
-    stat: "0 à gérer",
-    statContext: "Logistique, distribution, comm interne : on prend tout en charge. Vous validez, on déploie.",
-    color: "#A89B85",
-  },
-];
-
 export default function Home() {
   return (
     <>
@@ -256,63 +211,153 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal animation="fadeUp">
-            <div className="bg-white rounded-2xl border border-warm-gray overflow-hidden shadow-[0_8px_30px_-12px_rgba(31,61,46,0.08)]">
-              {REASONS.map((r, i) => (
-                <div
-                  key={i}
-                  className="group relative flex flex-col md:flex-row md:items-start gap-6 md:gap-10 px-8 md:px-12 py-9 md:py-10 border-b border-warm-gray last:border-b-0 transition-colors duration-300 hover:bg-[#FAF8F3]"
-                >
-                  {/* Vertical color bar — persona signature */}
-                  <div
-                    className="absolute left-0 top-0 bottom-0 w-[4px] transition-all duration-500 group-hover:w-[6px]"
-                    style={{ backgroundColor: r.color }}
-                  />
-
-                  {/* Number + persona — fixed width left */}
-                  <div className="md:w-56 shrink-0 flex items-start gap-5">
-                    <span
-                      className="font-poppins text-[44px] md:text-[52px] font-bold leading-none tracking-tight"
-                      style={{ color: r.color }}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div className="pt-1.5">
-                      <div
-                        className="text-[10px] font-bold uppercase tracking-[0.22em] mb-1"
-                        style={{ color: r.color }}
-                      >
-                        Pour la
-                      </div>
-                      <div className="font-poppins text-[15px] font-bold text-deep leading-tight">
-                        {r.role}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Headline + context — flexible center */}
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-poppins text-xl md:text-[22px] font-bold text-deep leading-[1.25] mb-2.5">
-                      {r.headline}
+          {/* Apple-style bento — 3 cols, mixed widths, light/dark rhythm */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 auto-rows-fr">
+            {/* 01 — DAF (wide light, sage gradient) */}
+            <ScrollReveal animation="fadeUp" delay={0} className="md:col-span-2">
+              <div className="group h-full rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-white via-white to-[#EEF3EC] border border-warm-gray transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(31,61,46,0.25)] relative overflow-hidden">
+                <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-sage/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/[0.18] group-hover:scale-110" />
+                <div className="relative h-full flex flex-col lg:flex-row gap-8">
+                  <div className="flex-1">
+                    <div className="text-[10px] font-bold text-sage uppercase tracking-[0.22em] mb-4">01 · Pour la DAF</div>
+                    <h3 className="font-poppins text-[28px] lg:text-[40px] font-bold text-deep leading-[1.05] tracking-tight mb-4">
+                      Un investissement,<br />pas un abonnement.
                     </h3>
-                    <p className="text-[13.5px] text-text-light leading-relaxed max-w-xl">
-                      {r.statContext}
+                    <p className="text-sm text-text-light leading-relaxed max-w-md">
+                      Soit 9× moins qu&apos;une salle de sport — et jamais à renégocier. Budget verrouillé dès la première année.
                     </p>
                   </div>
-
-                  {/* Stat — right */}
-                  <div className="md:w-36 shrink-0 md:text-right">
-                    <div
-                      className="font-poppins text-[26px] md:text-[28px] font-bold leading-none tracking-tight"
-                      style={{ color: r.color }}
-                    >
-                      {r.stat}
+                  <div className="lg:w-44 shrink-0 lg:border-l lg:border-warm-gray lg:pl-8 flex lg:flex-col items-end lg:items-start lg:justify-end">
+                    <div>
+                      <div className="font-poppins text-[64px] lg:text-[76px] font-bold text-sage leading-none tracking-tighter transition-transform duration-500 group-hover:scale-105 origin-left">
+                        39€
+                      </div>
+                      <div className="text-sm italic text-text-light mt-2">une fois</div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </ScrollReveal>
+              </div>
+            </ScrollReveal>
+
+            {/* 02 — DRH (narrow, coral tint) */}
+            <ScrollReveal animation="fadeUp" delay={100}>
+              <div className="group h-full rounded-3xl p-8 bg-[#FBF6F2] border border-[#D97757]/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(217,119,87,0.3)] relative overflow-hidden">
+                <div className="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-[#D97757]/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[#D97757]/[0.22] group-hover:scale-110" />
+                <div className="relative h-full flex flex-col">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.22em] mb-4" style={{ color: "#D97757" }}>02 · Pour la DRH</div>
+                  <div className="font-poppins text-[68px] lg:text-[76px] font-bold leading-none tracking-tighter mb-1 transition-transform duration-500 group-hover:scale-105 origin-left" style={{ color: "#D97757" }}>
+                    −28%
+                  </div>
+                  <div className="text-sm italic text-text-light mb-8">d&apos;absentéisme</div>
+                  <div className="mt-auto">
+                    <h3 className="font-poppins text-xl font-bold text-deep leading-snug mb-2">
+                      Moins d&apos;absences, plus de présence.
+                    </h3>
+                    <p className="text-[13px] text-text-light leading-relaxed">
+                      Sur le motif règles. Des équipes plus stables, moins d&apos;imprévus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 03 — Marque employeur (narrow, lime tint) */}
+            <ScrollReveal animation="fadeUp" delay={200}>
+              <div className="group h-full rounded-3xl p-8 bg-[#F4F9EC] border border-[#98CC5E]/25 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(152,204,94,0.35)] relative overflow-hidden">
+                <div className="absolute -bottom-20 -right-20 w-56 h-56 rounded-full bg-[#98CC5E]/15 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[#98CC5E]/30 group-hover:scale-110" />
+                <div className="relative h-full flex flex-col">
+                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.22em] mb-4">03 · Marque employeur</div>
+                  <div className="font-poppins text-[68px] lg:text-[76px] font-bold text-sage-dark leading-none tracking-tighter mb-1 transition-transform duration-500 group-hover:scale-105 origin-left">
+                    73%
+                  </div>
+                  <div className="text-sm italic text-text-light mb-8">des candidats</div>
+                  <div className="mt-auto">
+                    <h3 className="font-poppins text-xl font-bold text-deep leading-snug mb-2">
+                      Ce que les talents regardent.
+                    </h3>
+                    <p className="text-[13px] text-text-light leading-relaxed">
+                      Des engagements concrets, pas un baby-foot. Visible dès l&apos;entretien.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 04 — RSE (wide DARK — showpiece) */}
+            <ScrollReveal animation="fadeUp" delay={300} className="md:col-span-2">
+              <div className="group h-full rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-sage-dark via-[#1F3D2E] to-[#142A1F] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(31,61,46,0.6)] relative overflow-hidden">
+                <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-lime/[0.12] blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-lime/[0.22] group-hover:scale-110" />
+                <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-sage/20 blur-3xl pointer-events-none opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+                <div className="relative h-full flex flex-col lg:flex-row gap-8 items-center lg:items-stretch">
+                  <div className="lg:w-1/2 flex flex-col justify-center">
+                    <div className="text-[10px] font-bold text-lime uppercase tracking-[0.22em] mb-4">04 · Pour la RSE</div>
+                    <div className="font-poppins text-[80px] lg:text-[100px] font-bold text-white leading-none tracking-tighter mb-2 transition-transform duration-500 group-hover:scale-105 origin-left">
+                      1,2T
+                    </div>
+                    <div className="text-sm italic text-white/60">de déchets évités · pour 100 collaboratrices</div>
+                  </div>
+                  <div className="lg:w-1/2 lg:border-l lg:border-white/10 lg:pl-8 flex flex-col justify-center">
+                    <h3 className="font-poppins text-[24px] lg:text-[28px] font-bold text-white leading-tight mb-3">
+                      Des chiffres traçables, pas des promesses.
+                    </h3>
+                    <p className="text-sm text-white/70 leading-relaxed">
+                      Donnée vérifiable, intégrable au DPEF, auditée par tiers indépendant. Vos équipes RSE vont adorer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 05 — Direction Générale (wide cream) */}
+            <ScrollReveal animation="fadeUp" delay={400} className="md:col-span-2">
+              <div className="group h-full rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-[#FAF6EE] via-[#F4F0E7] to-[#EBE5D7] border border-warm-gray transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(31,61,46,0.25)] relative overflow-hidden">
+                <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-sage/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/[0.18] group-hover:scale-110" />
+                <div className="relative h-full flex flex-col lg:flex-row gap-8">
+                  <div className="flex-1">
+                    <div className="text-[10px] font-bold uppercase tracking-[0.22em] mb-4" style={{ color: "#3E5A4A" }}>05 · Direction Générale</div>
+                    <h3 className="font-poppins text-[28px] lg:text-[36px] font-bold text-deep leading-[1.05] tracking-tight mb-4">
+                      Audité par des tiers.<br />Pas par nous.
+                    </h3>
+                    <p className="text-sm text-text-light leading-relaxed max-w-md">
+                      Audit indépendant chaque année. Salaires, gouvernance, impact environnemental — tout est public. Zéro greenwashing possible.
+                    </p>
+                  </div>
+                  <div className="lg:w-44 shrink-0 lg:border-l lg:border-warm-gray lg:pl-8 flex lg:flex-col items-end lg:items-start lg:justify-end">
+                    <div>
+                      <div className="font-poppins text-[52px] lg:text-[60px] font-bold text-sage-dark leading-[0.95] tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
+                        B Corp
+                      </div>
+                      <div className="text-sm italic text-text-light mt-2">certifiée</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 06 — Office Manager (narrow sage tint) */}
+            <ScrollReveal animation="fadeUp" delay={500}>
+              <div className="group h-full rounded-3xl p-8 bg-[#EEF3EC] border border-sage/20 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(31,61,46,0.25)] relative overflow-hidden">
+                <div className="absolute -bottom-20 -right-20 w-56 h-56 rounded-full bg-sage/15 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/30 group-hover:scale-110" />
+                <div className="relative h-full flex flex-col">
+                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.22em] mb-4">06 · Office Manager</div>
+                  <div className="flex items-baseline gap-3 mb-1">
+                    <div className="font-poppins text-[100px] lg:text-[120px] font-bold text-sage leading-[0.85] tracking-tighter transition-transform duration-500 group-hover:scale-105 origin-left">
+                      0
+                    </div>
+                    <div className="font-poppins text-2xl italic text-sage/70">à gérer</div>
+                  </div>
+                  <div className="mt-auto pt-6">
+                    <h3 className="font-poppins text-xl font-bold text-deep leading-snug mb-2">
+                      Zéro charge mentale en plus.
+                    </h3>
+                    <p className="text-[13px] text-text-light leading-relaxed">
+                      Logistique, distribution, comm interne : on prend tout en charge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
