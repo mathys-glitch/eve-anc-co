@@ -256,42 +256,63 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {REASONS.map((r, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
-                <div className="group h-full bg-white rounded-2xl p-9 lg:p-10 border border-warm-gray hover:-translate-y-1 hover:shadow-[0_24px_60px_-24px_rgba(31,61,46,0.2)] transition-all duration-500 flex flex-col">
-                  {/* Color bar — persona signature */}
+          <ScrollReveal animation="fadeUp">
+            <div className="bg-white rounded-2xl border border-warm-gray overflow-hidden shadow-[0_8px_30px_-12px_rgba(31,61,46,0.08)]">
+              {REASONS.map((r, i) => (
+                <div
+                  key={i}
+                  className="group relative flex flex-col md:flex-row md:items-start gap-6 md:gap-10 px-8 md:px-12 py-9 md:py-10 border-b border-warm-gray last:border-b-0 transition-colors duration-300 hover:bg-[#FAF8F3]"
+                >
+                  {/* Vertical color bar — persona signature */}
                   <div
-                    className="h-[3px] w-10 mb-8 transition-all duration-500 group-hover:w-16"
+                    className="absolute left-0 top-0 bottom-0 w-[4px] transition-all duration-500 group-hover:w-[6px]"
                     style={{ backgroundColor: r.color }}
                   />
 
-                  {/* Persona */}
-                  <p
-                    className="text-[11px] font-bold uppercase tracking-[0.22em] mb-6"
-                    style={{ color: r.color }}
-                  >
-                    Pour la {r.role}
-                  </p>
-
-                  {/* Headline — the hero */}
-                  <h3 className="font-poppins text-[22px] lg:text-[26px] font-bold text-deep leading-[1.2] tracking-tight mb-auto pb-10">
-                    {r.headline}
-                  </h3>
-
-                  {/* Stat + context at bottom */}
-                  <div className="pt-6 border-t border-warm-gray">
-                    <div className="font-poppins font-bold text-deep text-base mb-1.5">
-                      {r.stat}
+                  {/* Number + persona — fixed width left */}
+                  <div className="md:w-56 shrink-0 flex items-start gap-5">
+                    <span
+                      className="font-poppins text-[44px] md:text-[52px] font-bold leading-none tracking-tight"
+                      style={{ color: r.color }}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="pt-1.5">
+                      <div
+                        className="text-[10px] font-bold uppercase tracking-[0.22em] mb-1"
+                        style={{ color: r.color }}
+                      >
+                        Pour la
+                      </div>
+                      <div className="font-poppins text-[15px] font-bold text-deep leading-tight">
+                        {r.role}
+                      </div>
                     </div>
-                    <p className="text-[13px] text-text-light leading-relaxed">
+                  </div>
+
+                  {/* Headline + context — flexible center */}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-poppins text-xl md:text-[22px] font-bold text-deep leading-[1.25] mb-2.5">
+                      {r.headline}
+                    </h3>
+                    <p className="text-[13.5px] text-text-light leading-relaxed max-w-xl">
                       {r.statContext}
                     </p>
                   </div>
+
+                  {/* Stat — right */}
+                  <div className="md:w-36 shrink-0 md:text-right">
+                    <div
+                      className="font-poppins text-[26px] md:text-[28px] font-bold leading-none tracking-tight"
+                      style={{ color: r.color }}
+                    >
+                      {r.stat}
+                    </div>
+                  </div>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
