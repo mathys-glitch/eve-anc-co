@@ -119,7 +119,7 @@ export default function Home() {
               { stat: "97%", label: "d'adoption", caption: "dès le premier mois d'usage", color: "#98CC5E" },
             ].map((s, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
-                <div className="group px-4 py-6 lg:px-8 lg:py-4">
+                <div className="group px-4 py-6 lg:px-8 lg:py-4 text-center flex flex-col items-center">
                   <div
                     className="font-poppins text-[52px] lg:text-[68px] font-extrabold leading-none tracking-tight mb-3 transition-all duration-500 group-hover:tracking-tighter"
                     style={{ color: s.color }}
