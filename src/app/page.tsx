@@ -323,23 +323,23 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            {/* 06 — Office Manager (narrow sage tint) */}
+            {/* 06 — Vos employées (narrow sage tint) */}
             <ScrollReveal animation="fadeUp" delay={500}>
               <div className="group h-full rounded-3xl p-7 bg-[#EEF3EC] border border-sage/20 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(31,61,46,0.22)] relative overflow-hidden">
                 <div className="absolute -bottom-16 -right-16 w-44 h-44 rounded-full bg-sage/15 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/30 group-hover:scale-110" />
                 <div className="relative h-full flex flex-col">
-                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.22em] mb-3">06 · Office Manager</div>
+                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.22em] mb-3">06 · Vos employées</div>
                   <h3 className="font-poppins text-lg font-bold text-deep leading-snug mb-2">
-                    Zéro charge mentale en plus.
+                    Protégées toute la journée, sans y penser.
                   </h3>
                   <p className="text-[12.5px] text-text-light leading-relaxed mb-6">
-                    Logistique, distribution, comm interne : on s&apos;occupe de tout.
+                    Du matin jusqu&apos;au soir, sans rupture ni stress. Une seule culotte tient la journée.
                   </p>
                   <div className="mt-auto pt-5 border-t border-sage/20 flex items-baseline gap-2">
                     <div className="font-poppins text-[36px] font-bold text-sage leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
-                      0
+                      12H
                     </div>
-                    <div className="text-sm italic text-text-light">à gérer</div>
+                    <div className="text-sm italic text-text-light">de protection</div>
                   </div>
                 </div>
               </div>

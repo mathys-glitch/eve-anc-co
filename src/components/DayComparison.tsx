@@ -17,7 +17,7 @@ const WITH: DayItem[] = [
   { time: "11:00", event: "Confort max, coton bio qui respire, zéro irritation" },
   { time: "13:00", event: "Pause déj tranquille, rien à prévoir, zéro stress" },
   { time: "15:00", event: "Concentration totale, zéro distraction, 100% présente" },
-  { time: "17:00", event: "Machine ce soir, prête pour 300 utilisations de plus" },
+  { time: "17:00", event: "Machine ce soir, prête pour une nouvelle journée" },
 ];
 
 const CORAL = "#D97757";
