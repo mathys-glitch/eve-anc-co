@@ -36,9 +36,10 @@ export default function Navbar() {
         <div className="hidden md:block">
           <a
             href="#devis"
-            className="bg-white/25 backdrop-blur-lg border border-white/35 text-white text-xs font-bold tracking-wider px-6 py-2.5 rounded-full hover:bg-white/40 hover:border-white/50 transition-all duration-300"
+            className="inline-flex items-center gap-1.5 bg-white text-sage-dark text-xs font-bold tracking-wider px-6 py-2.5 rounded-full hover:bg-lime hover:gap-2.5 transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.25)]"
           >
             DEVIS GRATUIT
+            <span aria-hidden="true">→</span>
           </a>
         </div>
 
