@@ -24,7 +24,7 @@ export default function Home() {
             <div className="max-w-xl">
               {/* Headline — 2 lines max */}
               <h1 className="hero-animate hero-animate-delay-2 font-poppins text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6">
-                Vos collaboratrices méritent mieux que des <span className="text-lime italic">tampons.</span>
+                Elles méritent mieux que des <span className="text-lime italic">tampons.</span>
               </h1>
 
               {/* Subheading */}
