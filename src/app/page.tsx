@@ -113,9 +113,9 @@ export default function Home() {
           {/* Stats — typography-led, separated by vertical hairlines */}
           <div className="grid grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-warm-gray">
             {[
-              { stat: "1,2T", label: "Déchets évités", caption: "pour 100 collaboratrices équipées", color: "#5D7A5A" },
-              { stat: "−28%", label: "d'absentéisme", caption: "lié aux règles, en moyenne", color: "#D97757" },
-              { stat: "300+", label: "utilisations", caption: "par culotte avant lavage final", color: "#1F3D2E" },
+              { stat: "1,2T", label: "Déchets évités", caption: "pour 100 collaboratrices équipées", color: "#1A1A1A" },
+              { stat: "−28%", label: "d'absentéisme", caption: "lié aux règles, en moyenne", color: "#1A1A1A" },
+              { stat: "300+", label: "utilisations", caption: "par culotte avant lavage final", color: "#1A1A1A" },
               { stat: "97%", label: "d'adoption", caption: "dès le premier mois d'usage", color: "#98CC5E" },
             ].map((s, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
