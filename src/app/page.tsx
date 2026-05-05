@@ -2,6 +2,39 @@ import ScrollReveal from "@/components/ScrollReveal";
 import DayComparison from "@/components/DayComparison";
 import ContactForm from "@/components/ContactForm";
 
+const REASONS = [
+  {
+    title: "Des chiffres, pas des promesses",
+    body: "Déchets évités, CO₂, absentéisme : chaque donnée est traçable et intégrable à votre DPEF.",
+    tag: "Impact",
+  },
+  {
+    title: "Rentable dès le premier jour",
+    body: "Un investissement unique au lieu d’un coût récurrent. Pas d’abonnement, pas de surprise.",
+    tag: "Budget",
+  },
+  {
+    title: "Moins d’absences, plus de présence",
+    body: "28% des femmes s’absentent à cause des règles. Un tabou résolu = équipes plus stables.",
+    tag: "RH",
+  },
+  {
+    title: "Ce que les talents regardent",
+    body: "73% des candidats choisissent une entreprise pour ses engagements concrets, pas un baby-foot.",
+    tag: "Marque employeur",
+  },
+  {
+    title: "Audité, pas auto-déclaré",
+    body: "Certifiée B Corp : audit indépendant chaque année. Salaires, gouvernance, impact — tout est public.",
+    tag: "Crédibilité",
+  },
+  {
+    title: "On s’occupe de tout",
+    body: "Logistique, distribution, communication interne : on prend tout en charge. Vous validez, on déploie.",
+    tag: "Clé en main",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -200,107 +233,32 @@ export default function Home() {
       <section id="preuves" className="py-20 lg:py-28 bg-[#F4F1EE]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-20">
-              <span className="text-xs font-semibold text-terra uppercase tracking-[0.2em]">Pour convaincre en interne</span>
+            <div className="text-center mb-16">
+              <span className="text-xs font-semibold text-sage uppercase tracking-[0.2em]">Pour convaincre en interne</span>
               <h2 className="mt-5 text-4xl md:text-5xl font-bold text-deep leading-tight font-poppins">
                 6 raisons de dire oui au CODIR
               </h2>
+              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+                Tout ce qu&apos;il faut pour défendre l&apos;initiative en réunion. Une raison, un chiffre, une réponse.
+              </p>
             </div>
           </ScrollReveal>
 
-          {/* Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Card 1 — Large */}
-            <ScrollReveal animation="fadeUp" delay={0}>
-              <div className="md:col-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-terra to-terra-dark p-10 h-full min-h-[280px] flex flex-col justify-between group">
-                <div className="absolute top-4 right-6 text-[120px] font-black text-white/10 leading-none select-none">01</div>
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">Des chiffres, pas des mots</h3>
-                  <p className="text-sm text-white/75 leading-relaxed">Déchets évités, CO2 économisé, absentéisme réduit : chaque donnée est traçable et intégrable à votre DPEF. Vos équipes RSE vont adorer.</p>
-                </div>
-                <div className="relative z-10 mt-6">
-                  <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">Impact vérifiable</span>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Card 2 + 3 stacked */}
-            <div className="md:col-span-2 grid grid-rows-2 gap-4">
-              <ScrollReveal animation="fadeUp" delay={80}>
-                <div className="relative overflow-hidden rounded-3xl bg-white p-8 group hover:shadow-lg transition-all duration-300 border border-warm-gray">
-                  <div className="absolute top-2 right-6 text-[80px] font-black text-terra/5 leading-none select-none">02</div>
-                  <div className="relative z-10 flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-terra/10 flex items-center justify-center">
-                      <span className="text-terra text-xl font-bold">€</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Rentable dès le premier jour</h3>
-                      <p className="text-sm text-text-light leading-relaxed">Un seul investissement contre un coût récurrent chaque année. Pas de renouvellement, pas de surprise. Le budget est maîtrisé dès le départ.</p>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {REASONS.map((r, i) => (
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
+                <div className="h-full bg-white rounded-xl p-7 border border-warm-gray hover:border-sage/40 hover:-translate-y-0.5 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="w-10 h-10 rounded-full bg-sage/10 text-sage font-poppins font-bold text-sm flex items-center justify-center">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-[10px] font-bold text-sage uppercase tracking-widest">{r.tag}</span>
                   </div>
+                  <h3 className="text-lg font-bold text-deep mb-3 font-poppins leading-snug">{r.title}</h3>
+                  <p className="text-sm text-text-light leading-relaxed">{r.body}</p>
                 </div>
               </ScrollReveal>
-              <ScrollReveal animation="fadeUp" delay={160}>
-                <div className="relative overflow-hidden rounded-3xl bg-white p-8 group hover:shadow-lg transition-all duration-300 border border-warm-gray">
-                  <div className="absolute top-2 right-6 text-[80px] font-black text-sage/5 leading-none select-none">03</div>
-                  <div className="relative z-10 flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sage/10 flex items-center justify-center">
-                      <span className="text-sage text-xl font-bold">↓</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Moins d&apos;absences, plus de présence</h3>
-                      <p className="text-sm text-text-light leading-relaxed">28% des femmes s&apos;absentent chaque mois à cause de leurs règles. Une solution adaptée change la donne. Résultat : des équipes plus stables et plus sereines.</p>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Card 4 + 5 stacked */}
-            <div className="md:col-span-2 grid grid-rows-2 gap-4">
-              <ScrollReveal animation="fadeUp" delay={240}>
-                <div className="relative overflow-hidden rounded-3xl bg-white p-8 group hover:shadow-lg transition-all duration-300 border border-warm-gray">
-                  <div className="absolute top-2 right-6 text-[80px] font-black text-terra/5 leading-none select-none">04</div>
-                  <div className="relative z-10 flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-terra/10 flex items-center justify-center">
-                      <span className="text-terra text-xl font-bold">★</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Ce que les talents regardent vraiment</h3>
-                      <p className="text-sm text-text-light leading-relaxed">73% des candidats choisissent une entreprise pour ses engagements concrets. Pas pour un baby-foot. Une initiative comme celle-ci se remarque dès l&apos;entretien.</p>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal animation="fadeUp" delay={320}>
-                <div className="relative overflow-hidden rounded-3xl bg-white p-8 group hover:shadow-lg transition-all duration-300 border border-warm-gray">
-                  <div className="absolute top-2 right-6 text-[80px] font-black text-sage/5 leading-none select-none">05</div>
-                  <div className="relative z-10 flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sage/10 flex items-center justify-center">
-                      <span className="text-sage text-xl font-bold">✓</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-deep mb-2 font-poppins">Vérifié par des tiers, pas par nous</h3>
-                      <p className="text-sm text-text-light leading-relaxed">La certification B Corp, c&apos;est un audit indépendant chaque année. Salaires, gouvernance, impact environnemental : tout est public. Zéro greenwashing.</p>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Card 6 — Large */}
-            <ScrollReveal animation="fadeUp" delay={400}>
-              <div className="md:col-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-sage to-sage/70 p-10 h-full min-h-[280px] flex flex-col justify-between group">
-                <div className="absolute top-4 right-6 text-[120px] font-black text-white/10 leading-none select-none">06</div>
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3 font-poppins">On s&apos;occupe de tout</h3>
-                  <p className="text-sm text-white/75 leading-relaxed">Logistique, distribution, communication interne : on prend tout en charge. Vous validez le projet, on déploie. Votre seul effort : envoyer un mail.</p>
-                </div>
-                <div className="relative z-10 mt-6">
-                  <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">Clé en main</span>
-                </div>
-              </div>
-            </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
