@@ -185,7 +185,7 @@ export default function Home() {
                 Ce que ça change, concrètement
               </h2>
               <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-                Chaque mois, 28% des femmes adaptent leur journée à cause de leurs règles. Inconfort, stress, absence. Voici à quoi ressemble une journée quand le problème est résolu.
+                53% des collaboratrices subissent l&apos;impact de leurs règles au travail. 9 jours de productivité perdus par an, en moyenne. Voici à quoi ressemble ce coût invisible — et comment il disparaît.
               </p>
             </div>
           </ScrollReveal>
