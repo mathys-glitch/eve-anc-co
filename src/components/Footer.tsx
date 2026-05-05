@@ -34,7 +34,7 @@ export default function Footer() {
               <div className="flex items-start gap-4 mb-8">
                 <img src="/images/logo-bcorp.png" alt="B Corp Certifiée" className="w-16 h-auto flex-shrink-0" />
                 <p className="text-sm text-deep leading-relaxed">
-                  EVE AND CO est <a href="https://eve-and-co.com/pages/nos-actions" target="_blank" rel="noopener noreferrer" className="underline hover:text-terra transition-colors">certifiée B Corp</a>.<br />
+                  EVE AND CO est <a href="https://eve-and-co.com/blogs/actualites/b-corp-eve-and-co" target="_blank" rel="noopener noreferrer" className="underline hover:text-terra transition-colors">certifiée B Corp</a>.<br />
                   Nous respectons des normes sociales et environnementales élevées.
                 </p>
               </div>
