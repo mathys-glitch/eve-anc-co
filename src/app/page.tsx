@@ -2,103 +2,48 @@ import ScrollReveal from "@/components/ScrollReveal";
 import DayComparison from "@/components/DayComparison";
 import ContactForm from "@/components/ContactForm";
 
-function EuroIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 10h12" /><path d="M4 14h9" /><path d="M19 6a7 7 0 100 12" />
-    </svg>
-  );
-}
-function PeopleIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-      <circle cx="8.5" cy="7" r="4" />
-      <path d="M20 8v6M23 11h-6" />
-    </svg>
-  );
-}
-function StarIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-    </svg>
-  );
-}
-function LeafIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.2 2.96c1.4 9.3-3.4 12.6-8.2 17.04z" />
-      <path d="M2 21c0-3 1.85-5.36 5.08-6" />
-    </svg>
-  );
-}
-function ShieldIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      <path d="M9 12l2 2 4-4" />
-    </svg>
-  );
-}
-function PackageIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-      <line x1="12" y1="22.08" x2="12" y2="12" />
-    </svg>
-  );
-}
-
 const REASONS = [
   {
     role: "DAF",
-    roleLong: "Finance",
-    stat: "39€",
-    statSuffix: "une fois",
-    body: "Un investissement unique au lieu de 360€/an de salle de sport. Pas d’abonnement, pas de renégociation.",
-    Icon: EuroIcon,
+    headline: "Un investissement, pas un abonnement.",
+    stat: "39€ une fois",
+    statContext: "Soit 9× moins qu’une salle de sport — et jamais à renégocier.",
+    color: "#5D7A5A",
   },
   {
     role: "DRH",
-    roleLong: "Ressources Humaines",
+    headline: "Moins d’absences, plus de présence.",
     stat: "−28%",
-    statSuffix: "d’absentéisme",
-    body: "Sur le motif règles, en moyenne. Des équipes plus stables, moins de remplacements en urgence.",
-    Icon: PeopleIcon,
+    statContext: "d’absentéisme lié aux règles. Des équipes plus stables, moins d’imprévus.",
+    color: "#D97757",
   },
   {
     role: "Marque employeur",
-    roleLong: "Communication & Talent",
+    headline: "Ce que les talents regardent vraiment.",
     stat: "73%",
-    statSuffix: "des candidats",
-    body: "Choisissent une entreprise pour ses engagements concrets, pas pour un baby-foot. Visible dès l’entretien.",
-    Icon: StarIcon,
+    statContext: "des candidats choisissent une entreprise pour ses engagements concrets, pas un baby-foot.",
+    color: "#98CC5E",
   },
   {
     role: "RSE",
-    roleLong: "Impact & DPEF",
+    headline: "Des chiffres traçables, pas des promesses.",
     stat: "1,2T",
-    statSuffix: "de déchets évités",
-    body: "Pour 100 collaboratrices équipées. Donnée traçable, intégrable au DPEF, vérifiable par audit tiers.",
-    Icon: LeafIcon,
+    statContext: "de déchets évités pour 100 collaboratrices. Vérifiable, intégrable au DPEF.",
+    color: "#1F3D2E",
   },
   {
     role: "Direction Générale",
-    roleLong: "Stratégie & Risque",
+    headline: "Audité par des tiers. Pas par nous.",
     stat: "B Corp",
-    statSuffix: "audité",
-    body: "Certification indépendante annuelle. Salaires, gouvernance, impact : tout est public. Zéro greenwashing.",
-    Icon: ShieldIcon,
+    statContext: "Certification indépendante annuelle. Salaires, gouvernance, impact : tout est public.",
+    color: "#3E5A4A",
   },
   {
     role: "Office Manager",
-    roleLong: "Opérations",
-    stat: "0",
-    statSuffix: "à gérer",
-    body: "Logistique, distribution, communication interne : on prend tout en charge. Vous validez, on déploie.",
-    Icon: PackageIcon,
+    headline: "Zéro charge mentale en plus.",
+    stat: "0 à gérer",
+    statContext: "Logistique, distribution, comm interne : on prend tout en charge. Vous validez, on déploie.",
+    color: "#A89B85",
   },
 ];
 
@@ -306,73 +251,46 @@ export default function Home() {
                 6 raisons de dire oui au CODIR
               </h2>
               <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-                Une réponse pour chaque décideur autour de la table. Un rôle, un chiffre, un argument.
+                Une réponse pour chaque décideur autour de la table.
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {REASONS.map((r, i) => {
-              const roman = ["I", "II", "III", "IV", "V", "VI"][i];
-              return (
-                <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
-                  <div className="group h-full bg-white rounded-2xl border border-warm-gray hover:border-sage/40 hover:shadow-[0_20px_50px_-20px_rgba(31,61,46,0.18)] transition-all duration-500 relative overflow-hidden">
-                    {/* Bottom warm wash */}
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#F7F4EF]/70 to-transparent pointer-events-none" />
-                    {/* Sage glow top-right */}
-                    <div className="absolute -top-24 -right-24 w-56 h-56 rounded-full bg-sage/[0.05] blur-3xl pointer-events-none transition-opacity duration-700 group-hover:bg-sage/[0.12]" />
+            {REASONS.map((r, i) => (
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
+                <div className="group h-full bg-white rounded-2xl p-9 lg:p-10 border border-warm-gray hover:-translate-y-1 hover:shadow-[0_24px_60px_-24px_rgba(31,61,46,0.2)] transition-all duration-500 flex flex-col">
+                  {/* Color bar — persona signature */}
+                  <div
+                    className="h-[3px] w-10 mb-8 transition-all duration-500 group-hover:w-16"
+                    style={{ backgroundColor: r.color }}
+                  />
 
-                    <div className="relative p-9 flex flex-col h-full">
-                      {/* Top: icon + roman */}
-                      <div className="flex items-start justify-between mb-10">
-                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-white to-sage/15 border border-sage/25 flex items-center justify-center text-sage shadow-sm transition-all duration-500 group-hover:-translate-y-0.5 group-hover:shadow-md">
-                          <r.Icon />
-                        </div>
-                        <span className="font-poppins italic text-sage/50 text-xs font-semibold tracking-[0.22em] mt-2 shrink-0">
-                          {roman}.
-                        </span>
-                      </div>
+                  {/* Persona */}
+                  <p
+                    className="text-[11px] font-bold uppercase tracking-[0.22em] mb-6"
+                    style={{ color: r.color }}
+                  >
+                    Pour la {r.role}
+                  </p>
 
-                      {/* Persona — hero */}
-                      <div className="mb-6">
-                        <div className="text-[10px] font-bold text-sage uppercase tracking-[0.22em] mb-2">Pour la</div>
-                        <h3 className="font-poppins text-[26px] lg:text-[30px] font-bold text-deep leading-[1.05] tracking-tight mb-1.5">
-                          {r.role}
-                        </h3>
-                        <p className="text-[13px] text-text-light font-medium">{r.roleLong}</p>
-                      </div>
+                  {/* Headline — the hero */}
+                  <h3 className="font-poppins text-[22px] lg:text-[26px] font-bold text-deep leading-[1.2] tracking-tight mb-auto pb-10">
+                    {r.headline}
+                  </h3>
 
-                      {/* Decorative break: hairline + dot */}
-                      <div className="flex items-center gap-2 mb-6">
-                        <div className="w-8 h-px bg-sage" />
-                        <div className="w-1.5 h-1.5 rounded-full bg-sage" />
-                      </div>
-
-                      {/* Stat in editorial serif italic */}
-                      <div className="mb-7 flex items-baseline gap-2.5 flex-wrap">
-                        <span
-                          className="text-[36px] lg:text-[40px] text-deep tracking-tight leading-none"
-                          style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic", fontWeight: 700 }}
-                        >
-                          {r.stat}
-                        </span>
-                        <span
-                          className="text-sm text-text-light"
-                          style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}
-                        >
-                          {r.statSuffix}
-                        </span>
-                      </div>
-
-                      {/* Caption */}
-                      <p className="text-[13px] text-text-light leading-relaxed mt-auto">
-                        {r.body}
-                      </p>
+                  {/* Stat + context at bottom */}
+                  <div className="pt-6 border-t border-warm-gray">
+                    <div className="font-poppins font-bold text-deep text-base mb-1.5">
+                      {r.stat}
                     </div>
+                    <p className="text-[13px] text-text-light leading-relaxed">
+                      {r.statContext}
+                    </p>
                   </div>
-                </ScrollReveal>
-              );
-            })}
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
