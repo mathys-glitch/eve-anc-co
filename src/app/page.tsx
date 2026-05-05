@@ -37,9 +37,6 @@ export default function Home() {
                 <a href="#devis" className="inline-flex items-center justify-center px-7 py-3.5 bg-lime text-sage-dark font-bold rounded-full hover:bg-lime-dark transition-all duration-300 text-sm">
                   Recevoir un devis gratuit →
                 </a>
-                <a href="#impact" className="inline-flex items-center justify-center px-7 py-3.5 text-white font-semibold border border-white/40 bg-white/5 backdrop-blur-md rounded-full hover:bg-white/15 transition-all duration-300 text-sm">
-                  Calculer mon impact
-                </a>
               </div>
 
               {/* Bottom Card — B Corp testimonial style */}
