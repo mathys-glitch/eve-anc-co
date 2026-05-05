@@ -197,105 +197,105 @@ export default function Home() {
       </section>
 
       {/* ═══════ 6 ARGUMENTS CODIR ═══════ */}
-      <section id="preuves" className="py-20 lg:py-28 bg-[#F4F1EE]">
+      <section id="preuves" className="py-12 lg:py-16 bg-[#F4F1EE]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 lg:mb-10">
               <span className="text-xs font-semibold text-sage uppercase tracking-[0.2em]">Pour convaincre en interne</span>
-              <h2 className="mt-5 text-4xl md:text-5xl font-bold text-deep leading-tight font-poppins">
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-deep leading-tight font-poppins">
                 6 raisons de dire oui au CODIR
               </h2>
-              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+              <p className="mt-3 text-base text-text-light max-w-2xl mx-auto">
                 Une réponse pour chaque décideur autour de la table.
               </p>
             </div>
           </ScrollReveal>
 
           {/* Apple-style bento — 3 cols, mixed widths, light/dark rhythm */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-fr">
-            {/* 01 — DAF (wide light, sage gradient) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 auto-rows-fr">
+            {/* 01 — DAF (wide light) */}
             <ScrollReveal animation="fadeUp" delay={0} className="md:col-span-2">
-              <div className="group h-full rounded-3xl p-7 lg:p-8 bg-gradient-to-br from-white via-white to-[#EEF3EC] border border-warm-gray transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(31,61,46,0.22)] relative overflow-hidden">
-                <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-sage/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/[0.18] group-hover:scale-110" />
+              <div className="group h-full rounded-2xl p-5 lg:p-6 bg-gradient-to-br from-white via-white to-[#EEF3EC] border border-warm-gray transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(31,61,46,0.22)] relative overflow-hidden">
+                <div className="absolute -top-20 -right-20 w-52 h-52 rounded-full bg-sage/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/[0.18] group-hover:scale-110" />
                 <div className="relative h-full flex flex-col">
-                  <div className="text-[10px] font-bold text-sage uppercase tracking-[0.22em] mb-3">01 · Pour la DAF</div>
-                  <h3 className="font-poppins text-[22px] lg:text-[26px] font-bold text-deep leading-[1.2] tracking-tight mb-3">
+                  <div className="text-[10px] font-bold text-sage uppercase tracking-[0.2em] mb-2">01 · Pour la DAF</div>
+                  <h3 className="font-poppins text-[17px] lg:text-[19px] font-bold text-deep leading-[1.25] tracking-tight mb-1.5">
                     Un investissement, pas un abonnement.
                   </h3>
-                  <p className="text-[13px] text-text-light leading-relaxed mb-6 max-w-md">
+                  <p className="text-[12.5px] text-text-light leading-snug mb-3 max-w-md">
                     Soit 9× moins qu&apos;une salle de sport — et jamais à renégocier.
                   </p>
-                  <div className="mt-auto pt-5 border-t border-warm-gray flex items-baseline gap-2">
-                    <div className="font-poppins text-[36px] lg:text-[42px] font-bold text-sage leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
+                  <div className="mt-auto pt-3 border-t border-warm-gray flex items-baseline gap-2">
+                    <div className="font-poppins text-[28px] lg:text-[32px] font-bold text-sage leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
                       39€
                     </div>
-                    <div className="text-sm italic text-text-light">une fois</div>
+                    <div className="text-xs italic text-text-light">une fois</div>
                   </div>
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* 02 — DRH (narrow, coral tint) */}
+            {/* 02 — DRH (narrow coral) */}
             <ScrollReveal animation="fadeUp" delay={100}>
-              <div className="group h-full rounded-3xl p-7 bg-[#FBF6F2] border border-[#D97757]/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(217,119,87,0.28)] relative overflow-hidden">
-                <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-[#D97757]/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[#D97757]/[0.22] group-hover:scale-110" />
+              <div className="group h-full rounded-2xl p-5 bg-[#FBF6F2] border border-[#D97757]/15 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(217,119,87,0.28)] relative overflow-hidden">
+                <div className="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-[#D97757]/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[#D97757]/[0.22] group-hover:scale-110" />
                 <div className="relative h-full flex flex-col">
-                  <div className="text-[10px] font-bold uppercase tracking-[0.22em] mb-3" style={{ color: "#D97757" }}>02 · Pour la DRH</div>
-                  <h3 className="font-poppins text-lg font-bold text-deep leading-snug mb-2">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2" style={{ color: "#D97757" }}>02 · Pour la DRH</div>
+                  <h3 className="font-poppins text-[15px] font-bold text-deep leading-snug mb-1.5">
                     Moins d&apos;absences, plus de présence.
                   </h3>
-                  <p className="text-[12.5px] text-text-light leading-relaxed mb-6">
+                  <p className="text-[12px] text-text-light leading-snug mb-3">
                     Sur le motif règles, en moyenne.
                   </p>
-                  <div className="mt-auto pt-5 border-t border-[#D97757]/15 flex items-baseline gap-2">
-                    <div className="font-poppins text-[36px] font-bold leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left" style={{ color: "#D97757" }}>
+                  <div className="mt-auto pt-3 border-t border-[#D97757]/15 flex items-baseline gap-2">
+                    <div className="font-poppins text-[28px] font-bold leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left" style={{ color: "#D97757" }}>
                       −28%
                     </div>
-                    <div className="text-sm italic text-text-light">absentéisme</div>
+                    <div className="text-xs italic text-text-light">absentéisme</div>
                   </div>
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* 03 — Marque employeur (narrow, lime tint) */}
+            {/* 03 — Marque employeur (narrow lime) */}
             <ScrollReveal animation="fadeUp" delay={200}>
-              <div className="group h-full rounded-3xl p-7 bg-[#F4F9EC] border border-[#98CC5E]/25 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(152,204,94,0.32)] relative overflow-hidden">
-                <div className="absolute -bottom-16 -right-16 w-44 h-44 rounded-full bg-[#98CC5E]/15 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[#98CC5E]/30 group-hover:scale-110" />
+              <div className="group h-full rounded-2xl p-5 bg-[#F4F9EC] border border-[#98CC5E]/25 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(152,204,94,0.32)] relative overflow-hidden">
+                <div className="absolute -bottom-12 -right-12 w-36 h-36 rounded-full bg-[#98CC5E]/15 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[#98CC5E]/30 group-hover:scale-110" />
                 <div className="relative h-full flex flex-col">
-                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.22em] mb-3">03 · Marque employeur</div>
-                  <h3 className="font-poppins text-lg font-bold text-deep leading-snug mb-2">
+                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.2em] mb-2">03 · Marque employeur</div>
+                  <h3 className="font-poppins text-[15px] font-bold text-deep leading-snug mb-1.5">
                     Ce que les talents regardent.
                   </h3>
-                  <p className="text-[12.5px] text-text-light leading-relaxed mb-6">
+                  <p className="text-[12px] text-text-light leading-snug mb-3">
                     Des engagements concrets, pas un baby-foot.
                   </p>
-                  <div className="mt-auto pt-5 border-t border-[#98CC5E]/25 flex items-baseline gap-2">
-                    <div className="font-poppins text-[36px] font-bold text-sage-dark leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
+                  <div className="mt-auto pt-3 border-t border-[#98CC5E]/25 flex items-baseline gap-2">
+                    <div className="font-poppins text-[28px] font-bold text-sage-dark leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
                       73%
                     </div>
-                    <div className="text-sm italic text-text-light">des candidats</div>
+                    <div className="text-xs italic text-text-light">des candidats</div>
                   </div>
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* 04 — RSE (wide DARK — showpiece) */}
+            {/* 04 — RSE (wide DARK) */}
             <ScrollReveal animation="fadeUp" delay={300} className="md:col-span-2">
-              <div className="group h-full rounded-3xl p-7 lg:p-8 bg-gradient-to-br from-sage-dark via-[#1F3D2E] to-[#142A1F] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(31,61,46,0.55)] relative overflow-hidden">
-                <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-lime/[0.12] blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-lime/[0.22] group-hover:scale-110" />
+              <div className="group h-full rounded-2xl p-5 lg:p-6 bg-gradient-to-br from-sage-dark via-[#1F3D2E] to-[#142A1F] transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(31,61,46,0.55)] relative overflow-hidden">
+                <div className="absolute -bottom-20 -left-20 w-56 h-56 rounded-full bg-lime/[0.12] blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-lime/[0.22] group-hover:scale-110" />
                 <div className="relative h-full flex flex-col">
-                  <div className="text-[10px] font-bold text-lime uppercase tracking-[0.22em] mb-3">04 · Pour la RSE</div>
-                  <h3 className="font-poppins text-[22px] lg:text-[26px] font-bold text-white leading-[1.2] tracking-tight mb-3">
+                  <div className="text-[10px] font-bold text-lime uppercase tracking-[0.2em] mb-2">04 · Pour la RSE</div>
+                  <h3 className="font-poppins text-[17px] lg:text-[19px] font-bold text-white leading-[1.25] tracking-tight mb-1.5">
                     Des chiffres traçables, pas des promesses.
                   </h3>
-                  <p className="text-[13px] text-white/70 leading-relaxed mb-6 max-w-md">
+                  <p className="text-[12.5px] text-white/70 leading-snug mb-3 max-w-md">
                     Donnée vérifiable, intégrable au DPEF, auditée par tiers indépendant.
                   </p>
-                  <div className="mt-auto pt-5 border-t border-white/10 flex items-baseline gap-2">
-                    <div className="font-poppins text-[36px] lg:text-[42px] font-bold text-white leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
+                  <div className="mt-auto pt-3 border-t border-white/10 flex items-baseline gap-2">
+                    <div className="font-poppins text-[28px] lg:text-[32px] font-bold text-white leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
                       1,2T
                     </div>
-                    <div className="text-sm italic text-white/60">déchets évités · 100 collab.</div>
+                    <div className="text-xs italic text-white/60">déchets évités · 100 collab.</div>
                   </div>
                 </div>
               </div>
@@ -303,43 +303,43 @@ export default function Home() {
 
             {/* 05 — Direction Générale (wide cream) */}
             <ScrollReveal animation="fadeUp" delay={400} className="md:col-span-2">
-              <div className="group h-full rounded-3xl p-7 lg:p-8 bg-gradient-to-br from-[#FAF6EE] via-[#F4F0E7] to-[#EBE5D7] border border-warm-gray transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(31,61,46,0.22)] relative overflow-hidden">
-                <div className="absolute -top-20 -left-20 w-56 h-56 rounded-full bg-sage/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/[0.18] group-hover:scale-110" />
+              <div className="group h-full rounded-2xl p-5 lg:p-6 bg-gradient-to-br from-[#FAF6EE] via-[#F4F0E7] to-[#EBE5D7] border border-warm-gray transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(31,61,46,0.22)] relative overflow-hidden">
+                <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-sage/10 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/[0.18] group-hover:scale-110" />
                 <div className="relative h-full flex flex-col">
-                  <div className="text-[10px] font-bold uppercase tracking-[0.22em] mb-3" style={{ color: "#3E5A4A" }}>05 · Direction Générale</div>
-                  <h3 className="font-poppins text-[22px] lg:text-[26px] font-bold text-deep leading-[1.2] tracking-tight mb-3">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2" style={{ color: "#3E5A4A" }}>05 · Direction Générale</div>
+                  <h3 className="font-poppins text-[17px] lg:text-[19px] font-bold text-deep leading-[1.25] tracking-tight mb-1.5">
                     Audité par des tiers. Pas par nous.
                   </h3>
-                  <p className="text-[13px] text-text-light leading-relaxed mb-6 max-w-md">
+                  <p className="text-[12.5px] text-text-light leading-snug mb-3 max-w-md">
                     Audit indépendant chaque année. Tout est public, zéro greenwashing.
                   </p>
-                  <div className="mt-auto pt-5 border-t border-warm-gray flex items-baseline gap-2">
-                    <div className="font-poppins text-[34px] lg:text-[40px] font-bold text-sage-dark leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
+                  <div className="mt-auto pt-3 border-t border-warm-gray flex items-baseline gap-2">
+                    <div className="font-poppins text-[26px] lg:text-[30px] font-bold text-sage-dark leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
                       B Corp
                     </div>
-                    <div className="text-sm italic text-text-light">certifiée</div>
+                    <div className="text-xs italic text-text-light">certifiée</div>
                   </div>
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* 06 — Vos employées (narrow sage tint) */}
+            {/* 06 — Vos employées (narrow sage) */}
             <ScrollReveal animation="fadeUp" delay={500}>
-              <div className="group h-full rounded-3xl p-7 bg-[#EEF3EC] border border-sage/20 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(31,61,46,0.22)] relative overflow-hidden">
-                <div className="absolute -bottom-16 -right-16 w-44 h-44 rounded-full bg-sage/15 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/30 group-hover:scale-110" />
+              <div className="group h-full rounded-2xl p-5 bg-[#EEF3EC] border border-sage/20 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(31,61,46,0.22)] relative overflow-hidden">
+                <div className="absolute -bottom-12 -right-12 w-36 h-36 rounded-full bg-sage/15 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-sage/30 group-hover:scale-110" />
                 <div className="relative h-full flex flex-col">
-                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.22em] mb-3">06 · Vos employées</div>
-                  <h3 className="font-poppins text-lg font-bold text-deep leading-snug mb-2">
+                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.2em] mb-2">06 · Vos employées</div>
+                  <h3 className="font-poppins text-[15px] font-bold text-deep leading-snug mb-1.5">
                     Protégées toute la journée, sans y penser.
                   </h3>
-                  <p className="text-[12.5px] text-text-light leading-relaxed mb-6">
-                    Du matin jusqu&apos;au soir, sans rupture ni stress. Une seule culotte tient la journée.
+                  <p className="text-[12px] text-text-light leading-snug mb-3">
+                    Du matin jusqu&apos;au soir, sans rupture ni stress.
                   </p>
-                  <div className="mt-auto pt-5 border-t border-sage/20 flex items-baseline gap-2">
-                    <div className="font-poppins text-[36px] font-bold text-sage leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
+                  <div className="mt-auto pt-3 border-t border-sage/20 flex items-baseline gap-2">
+                    <div className="font-poppins text-[28px] font-bold text-sage leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
                       12H
                     </div>
-                    <div className="text-sm italic text-text-light">de protection</div>
+                    <div className="text-xs italic text-text-light">de protection</div>
                   </div>
                 </div>
               </div>
