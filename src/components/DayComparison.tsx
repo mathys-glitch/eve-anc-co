@@ -1,37 +1,26 @@
 "use client";
 
-type DayItem = { time: string; event: string; comfort: number; focus: number };
+type DayItem = { time: string; event: string };
 
 const WITHOUT: DayItem[] = [
-  { time: "07:30", event: "Trajet domicile-bureau : check anxieux du sac", comfort: 2, focus: 2 },
-  { time: "09:00", event: "Première réunion, esprit ailleurs", comfort: 2, focus: 1 },
-  { time: "11:00", event: "Stand-up d'équipe : pause toilettes obligatoire", comfort: 1, focus: 2 },
-  { time: "13:00", event: "Pause déj écourtée, détour pharmacie", comfort: 1, focus: 1 },
-  { time: "15:00", event: "Présentation client à 16h, focus à 30%", comfort: 2, focus: 1 },
-  { time: "17:00", event: "Fin de journée, épuisement mental", comfort: 1, focus: 1 },
+  { time: "07:30", event: "Trajet domicile-bureau : check anxieux du sac" },
+  { time: "09:00", event: "Première réunion, esprit ailleurs" },
+  { time: "11:00", event: "Stand-up d'équipe : pause toilettes obligatoire" },
+  { time: "13:00", event: "Pause déj écourtée, détour pharmacie" },
+  { time: "15:00", event: "Présentation client à 16h, focus à 30%" },
+  { time: "17:00", event: "Fin de journée, épuisement mental" },
 ];
 
 const WITH: DayItem[] = [
-  { time: "07:30", event: "On enfile sa culotte. Point. Et c'est parti.", comfort: 5, focus: 5 },
-  { time: "09:00", event: "Au bureau, on oublie totalement", comfort: 5, focus: 5 },
-  { time: "11:00", event: "Confort max, coton bio qui respire, zéro irritation", comfort: 5, focus: 5 },
-  { time: "13:00", event: "Pause déj tranquille, rien à prévoir, zéro stress", comfort: 5, focus: 5 },
-  { time: "15:00", event: "Concentration totale, zéro distraction, 100% présente", comfort: 5, focus: 5 },
-  { time: "17:00", event: "Machine ce soir, prête pour 300 utilisations de plus", comfort: 5, focus: 5 },
+  { time: "07:30", event: "On enfile sa culotte. Point. Et c'est parti." },
+  { time: "09:00", event: "Au bureau, on oublie totalement" },
+  { time: "11:00", event: "Confort max, coton bio qui respire, zéro irritation" },
+  { time: "13:00", event: "Pause déj tranquille, rien à prévoir, zéro stress" },
+  { time: "15:00", event: "Concentration totale, zéro distraction, 100% présente" },
+  { time: "17:00", event: "Machine ce soir, prête pour 300 utilisations de plus" },
 ];
 
 const CORAL = "#D97757";
-
-function Gauge({ label, value, barClass }: { label: string; value: number; barClass: string }) {
-  return (
-    <div className="flex items-center gap-2 min-w-0 flex-1">
-      <span className="text-[10px] uppercase tracking-wider text-text-light font-semibold shrink-0">{label}</span>
-      <div className="flex-1 h-1.5 bg-black/5 rounded-full overflow-hidden">
-        <div className={`h-full rounded-full ${barClass}`} style={{ width: `${(value / 5) * 100}%` }} />
-      </div>
-    </div>
-  );
-}
 
 function AlertIcon() {
   return (
@@ -67,22 +56,16 @@ export default function DayComparison() {
           <h3 className="text-base lg:text-lg font-bold text-deep">Une journée au bureau, sans EVE AND CO</h3>
         </div>
 
-        <div className="border-l border-dashed border-[#E5E5E5] pl-5 space-y-6">
+        <ul className="border-l border-dashed border-[#E5E5E5] pl-5 space-y-5">
           {WITHOUT.map((item, i) => (
-            <div key={i}>
-              <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-xs font-mono font-bold shrink-0 w-12" style={{ color: CORAL }}>
-                  {item.time}
-                </span>
-                <p className="text-sm text-deep leading-relaxed font-medium flex-1 min-w-0">{item.event}</p>
-              </div>
-              <div className="flex items-center gap-4 pl-[60px]">
-                <Gauge label="Confort" value={item.comfort} barClass="bg-[#D97757]" />
-                <Gauge label="Focus pro" value={item.focus} barClass="bg-[#D97757]" />
-              </div>
-            </div>
+            <li key={i} className="flex items-baseline gap-3">
+              <span className="text-xs font-mono font-bold shrink-0 w-12" style={{ color: CORAL }}>
+                {item.time}
+              </span>
+              <p className="text-sm text-deep leading-relaxed">{item.event}</p>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="mt-8 pt-5 border-t border-[#D97757]/15">
           <p className="text-sm font-semibold leading-relaxed" style={{ color: CORAL }}>
@@ -100,20 +83,14 @@ export default function DayComparison() {
           <h3 className="text-base lg:text-lg font-bold text-deep">Une journée au bureau, avec EVE AND CO</h3>
         </div>
 
-        <div className="border-l border-dashed border-[#D8E4D8] pl-5 space-y-6">
+        <ul className="border-l border-dashed border-[#D8E4D8] pl-5 space-y-5">
           {WITH.map((item, i) => (
-            <div key={i}>
-              <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-xs font-mono font-bold text-sage shrink-0 w-12">{item.time}</span>
-                <p className="text-sm text-deep leading-relaxed font-medium flex-1 min-w-0">{item.event}</p>
-              </div>
-              <div className="flex items-center gap-4 pl-[60px]">
-                <Gauge label="Confort" value={item.comfort} barClass="bg-sage" />
-                <Gauge label="Focus pro" value={item.focus} barClass="bg-sage" />
-              </div>
-            </div>
+            <li key={i} className="flex items-baseline gap-3">
+              <span className="text-xs font-mono font-bold text-sage shrink-0 w-12">{item.time}</span>
+              <p className="text-sm text-deep leading-relaxed">{item.event}</p>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="mt-8 pt-5 border-t border-sage/20">
           <p className="text-sm font-semibold text-sage leading-relaxed">
