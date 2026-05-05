@@ -245,20 +245,37 @@ export default function Home() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {REASONS.map((r, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
-                <div className="h-full bg-white rounded-xl p-7 border border-warm-gray hover:border-sage/40 hover:-translate-y-0.5 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="w-10 h-10 rounded-full bg-sage/10 text-sage font-poppins font-bold text-sm flex items-center justify-center">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-[10px] font-bold text-sage uppercase tracking-widest">{r.tag}</span>
+            {REASONS.map((r, i) => {
+              const roman = ["I", "II", "III", "IV", "V", "VI"][i];
+              return (
+                <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
+                  <div className="h-full bg-white rounded-xl p-8 lg:p-10 border border-warm-gray hover:border-sage/40 transition-all duration-500 relative overflow-hidden">
+                    {/* Subtle gradient wash */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-sage/[0.03] via-transparent to-transparent pointer-events-none" />
+
+                    {/* Top: roman numeral · hairline · tag */}
+                    <div className="relative flex items-center gap-4 mb-8">
+                      <span className="font-poppins italic text-sage text-base font-medium tracking-wide">{roman}.</span>
+                      <div className="flex-1 h-px bg-warm-gray" />
+                      <span className="text-[10px] font-bold text-sage uppercase tracking-[0.2em]">{r.tag}</span>
+                    </div>
+
+                    {/* Editorial title */}
+                    <h3 className="relative font-poppins text-2xl lg:text-[26px] font-bold text-deep leading-[1.15] mb-6">
+                      {r.title}
+                    </h3>
+
+                    {/* Hairline accent */}
+                    <div className="relative w-10 h-[2px] bg-sage/70 mb-6" />
+
+                    {/* Caption */}
+                    <p className="relative text-sm text-text-light leading-relaxed">
+                      {r.body}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-deep mb-3 font-poppins leading-snug">{r.title}</h3>
-                  <p className="text-sm text-text-light leading-relaxed">{r.body}</p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
