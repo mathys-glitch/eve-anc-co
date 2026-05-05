@@ -74,54 +74,8 @@ export default function Footer() {
 
           {/* Bottom Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end pt-8">
-            {/* Left: Payment + Contact */}
+            {/* Left: Contact */}
             <div>
-              {/* Payment Icons */}
-              <div className="flex items-center gap-1.5 mb-4">
-                {/* AMEX */}
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" className="rounded">
-                  <rect width="38" height="24" rx="3" fill="#016FD0"/>
-                  <text x="19" y="15" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold" fontFamily="Arial">AMEX</text>
-                </svg>
-                {/* Apple Pay */}
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" className="rounded">
-                  <rect width="38" height="24" rx="3" fill="#000"/>
-                  <text x="10" y="15" fill="white" fontSize="7.5" fontWeight="600" fontFamily="Arial">&#xF8FF; Pay</text>
-                  <path d="M10.5 7.3c.4-.5.7-1.2.6-1.9-.6 0-1.3.4-1.8.9-.4.5-.7 1.2-.6 1.9.6 0 1.3-.4 1.8-.9z" fill="white"/>
-                  <path d="M11.1 8.3c-1 0-1.8.5-2.3.5s-1.2-.5-2-.5c-1 0-2 .6-2.5 1.5-1.1 1.9-.3 4.6.8 6.2.5.7 1.1 1.6 1.9 1.5.8 0 1.1-.5 2-.5s1.2.5 2 .5 1.4-.8 1.9-1.5c.6-.9.8-1.7.8-1.7-1.7-.7-2-3.3-.3-4.3-.6-.8-1.5-1.2-2.3-1.2z" fill="white" transform="translate(12, 1) scale(0.55)"/>
-                  <text x="22" y="15.5" fill="white" fontSize="8" fontWeight="500" fontFamily="Arial">Pay</text>
-                </svg>
-                {/* Google Pay */}
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" className="rounded border border-gray-200">
-                  <rect width="38" height="24" rx="3" fill="#fff"/>
-                  <text x="8" y="15.5" fill="#5F6368" fontSize="8" fontWeight="500" fontFamily="Arial">G Pay</text>
-                  <circle cx="10" cy="12" r="3.5" fill="none" stroke="#4285F4" strokeWidth="1.2"/>
-                  <path d="M10 8.5v3.5h3.5" fill="none" stroke="#EA4335" strokeWidth="1"/>
-                </svg>
-                {/* Mastercard */}
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" className="rounded border border-gray-200">
-                  <rect width="38" height="24" rx="3" fill="#fff"/>
-                  <circle cx="15" cy="12" r="7" fill="#EB001B"/>
-                  <circle cx="23" cy="12" r="7" fill="#F79E1B"/>
-                  <path d="M19 6.5a7 7 0 000 11 7 7 0 000-11z" fill="#FF5F00"/>
-                </svg>
-                {/* Bancontact */}
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" className="rounded">
-                  <rect width="38" height="24" rx="3" fill="#005B82"/>
-                  <text x="19" y="14.5" textAnchor="middle" fill="white" fontSize="5.5" fontWeight="600" fontFamily="Arial">bancontact</text>
-                </svg>
-                {/* PayPal */}
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" className="rounded border border-gray-200">
-                  <rect width="38" height="24" rx="3" fill="#fff"/>
-                  <text x="7" y="15.5" fill="#003087" fontSize="8" fontWeight="bold" fontFamily="Arial">Pay</text>
-                  <text x="22" y="15.5" fill="#009CDE" fontSize="8" fontWeight="bold" fontFamily="Arial">Pal</text>
-                </svg>
-                {/* VISA */}
-                <svg width="38" height="24" viewBox="0 0 38 24" fill="none" className="rounded border border-gray-200">
-                  <rect width="38" height="24" rx="3" fill="#fff"/>
-                  <text x="19" y="15.5" textAnchor="middle" fill="#1A1F71" fontSize="10" fontWeight="bold" fontFamily="Arial" fontStyle="italic">VISA</text>
-                </svg>
-              </div>
               <p className="text-sm text-deep">24h/24 7j/7 : mathys@eve-and-co.com</p>
             </div>
 
