@@ -98,76 +98,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ COMPARAISON DES COÛTS ═══════ */}
-      <section className="py-16 lg:py-20 bg-cream">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="text-xs font-bold text-terra uppercase tracking-widest">Le vrai comparatif</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
-                39€. Une fois. Pour toujours.
-              </h2>
-              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
-                Le résultat parle de lui-même.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Comparison Table */}
-          <ScrollReveal animation="fadeUp">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-warm-gray">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-warm-gray bg-cream/50">
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">INITIATIVE</th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">COÛT / PERSONNE / AN</th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">DURÉE</th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">ADOPTION</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-warm-gray">
-                      <td className="px-6 py-5 text-sm text-deep font-medium">Salle de sport</td>
-                      <td className="px-6 py-5 text-sm text-deep font-medium">360 €</td>
-                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
-                      <td className="px-6 py-5 text-sm text-text-light">~40 %</td>
-                    </tr>
-                    <tr className="border-b border-warm-gray">
-                      <td className="px-6 py-5 text-sm text-deep font-medium">Team building</td>
-                      <td className="px-6 py-5 text-sm text-deep font-medium">80 €</td>
-                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
-                      <td className="px-6 py-5 text-sm text-text-light">~55 %</td>
-                    </tr>
-                    <tr className="border-b border-warm-gray">
-                      <td className="px-6 py-5 text-sm text-deep font-medium">Bons Noël</td>
-                      <td className="px-6 py-5 text-sm text-deep font-medium">50 €</td>
-                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
-                      <td className="px-6 py-5 text-sm text-text-light">~60 %</td>
-                    </tr>
-                    <tr style={{ backgroundColor: '#3E5A4A' }}>
-                      <td className="px-6 py-5 text-sm font-bold text-white">
-                        <img src="/images/logo-white.png" alt="EVE AND CO" className="h-[14px] w-auto" />
-                      </td>
-                      <td className="px-6 py-5 text-sm font-bold text-lime">39 €*</td>
-                      <td className="px-6 py-5">
-                        <span className="inline-flex items-center gap-1.5 bg-lime text-sage-dark text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
-                          ✓ Une seule fois
-                        </span>
-                      </td>
-                      <td className="px-6 py-5 text-sm"><span className="text-lime font-bold">97% ✓</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="px-6 py-4 bg-warm-gray/30 text-xs text-text-light">
-                * Investissement unique par personne, amorti sur 5 ans. Éligible CSE. Exonéré URSSAF.
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* ═══════ RÉSULTATS CONCRETS ═══════ */}
       <section id="impact" className="py-16 lg:py-20 bg-[#F9F5F0]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
@@ -383,6 +313,76 @@ export default function Home() {
           Structure prête: 3 cartes avec avatar en noir & blanc, citation en italique, nom, poste, entreprise.
           Images d'avatars déjà présentes dans /public/images/avatar-*.jpg.
           Voir l'historique Git pour retrouver le code complet (commit précédent). */}
+
+      {/* ═══════ COMPARAISON DES COÛTS ═══════ */}
+      <section className="py-16 lg:py-20 bg-cream">
+        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold text-terra uppercase tracking-widest">Le vrai comparatif</span>
+              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+                39€. Une fois. Pour toujours.
+              </h2>
+              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+                Le résultat parle de lui-même.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Comparison Table */}
+          <ScrollReveal animation="fadeUp">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-warm-gray">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-warm-gray bg-cream/50">
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">INITIATIVE</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">COÛT / PERSONNE / AN</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">DURÉE</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">ADOPTION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-warm-gray">
+                      <td className="px-6 py-5 text-sm text-deep font-medium">Salle de sport</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">360 €</td>
+                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
+                      <td className="px-6 py-5 text-sm text-text-light">~40 %</td>
+                    </tr>
+                    <tr className="border-b border-warm-gray">
+                      <td className="px-6 py-5 text-sm text-deep font-medium">Team building</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">80 €</td>
+                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
+                      <td className="px-6 py-5 text-sm text-text-light">~55 %</td>
+                    </tr>
+                    <tr className="border-b border-warm-gray">
+                      <td className="px-6 py-5 text-sm text-deep font-medium">Bons Noël</td>
+                      <td className="px-6 py-5 text-sm text-deep font-medium">50 €</td>
+                      <td className="px-6 py-5 text-sm"><span className="text-terra font-semibold">Chaque année</span></td>
+                      <td className="px-6 py-5 text-sm text-text-light">~60 %</td>
+                    </tr>
+                    <tr style={{ backgroundColor: '#3E5A4A' }}>
+                      <td className="px-6 py-5 text-sm font-bold text-white">
+                        <img src="/images/logo-white.png" alt="EVE AND CO" className="h-[14px] w-auto" />
+                      </td>
+                      <td className="px-6 py-5 text-sm font-bold text-lime">39 €*</td>
+                      <td className="px-6 py-5">
+                        <span className="inline-flex items-center gap-1.5 bg-lime text-sage-dark text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                          ✓ Une seule fois
+                        </span>
+                      </td>
+                      <td className="px-6 py-5 text-sm"><span className="text-lime font-bold">97% ✓</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="px-6 py-4 bg-warm-gray/30 text-xs text-text-light">
+                * Investissement unique par personne, amorti sur 5 ans. Éligible CSE. Exonéré URSSAF.
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
       {/* ═══════ CTA FINAL ═══════ */}
       <section id="devis" className="relative py-20 lg:py-28 bg-sage-dark overflow-hidden">
