@@ -312,41 +312,67 @@ export default function Home() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {REASONS.map((r, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
-                <div className="h-full bg-white rounded-xl p-7 border border-warm-gray hover:border-sage/40 transition-all duration-500 relative">
-                  {/* Header — icon + persona + roman */}
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <span className="w-10 h-10 rounded-xl bg-sage/10 text-sage flex items-center justify-center shrink-0">
-                        <r.Icon />
-                      </span>
-                      <div className="min-w-0">
-                        <div className="text-[10px] font-bold text-sage uppercase tracking-[0.2em] mb-0.5">Pour la</div>
-                        <div className="text-[15px] font-bold text-deep font-poppins leading-tight truncate">{r.role}</div>
+            {REASONS.map((r, i) => {
+              const roman = ["I", "II", "III", "IV", "V", "VI"][i];
+              return (
+                <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
+                  <div className="group h-full bg-white rounded-2xl border border-warm-gray hover:border-sage/40 hover:shadow-[0_20px_50px_-20px_rgba(31,61,46,0.18)] transition-all duration-500 relative overflow-hidden">
+                    {/* Bottom warm wash */}
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#F7F4EF]/70 to-transparent pointer-events-none" />
+                    {/* Sage glow top-right */}
+                    <div className="absolute -top-24 -right-24 w-56 h-56 rounded-full bg-sage/[0.05] blur-3xl pointer-events-none transition-opacity duration-700 group-hover:bg-sage/[0.12]" />
+
+                    <div className="relative p-9 flex flex-col h-full">
+                      {/* Top: icon + roman */}
+                      <div className="flex items-start justify-between mb-10">
+                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-white to-sage/15 border border-sage/25 flex items-center justify-center text-sage shadow-sm transition-all duration-500 group-hover:-translate-y-0.5 group-hover:shadow-md">
+                          <r.Icon />
+                        </div>
+                        <span className="font-poppins italic text-sage/50 text-xs font-semibold tracking-[0.22em] mt-2 shrink-0">
+                          {roman}.
+                        </span>
                       </div>
-                    </div>
-                    <span className="font-poppins italic text-sage/40 text-xs font-semibold tracking-wider shrink-0 ml-2">
-                      {["I", "II", "III", "IV", "V", "VI"][i]}.
-                    </span>
-                  </div>
 
-                  {/* Stat callout — inset cream box with sage left rule */}
-                  <div className="rounded-lg bg-[#F7F4EF] pl-4 pr-5 py-3.5 mb-5 border-l-[3px] border-sage">
-                    <div className="text-[9px] font-bold text-sage/80 uppercase tracking-[0.18em] mb-1">Le chiffre clé</div>
-                    <div className="flex items-baseline gap-2 flex-wrap">
-                      <span className="font-poppins text-[28px] font-bold text-deep leading-none tracking-tight">{r.stat}</span>
-                      <span className="font-poppins italic text-sm text-text-light">{r.statSuffix}</span>
+                      {/* Persona — hero */}
+                      <div className="mb-6">
+                        <div className="text-[10px] font-bold text-sage uppercase tracking-[0.22em] mb-2">Pour la</div>
+                        <h3 className="font-poppins text-[26px] lg:text-[30px] font-bold text-deep leading-[1.05] tracking-tight mb-1.5">
+                          {r.role}
+                        </h3>
+                        <p className="text-[13px] text-text-light font-medium">{r.roleLong}</p>
+                      </div>
+
+                      {/* Decorative break: hairline + dot */}
+                      <div className="flex items-center gap-2 mb-6">
+                        <div className="w-8 h-px bg-sage" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-sage" />
+                      </div>
+
+                      {/* Stat in editorial serif italic */}
+                      <div className="mb-7 flex items-baseline gap-2.5 flex-wrap">
+                        <span
+                          className="text-[36px] lg:text-[40px] text-deep tracking-tight leading-none"
+                          style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic", fontWeight: 700 }}
+                        >
+                          {r.stat}
+                        </span>
+                        <span
+                          className="text-sm text-text-light"
+                          style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}
+                        >
+                          {r.statSuffix}
+                        </span>
+                      </div>
+
+                      {/* Caption */}
+                      <p className="text-[13px] text-text-light leading-relaxed mt-auto">
+                        {r.body}
+                      </p>
                     </div>
                   </div>
-
-                  {/* Caption */}
-                  <p className="text-sm text-text-light leading-relaxed">
-                    {r.body}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
