@@ -110,87 +110,28 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          {/* Stats — typography-led, separated by vertical hairlines */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-warm-gray">
             {[
-              {
-                stat: "1,2T",
-                label: "Déchets évités",
-                caption: "pour 100 collaboratrices équipées",
-                color: "#5D7A5A",
-                bgTo: "#EFF3EC",
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.2 2.96c1.4 9.3-3.4 12.6-8.2 17.04z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
-                ),
-              },
-              {
-                stat: "−28%",
-                label: "d'absentéisme",
-                caption: "lié aux règles, en moyenne",
-                color: "#D97757",
-                bgTo: "#FBF6F2",
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
-                ),
-              },
-              {
-                stat: "300+",
-                label: "utilisations",
-                caption: "par culotte avant lavage final",
-                color: "#1F3D2E",
-                bgTo: "#F4F0E7",
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
-                ),
-              },
-              {
-                stat: "97%",
-                label: "d'adoption",
-                caption: "dès le premier mois d'usage",
-                color: "#98CC5E",
-                bgTo: "#F4F9EC",
-                icon: (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                ),
-              },
+              { stat: "1,2T", label: "Déchets évités", caption: "pour 100 collaboratrices équipées", color: "#5D7A5A" },
+              { stat: "−28%", label: "d'absentéisme", caption: "lié aux règles, en moyenne", color: "#D97757" },
+              { stat: "300+", label: "utilisations", caption: "par culotte avant lavage final", color: "#1F3D2E" },
+              { stat: "97%", label: "d'adoption", caption: "dès le premier mois d'usage", color: "#98CC5E" },
             ].map((s, i) => (
-              <ScrollReveal key={i} animation="fadeUp" delay={i * 100}>
-                <div
-                  className="group h-full rounded-3xl p-6 lg:p-7 border border-warm-gray transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgba(0,0,0,0.18)] relative overflow-hidden"
-                  style={{ background: `linear-gradient(160deg, #FFFFFF 0%, ${s.bgTo} 100%)` }}
-                >
-                  {/* Corner glow */}
+              <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
+                <div className="group px-4 py-6 lg:px-8 lg:py-4">
                   <div
-                    className="absolute -top-14 -right-14 w-36 h-36 rounded-full blur-2xl pointer-events-none transition-all duration-700 group-hover:scale-110"
-                    style={{ backgroundColor: s.color, opacity: 0.1 }}
-                  />
-
-                  <div className="relative flex flex-col h-full">
-                    {/* Small icon top-left */}
-                    <div
-                      className="w-9 h-9 rounded-xl flex items-center justify-center mb-5 transition-transform duration-500 group-hover:scale-110"
-                      style={{ backgroundColor: `${s.color}1A`, color: s.color }}
-                    >
-                      {s.icon}
-                    </div>
-
-                    {/* Big editorial stat */}
-                    <div
-                      className="font-poppins text-[40px] lg:text-[48px] font-extrabold leading-none tracking-tight mb-3 transition-transform duration-500 group-hover:scale-105 origin-left"
-                      style={{ color: s.color }}
-                    >
-                      {s.stat}
-                    </div>
-
-                    {/* Hairline accent */}
-                    <div
-                      className="w-8 h-[2px] mb-4 rounded-full"
-                      style={{ backgroundColor: s.color, opacity: 0.4 }}
-                    />
-
-                    {/* Label + caption */}
-                    <h3 className="text-sm font-bold text-deep leading-tight mb-1">{s.label}</h3>
-                    <p className="text-[12px] text-text-light leading-relaxed">{s.caption}</p>
+                    className="font-poppins text-[52px] lg:text-[68px] font-extrabold leading-none tracking-tight mb-3 transition-all duration-500 group-hover:tracking-tighter"
+                    style={{ color: s.color }}
+                  >
+                    {s.stat}
                   </div>
+                  <div
+                    className="w-10 h-[2px] mb-4 transition-all duration-500 group-hover:w-16"
+                    style={{ backgroundColor: s.color }}
+                  />
+                  <h3 className="text-sm font-bold text-deep leading-tight mb-1">{s.label}</h3>
+                  <p className="text-[12.5px] text-text-light leading-relaxed">{s.caption}</p>
                 </div>
               </ScrollReveal>
             ))}
