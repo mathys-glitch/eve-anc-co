@@ -48,7 +48,7 @@ export default function Home() {
                   <p className="text-[11px] text-white/70 uppercase tracking-wider mb-1 font-semibold">Certifiée B Corp</p>
                   <p className="text-xs text-white/90 leading-snug">Entreprise à impact. Audit tiers indépendant.</p>
                 </div>
-                <a href="#preuves" className="flex-shrink-0 px-3 py-1.5 bg-lime text-sage-dark text-[11px] font-bold rounded-full hover:bg-lime-dark transition-all">
+                <a href="https://www.bcorporation.net/en-us/find-a-b-corp/company/eve-and-co-level-up/" target="_blank" rel="noopener noreferrer" className="flex-shrink-0 px-3 py-1.5 bg-lime text-sage-dark text-[11px] font-bold rounded-full hover:bg-lime-dark transition-all">
                   En savoir +
                 </a>
               </div>
