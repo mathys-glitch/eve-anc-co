@@ -314,41 +314,36 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {REASONS.map((r, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 80}>
-                <div className="h-full bg-white rounded-xl p-8 border border-warm-gray hover:border-sage/40 hover:-translate-y-0.5 transition-all duration-500 relative overflow-hidden group">
-                  {/* Soft glow corner accent */}
-                  <div className="absolute -top-16 -right-16 w-40 h-40 bg-sage/[0.08] rounded-full blur-2xl pointer-events-none transition-opacity duration-500 group-hover:bg-sage/[0.14]" />
-
-                  {/* Persona header */}
-                  <div className="relative flex items-center gap-3 mb-8">
-                    <span className="w-11 h-11 rounded-xl bg-sage/10 text-sage flex items-center justify-center shrink-0">
-                      <r.Icon />
+                <div className="h-full bg-white rounded-xl p-7 border border-warm-gray hover:border-sage/40 transition-all duration-500 relative">
+                  {/* Header — icon + persona + roman */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <span className="w-10 h-10 rounded-xl bg-sage/10 text-sage flex items-center justify-center shrink-0">
+                        <r.Icon />
+                      </span>
+                      <div className="min-w-0">
+                        <div className="text-[10px] font-bold text-sage uppercase tracking-[0.2em] mb-0.5">Pour la</div>
+                        <div className="text-[15px] font-bold text-deep font-poppins leading-tight truncate">{r.role}</div>
+                      </div>
+                    </div>
+                    <span className="font-poppins italic text-sage/40 text-xs font-semibold tracking-wider shrink-0 ml-2">
+                      {["I", "II", "III", "IV", "V", "VI"][i]}.
                     </span>
-                    <div className="min-w-0">
-                      <div className="text-[10px] font-bold text-sage uppercase tracking-[0.18em]">Pour la</div>
-                      <div className="text-base font-bold text-deep font-poppins leading-tight truncate">{r.role}</div>
-                    </div>
                   </div>
 
-                  {/* Big editorial stat */}
-                  <div className="relative mb-5">
+                  {/* Stat callout — inset cream box with sage left rule */}
+                  <div className="rounded-lg bg-[#F7F4EF] pl-4 pr-5 py-3.5 mb-5 border-l-[3px] border-sage">
+                    <div className="text-[9px] font-bold text-sage/80 uppercase tracking-[0.18em] mb-1">Le chiffre clé</div>
                     <div className="flex items-baseline gap-2 flex-wrap">
-                      <span className="font-poppins text-5xl lg:text-[64px] font-bold text-deep leading-none tracking-tight">{r.stat}</span>
-                      <span className="font-poppins italic text-base text-text-light font-medium">{r.statSuffix}</span>
+                      <span className="font-poppins text-[28px] font-bold text-deep leading-none tracking-tight">{r.stat}</span>
+                      <span className="font-poppins italic text-sm text-text-light">{r.statSuffix}</span>
                     </div>
                   </div>
 
-                  {/* Hairline */}
-                  <div className="relative w-10 h-[2px] bg-sage/70 mb-5" />
-
-                  {/* Argument */}
-                  <p className="relative text-sm text-text-light leading-relaxed">
+                  {/* Caption */}
+                  <p className="text-sm text-text-light leading-relaxed">
                     {r.body}
                   </p>
-
-                  {/* Numéro romain en filigrane bas-droite */}
-                  <span className="absolute bottom-4 right-5 font-poppins italic text-sage/15 text-2xl font-bold pointer-events-none select-none">
-                    {["I", "II", "III", "IV", "V", "VI"][i]}
-                  </span>
                 </div>
               </ScrollReveal>
             ))}
