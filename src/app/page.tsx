@@ -176,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ COMPARAISON QUOTIDIENNE ═══════ */}
-      <section id="quotidien" className="py-16 lg:py-20 bg-cream">
+      <section id="quotidien" className="py-16 lg:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -197,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ 6 ARGUMENTS CODIR ═══════ */}
-      <section id="preuves" className="py-12 lg:py-16 bg-[#F4F1EE]">
+      <section id="preuves" className="py-12 lg:py-16 bg-[#EFF3EC]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-8 lg:mb-10">
