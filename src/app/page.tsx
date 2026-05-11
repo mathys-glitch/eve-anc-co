@@ -11,36 +11,37 @@ export default function Home() {
         <img
           src="/images/superphoto.png"
           alt="EVE AND CO - Culotte menstruelle bio"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[70%_center] lg:object-center"
         />
 
-        {/* Gradient overlay from left to right for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sage-dark/95 via-sage-dark/60 to-sage-dark/20" />
-        <div className="absolute inset-0 bg-gradient-to-b from-sage-dark/30 via-transparent to-sage-dark/40" />
+        {/* Gradient overlays — distinct mobile (top→bottom darkening) vs desktop (left→right) */}
+        <div className="absolute inset-0 lg:hidden bg-gradient-to-b from-sage-dark/85 via-sage-dark/55 to-sage-dark/85" />
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-sage-dark/95 via-sage-dark/60 to-sage-dark/20" />
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-b from-sage-dark/30 via-transparent to-sage-dark/40" />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 lg:pt-40 pb-16 min-h-screen flex flex-col">
-          <div className="grid lg:grid-cols-2 gap-10 items-center flex-grow">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-12 pt-24 lg:pt-40 pb-12 lg:pb-16 min-h-screen flex flex-col">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center flex-grow">
             {/* Left Column: Text */}
             <div className="max-w-xl">
               {/* Headline — 2 lines max */}
-              <h1 className="hero-animate hero-animate-delay-2 font-poppins text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6">
+              <h1 className="hero-animate hero-animate-delay-2 font-poppins text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-5 lg:mb-6">
                 Elles méritent mieux que des <span className="text-lime italic">tampons.</span>
               </h1>
 
               {/* Subheading */}
-              <p className="hero-animate hero-animate-delay-3 text-base lg:text-lg text-white/85 leading-relaxed mb-10 max-w-lg">
+              <p className="hero-animate hero-animate-delay-3 text-[15px] lg:text-lg text-white/85 leading-relaxed mb-8 lg:mb-10 max-w-lg">
                 Culottes menstruelles bio, certifiées B Corp. Un investissement unique qui réduit l&apos;absentéisme de 28% et affiche 97% d&apos;adoption. L&apos;initiative CSE dont tout le monde parle.
               </p>
 
               {/* CTAs */}
-              <div className="hero-animate hero-animate-delay-4 flex flex-col sm:flex-row gap-3 mb-10">
+              <div className="hero-animate hero-animate-delay-4 flex flex-col sm:flex-row gap-3 mb-8 lg:mb-10">
                 <a href="#devis" className="inline-flex items-center justify-center px-7 py-3.5 bg-lime text-sage-dark font-bold rounded-full hover:bg-lime-dark transition-all duration-300 text-sm">
                   Recevoir un devis gratuit →
                 </a>
               </div>
 
               {/* Bottom Card — B Corp testimonial style */}
-              <div className="hero-animate hero-animate-delay-4 mt-12 lg:mt-16 max-w-sm bg-white/10 backdrop-blur-lg border border-white/15 rounded-2xl p-4 flex items-center gap-4">
+              <div className="hero-animate hero-animate-delay-4 mt-6 lg:mt-16 max-w-sm bg-white/10 backdrop-blur-lg border border-white/15 rounded-2xl p-3 lg:p-4 flex items-center gap-3 lg:gap-4">
                 <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center overflow-hidden p-1">
                   <img src="/images/logo-bcorp.png" alt="B Corp" className="w-full h-full object-contain brightness-0 invert" />
                 </div>
@@ -80,15 +81,15 @@ export default function Home() {
           </div>
 
           {/* Trust indicators at bottom */}
-          <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-8 pt-10 mt-auto">
+          <div className="hero-animate hero-animate-delay-4 grid grid-cols-3 gap-3 sm:gap-8 pt-8 lg:pt-10 mt-auto">
             {[
               { stat: "N°1", label: "En France" },
               { stat: "300K+", label: "Utilisatrices" },
               { stat: "4.5/5", label: "Trustpilot" },
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="text-2xl md:text-3xl font-extrabold text-lime mb-1 font-poppins">{item.stat}</div>
-                <p className="text-sm text-white/70">{item.label}</p>
+                <div className="text-xl sm:text-2xl md:text-3xl font-extrabold text-lime mb-1 font-poppins">{item.stat}</div>
+                <p className="text-xs sm:text-sm text-white/70">{item.label}</p>
               </div>
             ))}
           </div>
@@ -96,15 +97,15 @@ export default function Home() {
       </section>
 
       {/* ═══════ RÉSULTATS CONCRETS ═══════ */}
-      <section id="impact" className="py-16 lg:py-20 bg-[#F9F5F0]">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+      <section id="impact" className="py-12 lg:py-20 bg-[#F9F5F0]">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 lg:mb-16">
               <span className="inline-block px-4 py-2 bg-terra/10 text-terra text-xs font-bold uppercase tracking-widest rounded-full mb-4">Impact mesuré</span>
-              <h2 className="text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+              <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
                 Des chiffres, pas des promesses
               </h2>
-              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+              <p className="mt-4 lg:mt-6 text-base lg:text-lg text-text-light max-w-2xl mx-auto">
                 Chaque culotte menstruelle EVE AND CO remplace 5 ans de protections jetables. Voici ce que ça change concrètement pour votre entreprise.
               </p>
             </div>
@@ -119,9 +120,9 @@ export default function Home() {
               { stat: "97%", label: "d'adoption", caption: "dès le premier mois d'usage", color: "#98CC5E" },
             ].map((s, i) => (
               <ScrollReveal key={i} animation="fadeUp" delay={i * 120}>
-                <div className="group px-4 py-6 lg:px-8 lg:py-4 text-center flex flex-col items-center">
+                <div className="group px-3 py-5 sm:px-4 sm:py-6 lg:px-8 lg:py-4 text-center flex flex-col items-center">
                   <div
-                    className="font-poppins text-[52px] lg:text-[68px] font-extrabold leading-none tracking-tight mb-3 transition-all duration-500 group-hover:tracking-tighter"
+                    className="font-poppins text-[40px] sm:text-[52px] lg:text-[68px] font-extrabold leading-none tracking-tight mb-3 transition-all duration-500 group-hover:tracking-tighter"
                     style={{ color: s.color }}
                   >
                     {s.stat}
@@ -141,15 +142,15 @@ export default function Home() {
       </section>
 
       {/* ═══════ COMPARAISON QUOTIDIENNE ═══════ */}
-      <section id="quotidien" className="py-16 lg:py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+      <section id="quotidien" className="py-12 lg:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 lg:mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Avant / Après</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+              <h2 className="mt-3 lg:mt-4 text-3xl sm:text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
                 Ce que ça change, concrètement
               </h2>
-              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+              <p className="mt-4 lg:mt-6 text-base lg:text-lg text-text-light max-w-2xl mx-auto">
                 53% des collaboratrices subissent l&apos;impact de leurs règles au travail. 9 jours de productivité perdus par an, en moyenne. Voici à quoi ressemble ce coût invisible — et comment il disparaît.
               </p>
             </div>
@@ -163,7 +164,7 @@ export default function Home() {
 
       {/* ═══════ 6 ARGUMENTS CODIR ═══════ */}
       <section id="preuves" className="py-12 lg:py-16 bg-[#EDE6D7]">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10">
           <ScrollReveal>
             <div className="text-center mb-8 lg:mb-10">
               <span className="text-xs font-semibold text-sage uppercase tracking-[0.2em]">Pour convaincre en interne</span>
@@ -302,23 +303,73 @@ export default function Home() {
           Voir l'historique Git pour retrouver le code complet (commit précédent). */}
 
       {/* ═══════ COMPARAISON DES COÛTS ═══════ */}
-      <section className="py-16 lg:py-20 bg-cream">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+      <section className="py-12 lg:py-20 bg-cream">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-10">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 lg:mb-16">
               <span className="text-xs font-bold text-terra uppercase tracking-widest">Le vrai comparatif</span>
-              <h2 className="mt-4 text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
+              <h2 className="mt-3 lg:mt-4 text-3xl sm:text-4xl md:text-4xl font-bold text-deep leading-tight font-poppins">
                 39€. Une fois. Pour toujours.
               </h2>
-              <p className="mt-6 text-lg text-text-light max-w-2xl mx-auto">
+              <p className="mt-4 lg:mt-6 text-base lg:text-lg text-text-light max-w-2xl mx-auto">
                 Le résultat parle de lui-même.
               </p>
             </div>
           </ScrollReveal>
 
-          {/* Comparison Table */}
+          {/* Comparison — table on md+, stacked cards on mobile */}
           <ScrollReveal animation="fadeUp">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-warm-gray">
+            {/* Mobile: card layout */}
+            <div className="md:hidden space-y-3">
+              {[
+                { name: "Salle de sport", cost: "360 €", duration: "Chaque année", adoption: "~40 %" },
+                { name: "Team building", cost: "80 €", duration: "Chaque année", adoption: "~55 %" },
+                { name: "Bons Noël", cost: "50 €", duration: "Chaque année", adoption: "~60 %" },
+              ].map((row, i) => (
+                <div key={i} className="rounded-2xl border border-warm-gray bg-white p-5 shadow-sm">
+                  <h4 className="text-base font-bold text-deep mb-3">{row.name}</h4>
+                  <div className="grid grid-cols-3 gap-3">
+                    <div>
+                      <p className="text-[10px] font-semibold text-text-light uppercase tracking-wider mb-1">Coût/an</p>
+                      <p className="text-sm font-semibold text-deep">{row.cost}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-semibold text-text-light uppercase tracking-wider mb-1">Durée</p>
+                      <p className="text-sm font-semibold text-terra">{row.duration}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-semibold text-text-light uppercase tracking-wider mb-1">Adoption</p>
+                      <p className="text-sm text-text-light">{row.adoption}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <div className="rounded-2xl p-5 shadow-lg" style={{ backgroundColor: '#3E5A4A' }}>
+                <img src="/images/logo-white.png" alt="EVE AND CO" className="h-[14px] w-auto mb-4" />
+                <div className="grid grid-cols-3 gap-3">
+                  <div>
+                    <p className="text-[10px] font-semibold text-white/60 uppercase tracking-wider mb-1">Coût</p>
+                    <p className="text-sm font-bold text-lime">39 €*</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-semibold text-white/60 uppercase tracking-wider mb-1">Durée</p>
+                    <span className="inline-flex items-center bg-lime text-sage-dark text-[10px] font-extrabold px-2 py-1 rounded-full uppercase tracking-wider">
+                      ✓ Une fois
+                    </span>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-semibold text-white/60 uppercase tracking-wider mb-1">Adoption</p>
+                    <p className="text-sm font-bold text-lime">97% ✓</p>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-text-light px-1 pt-2">
+                * Investissement unique par personne, amorti sur 5 ans. Éligible CSE. Exonéré URSSAF.
+              </p>
+            </div>
+
+            {/* Desktop: full table */}
+            <div className="hidden md:block bg-white rounded-2xl overflow-hidden shadow-lg border border-warm-gray">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
@@ -372,38 +423,38 @@ export default function Home() {
       </section>
 
       {/* ═══════ CTA FINAL ═══════ */}
-      <section id="devis" className="relative py-20 lg:py-28 bg-sage-dark overflow-hidden">
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10">
+      <section id="devis" className="relative py-14 lg:py-28 bg-sage-dark overflow-hidden">
+        <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-6 lg:px-10">
           <ScrollReveal>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="text-white">
-                <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-8 font-poppins">
+                <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold leading-tight mb-6 lg:mb-8 font-poppins">
                   Et si c&apos;était le moment ?
                 </h2>
-                <p className="text-xl text-white/80 leading-relaxed mb-12">
+                <p className="text-base sm:text-lg lg:text-xl text-white/80 leading-relaxed mb-8 lg:mb-12">
                   Un devis sur-mesure, vos chiffres d&apos;impact personnalisés, et des échantillons gratuits pour votre comité. Aucun engagement. Juste les données pour décider.
                 </p>
 
-                <div className="space-y-5">
+                <div className="space-y-3 lg:space-y-5">
                   {[
                     "✓ Réponse sous 48h, vraiment",
                     "✓ Échantillons gratuits pour tester",
                     "✓ Zéro engagement, zéro pression",
                     "✓ Rapport d'impact personnalisé inclus",
                   ].map((item, i) => (
-                    <p key={i} className="text-white/90 font-semibold">
+                    <p key={i} className="text-sm sm:text-base text-white/90 font-semibold">
                       {item}
                     </p>
                   ))}
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-white/30">
-                  <p className="text-white/70 text-sm mb-4">Contact direct</p>
-                  <p className="text-white font-semibold text-lg">mathys@eve-and-co.com</p>
+                <div className="mt-8 lg:mt-12 pt-6 lg:pt-8 border-t border-white/30">
+                  <p className="text-white/70 text-sm mb-2 lg:mb-4">Contact direct</p>
+                  <p className="text-white font-semibold text-base sm:text-lg break-all">mathys@eve-and-co.com</p>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl p-12 shadow-2xl">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-12 shadow-2xl">
                 <ContactForm />
               </div>
             </div>

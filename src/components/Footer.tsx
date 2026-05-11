@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
     <footer className="bg-[#F4F1EE]">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-        <div className="py-16">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-16">
+        <div className="py-12 md:py-16">
           {/* Top Section: 3 columns */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1.2fr] gap-16 mb-14">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1.2fr] gap-10 md:gap-16 mb-10 md:mb-14">
             {/* Navigation */}
             <div>
               <h3 className="text-base font-bold text-deep mb-6">Navigation</h3>
@@ -73,30 +73,30 @@ export default function Footer() {
           </div>
 
           {/* Bottom Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center md:items-end pt-8">
             {/* Left: Contact */}
-            <div>
-              <p className="text-sm text-deep">24h/24 7j/7 : mathys@eve-and-co.com</p>
+            <div className="text-center md:text-left order-2 md:order-none">
+              <p className="text-sm text-deep break-all">24h/24 7j/7 : mathys@eve-and-co.com</p>
             </div>
 
             {/* Center: Big Logo */}
-            <div className="text-center">
+            <div className="text-center order-1 md:order-none">
               <img
                 src="/images/logo-black.png"
                 alt="EVE AND CO"
-                className="h-12 md:h-16 w-auto mx-auto opacity-[0.08]"
+                className="h-10 md:h-16 w-auto mx-auto opacity-[0.08]"
               />
             </div>
 
             {/* Right: Copyright */}
-            <div className="text-right">
+            <div className="text-center md:text-right order-3 md:order-none">
               <p className="text-sm text-deep">🇫🇷 Marque française – Tous droits réservés</p>
               <p className="text-sm text-deep">© 2026, EVE AND CO.</p>
             </div>
           </div>
 
           {/* Language */}
-          <div className="flex justify-end mt-6">
+          <div className="flex justify-center md:justify-end mt-6">
             <span className="text-xs text-text-light">🌐 FR – Français</span>
           </div>
         </div>
