@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import DayComparison from "@/components/DayComparison";
 import ContactForm from "@/components/ContactForm";
@@ -7,11 +8,15 @@ export default function Home() {
     <>
       {/* ═══════ HERO ═══════ */}
       <section className="relative min-h-screen overflow-hidden">
-        {/* Fullscreen photo background */}
-        <img
-          src="/images/superphoto.png"
+        {/* Fullscreen photo background — optimized via next/image, preloaded for fast LCP */}
+        <Image
+          src="/images/superphoto.jpg"
           alt="EVE AND CO - Culotte menstruelle bio"
-          className="absolute inset-0 h-full w-full object-cover object-[70%_center] lg:object-center"
+          fill
+          preload
+          sizes="100vw"
+          quality={85}
+          className="object-cover object-[70%_center] lg:object-center"
         />
 
         {/* Gradient overlays — distinct mobile (top→bottom darkening) vs desktop (left→right) */}
