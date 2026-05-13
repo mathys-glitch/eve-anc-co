@@ -32,7 +32,7 @@ export default function Home() {
             <div className="max-w-xl">
               {/* Headline — 2 lines max */}
               <h1 className="hero-animate hero-animate-delay-2 font-poppins text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-5 lg:mb-6">
-                Elles méritent mieux que des <span className="text-lime italic">tampons.</span>
+                Elles méritent mieux que des <span className="text-lime italic">serviettes.</span>
               </h1>
 
               {/* Subheading */}
@@ -237,7 +237,7 @@ export default function Home() {
                   </div>
                   <div className="text-sm italic text-text-light mb-3">des candidates / candidats</div>
                   <p className="text-[13px] text-text-light leading-snug mt-auto">
-                    <span className="text-deep font-medium">Optent pour la meilleure</span> marque employeur.
+                    <span className="text-deep font-medium">Sont sensibles à la</span> marque employeur.
                   </p>
                 </div>
               </div>
@@ -444,7 +444,7 @@ export default function Home() {
 
                 <div className="space-y-3 lg:space-y-5">
                   {[
-                    "✓ Réponse sous 48h, vraiment",
+                    "✓ Réponse sous 48h",
                     "✓ Échantillons gratuits pour tester",
                     "✓ Zéro engagement, zéro pression",
                     "✓ Rapport d'impact personnalisé inclus",
@@ -456,7 +456,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 lg:mt-12 pt-6 lg:pt-8 border-t border-white/30">
-                  <p className="text-white/70 text-sm mb-2 lg:mb-4">Contact direct</p>
+                  <p className="text-white/70 text-sm mb-2 lg:mb-4">Responsable Programme Impact Entreprises</p>
                   <p className="text-white font-semibold text-base sm:text-lg break-all">mathys@eve-and-co.com</p>
                 </div>
               </div>
