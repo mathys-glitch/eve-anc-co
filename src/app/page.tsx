@@ -256,7 +256,7 @@ export default function Home() {
                     <span className="text-sm italic text-white/60">de déchets évités · pour 100 collab.</span>
                   </div>
                   <p className="text-[13px] text-white/70 leading-snug max-w-md mt-auto">
-                    <span className="text-white font-medium">Des chiffres traçables,</span> intégrables au DPEF, audités par tiers indépendant.
+                    <span className="text-white font-medium">Des chiffres traçables,</span> intégrables au DPEF.
                   </p>
                 </div>
               </div>
