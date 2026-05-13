@@ -121,7 +121,7 @@ export default function Home() {
           {/* Stats — typography-led, separated by vertical hairlines */}
           <div className="grid grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-warm-gray">
             {[
-              { stat: "1,2T", label: "Déchets évités", caption: "pour 100 collaboratrices équipées", color: "#1A1A1A" },
+              { stat: "800KG", label: "Déchets évités", caption: "pour 100 collaboratrices équipées", color: "#1A1A1A" },
               { stat: "−28%", label: "d'absentéisme", caption: "lié aux règles, en moyenne", color: "#1A1A1A" },
               { stat: "300+", label: "utilisations", caption: "par culotte avant lavage final", color: "#1A1A1A" },
               { stat: "97%", label: "d'adoption", caption: "dès le premier mois d'usage", color: "#98CC5E" },
@@ -158,7 +158,7 @@ export default function Home() {
                 Ce que ça change, concrètement
               </h2>
               <p className="mt-4 lg:mt-6 text-base lg:text-lg text-text-light max-w-2xl mx-auto">
-                53% des collaboratrices subissent l&apos;impact de leurs règles au travail. 9 jours de productivité perdus par an, en moyenne. Voici à quoi ressemble ce coût invisible — et comment il disparaît.
+                53% des collaboratrices subissent l&apos;impact de leurs règles au travail. 9 jours de productivité perdus par an, en moyenne. Voici à quoi ressemble ce coût invisible.
               </p>
             </div>
           </ScrollReveal>
@@ -229,15 +229,15 @@ export default function Home() {
               <div className="group h-full rounded-2xl p-6 bg-[#F4F9EC] border border-[#98CC5E]/25 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(152,204,94,0.32)] relative overflow-hidden">
                 <div className="absolute -bottom-12 -right-12 w-36 h-36 rounded-full bg-[#98CC5E]/15 blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[#98CC5E]/30 group-hover:scale-110" />
                 <div className="relative h-full flex flex-col">
-                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.2em] mb-4">03 · Marque employeur</div>
+                  <div className="text-[10px] font-bold text-sage-dark uppercase tracking-[0.2em] mb-4">03 · Marque employeur boostée</div>
                   <div className="mb-1">
                     <span className="font-poppins text-[48px] lg:text-[54px] font-bold text-sage-dark leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left inline-block">
                       73%
                     </span>
                   </div>
-                  <div className="text-sm italic text-text-light mb-3">des candidats</div>
+                  <div className="text-sm italic text-text-light mb-3">des candidates / candidats</div>
                   <p className="text-[13px] text-text-light leading-snug mt-auto">
-                    <span className="text-deep font-medium">Ce que les talents regardent</span> — pas un baby-foot.
+                    <span className="text-deep font-medium">Optent pour la meilleure</span> marque employeur.
                   </p>
                 </div>
               </div>
@@ -251,7 +251,7 @@ export default function Home() {
                   <div className="text-[10px] font-bold text-lime uppercase tracking-[0.2em] mb-4">04 · Pour la RSE</div>
                   <div className="flex items-baseline gap-2.5 mb-3">
                     <span className="font-poppins text-[52px] lg:text-[60px] font-bold text-white leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 origin-left">
-                      1,2T
+                      800KG
                     </span>
                     <span className="text-sm italic text-white/60">de déchets évités · pour 100 collab.</span>
                   </div>

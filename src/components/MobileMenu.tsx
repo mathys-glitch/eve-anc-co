@@ -3,9 +3,6 @@
 import { useState } from "react";
 
 const links = [
-  { href: "#impact", label: "Impact" },
-  { href: "#quotidien", label: "Au quotidien" },
-  { href: "#preuves", label: "Arguments CODIR" },
   { href: "#devis", label: "Devis" },
 ];
 

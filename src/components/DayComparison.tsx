@@ -5,7 +5,7 @@ type DayItem = { time: string; event: string };
 const WITHOUT: DayItem[] = [
   { time: "07:30", event: "Trajet domicile-bureau : check anxieux du sac" },
   { time: "09:00", event: "Première réunion, esprit ailleurs" },
-  { time: "11:00", event: "Stand-up d'équipe : pause toilettes obligatoire" },
+  { time: "11:00", event: "Réunion d'équipe : pause toilettes obligatoire" },
   { time: "13:00", event: "Pause déj écourtée, détour pharmacie" },
   { time: "15:00", event: "Présentation client à 16h, focus à 30%" },
   { time: "17:00", event: "Fin de journée, épuisement mental" },
@@ -69,7 +69,7 @@ export default function DayComparison() {
 
         <div className="mt-8 pt-5 border-t border-[#D97757]/15">
           <p className="text-sm font-semibold leading-relaxed" style={{ color: CORAL }}>
-            📉 Bilan : -38% de productivité ressentie · 1 collaboratrice à effectif partiel · ~40 déchets/an
+            📉 Bilan : -38% de productivité ressentie
           </p>
         </div>
       </div>

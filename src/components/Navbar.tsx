@@ -1,11 +1,5 @@
 import MobileMenu from "./MobileMenu";
 
-const links = [
-  { href: "#impact", label: "IMPACT" },
-  { href: "#quotidien", label: "AU QUOTIDIEN" },
-  { href: "#preuves", label: "ARGUMENTS CODIR" },
-];
-
 export default function Navbar() {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
@@ -18,19 +12,6 @@ export default function Navbar() {
             className="h-5 lg:h-6 w-auto"
           />
         </a>
-
-        {/* Center Links */}
-        <nav className="hidden md:flex items-center gap-10">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-xs text-white/70 hover:text-white tracking-[0.15em] font-medium transition-colors duration-300"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
 
         {/* Right: CTA */}
         <div className="hidden md:block">

@@ -90,14 +90,17 @@ export default function Footer() {
 
             {/* Right: Copyright */}
             <div className="text-center md:text-right order-3 md:order-none">
-              <p className="text-sm text-deep">🇫🇷 Marque française – Tous droits réservés</p>
+              <p className="text-sm text-deep flex items-center justify-center md:justify-end gap-1.5">
+                {/* French flag — inline SVG so it renders on Windows (flag emoji unsupported) */}
+                <svg width="16" height="11" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg" aria-label="France" className="rounded-[1px] shrink-0">
+                  <rect width="1" height="2" fill="#002395" />
+                  <rect x="1" width="1" height="2" fill="#FFFFFF" />
+                  <rect x="2" width="1" height="2" fill="#ED2939" />
+                </svg>
+                Marque française – Tous droits réservés
+              </p>
               <p className="text-sm text-deep">© 2026, EVE AND CO.</p>
             </div>
-          </div>
-
-          {/* Language */}
-          <div className="flex justify-center md:justify-end mt-6">
-            <span className="text-xs text-text-light">🌐 FR – Français</span>
           </div>
         </div>
       </div>
