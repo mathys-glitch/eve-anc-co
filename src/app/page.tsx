@@ -439,7 +439,7 @@ export default function Home() {
                   Et si c&apos;était le moment ?
                 </h2>
                 <p className="text-base sm:text-lg lg:text-xl text-white/80 leading-relaxed mb-8 lg:mb-12">
-                  Un devis sur-mesure, vos chiffres d&apos;impact personnalisés, et des échantillons gratuits pour votre comité. Aucun engagement. Juste les données pour décider.
+                  Un devis sur-mesure, vos chiffres d&apos;impact personnalisés, et des échantillons gratuits pour votre comité. Aucun engagement.
                 </p>
 
                 <div className="space-y-3 lg:space-y-5">
