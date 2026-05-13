@@ -63,7 +63,7 @@ export default function ContactForm() {
             <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
-        <h3 className="text-3xl font-bold text-deep mb-3">C'est envoyé ! 🎉</h3>
+        <h3 className="text-3xl font-bold text-deep mb-3">C'est envoyé !</h3>
         <p className="text-text-light text-lg">Notre équipe vous contacte dans les 48h avec un devis adapté à votre structure.</p>
       </div>
     );
