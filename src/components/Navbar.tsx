@@ -1,5 +1,3 @@
-import MobileMenu from "./MobileMenu";
-
 export default function Navbar() {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
@@ -13,17 +11,13 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Right: CTA */}
-        <div className="hidden md:block">
-          <a
-            href="#devis"
-            className="bg-transparent border border-white/40 text-white text-xs font-bold tracking-wider px-6 py-2.5 rounded-full hover:bg-white/10 hover:border-white/60 transition-all duration-300"
-          >
-            DEVIS GRATUIT
-          </a>
-        </div>
-
-        <MobileMenu />
+        {/* CTA — visible on all viewports (replaces the mobile burger) */}
+        <a
+          href="#devis"
+          className="bg-transparent border border-white/40 text-white text-[11px] md:text-xs font-bold tracking-wider px-4 md:px-6 py-2 md:py-2.5 rounded-full hover:bg-white/10 hover:border-white/60 transition-all duration-300"
+        >
+          DEVIS GRATUIT
+        </a>
       </div>
     </header>
   );
