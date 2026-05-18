@@ -337,7 +337,7 @@ export default function Home() {
                   <h4 className="text-base font-bold text-deep mb-3">{row.name}</h4>
                   <div className="grid grid-cols-3 gap-3">
                     <div>
-                      <p className="text-[10px] font-semibold text-text-light uppercase tracking-wider mb-1">Coût/an</p>
+                      <p className="text-[10px] font-semibold text-text-light uppercase tracking-wider mb-1">Coût / personne</p>
                       <p className="text-sm font-semibold text-deep">{row.cost}</p>
                     </div>
                     <div>
@@ -382,7 +382,7 @@ export default function Home() {
                   <thead>
                     <tr className="border-b border-warm-gray bg-cream/50">
                       <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">INITIATIVE</th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">COÛT / PERSONNE / AN</th>
+                      <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">COÛT / PERSONNE</th>
                       <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">DURÉE</th>
                       <th className="px-6 py-4 text-left text-xs font-bold text-text-light uppercase tracking-wider">ADOPTION</th>
                     </tr>
